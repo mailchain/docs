@@ -13,7 +13,7 @@ You can use it for messaging other Mailchain users or any blockchain addresses. 
 1. The Mailchain username that you choose is registered to your identity (which is linked to your [Seed Phrase](#your-seed-phrase)).
 1. You create a [safe space](#your-safe-space) to keep your messages, registered addresses, labels, and other application data.
 
-## Your Seed Phrase:
+## Your Seed Phrase
 
 Your Seed Phrase is a collection of words that can be used to access your identity. There is no way to recover this if you lose it. Store a copy it somewhere safe (for example a password manager or written down and locked away).
 

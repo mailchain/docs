@@ -39,6 +39,7 @@ This has been explored previously. The biggest challenges are related to the oth
 As protocol functions are decentralized, the intention is for anyone to be able to run infrastructure.
 
 ### Why would someone run Mailchain infrastructure?
+
 Businesses may want to run their own infrastructure to control how and where messages are stored. Other community members or service providers may run infrastructure in order to receive rewards.
 
 ## Mailchain Account Security
