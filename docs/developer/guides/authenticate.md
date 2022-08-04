@@ -1,0 +1,34 @@
+# Authenticate
+
+You are in complete control of your account. You own your private key and seed phrase. We don't have access to them, not through security policy or permissions.
+
+## Authenticate SDK
+
+You can authenticate with your mnemonic phrase, seed, or password (coming soon).
+
+### Mnemonic phrase
+
+```typescript
+import { Mailchain } from '@mailchain/sdk';
+
+const mailchain = Mailchain.fromMnemonicPhrase('cat mail okay ...');
+```
+
+### Seed
+
+```typescript
+import { Mailchain } from '@mailchain/sdk';
+
+const mailchain = Mailchain.fromAccountSeed('0x....');
+```
+
+## Verify
+
+A good way to verify that the account exists and get information about the registered user is to call the `.self()` method.
+
+```typescript
+const self = mailchain.self();
+console.log(`username: ${self.username}, address: ${self.address}`);
+```
+
+The Mailchain SDK is now authenticated and you can start using authenticated endpoints.
