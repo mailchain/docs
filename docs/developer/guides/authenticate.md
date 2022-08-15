@@ -2,6 +2,12 @@
 
 You are in complete control of your account. You own your private key and seed phrase. We don't have access to them, not through security policy or permissions.
 
+:::note
+
+You need a Mailchain account before you can authenticate with the SDK. You can [create an account](user/guides/getting-started/create-a-mailchain-account) through the [app](https://app.mailchain.com/register).
+
+:::
+
 ## Authenticate SDK
 
 You can authenticate with your mnemonic phrase, seed, or password (coming soon).
@@ -31,4 +37,5 @@ const self = mailchain.self();
 console.log(`username: ${self.username}, address: ${self.address}`);
 ```
 
-The Mailchain SDK is now authenticated and you can start using authenticated endpoints.
+This will display your account username and Mailchain account address.
+The Mailchain SDK is now authenticated and you can start sending messages.

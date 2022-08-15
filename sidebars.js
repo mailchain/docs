@@ -79,9 +79,9 @@ const sidebars = {
 		{
 			type: 'category',
 			label: 'Quickstart',
-			link: {
-				type: 'generated-index',
-			},
+			// link: {
+			// 	type: 'generated-index',
+			// },
 			collapsed: false,
 			items: ['developer/guides/authenticate', 'developer/guides/send', 'developer/guides/register-address'],
 		},
