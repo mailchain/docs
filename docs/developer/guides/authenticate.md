@@ -30,11 +30,11 @@ const mailchain = Mailchain.fromAccountSeed('0x....');
 
 ## Verify
 
-A good way to verify that the account exists and get information about the registered user is to call the `.self()` method.
+A good way to verify that the account exists and get information about the registered user is to call the `.user()` method.
 
 ```typescript
-const self = mailchain.self();
-console.log(`username: ${self.username}, address: ${self.address}`);
+const user = mailchain.user();
+console.log(`username: ${user.username}, address: ${user.address}`);
 ```
 
 This will display your account username and Mailchain account address.
