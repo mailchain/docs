@@ -11,17 +11,17 @@ import { Mailchain } from '@mailchain/sdk';
 
 const mailchain = Mailchain.fromMnemonicPhrase('cat mail okay ...'); // use your seed phrase
 
-await result = mailchain.sendMail({
+const result = await mailchain.sendMail({
 	from: `yoursername@mailchain.local`, // sender address
 	to: [`0xbb56FbD7A2caC3e4C17936027102344127b7a112@ethereum.mailchain.com`], // list of recipients (blockchain or mailchain addresses)
 	subject: 'My first message', // subject line
 	content: {
-		html: 'Hello Mailchain 👋', // plain text body
-		text: '<p>Hello Mailchain 👋</p>', // html body
+		text: 'Hello Mailchain 👋', // plain text body
+		html: '<p>Hello Mailchain 👋</p>', // html body
 	},
 });
 
-console.log(result)
+console.log(result);
 ```
 
 :::note
