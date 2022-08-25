@@ -17,7 +17,9 @@ You can authenticate with your mnemonic phrase, seed, or password (coming soon).
 ```typescript
 import { Mailchain } from '@mailchain/sdk';
 
-const mailchain = Mailchain.fromMnemonicPhrase('cat mail okay ...');
+const mnemonicPhrase = 'cat mail okay ...'; // securely include mnemonic phrase
+
+const mailchain = Mailchain.fromMnemonicPhrase(mnemonicPhrase);
 ```
 
 ### Seed
@@ -33,7 +35,7 @@ const mailchain = Mailchain.fromAccountSeed('0x....');
 A good way to verify that the account exists and get information about the registered user is to call the `.user()` method.
 
 ```typescript
-const user = mailchain.user();
+const user = await mailchain.user();
 console.log(`username: ${user.username}, address: ${user.address}`);
 ```
 
