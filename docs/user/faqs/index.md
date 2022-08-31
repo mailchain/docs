@@ -66,7 +66,7 @@ If you forget your seed phrase and your password, your account will be inaccessi
 
 ### Who can read my messages?
 
-Mailchain messages are encrypted end-to-end. This means that once the sender has encrypted a message using the recipient's encryption key, only the recipient is able to decrypt it. The sender also keep an encrypted version of the message.
+Mailchain messages are encrypted end-to-end. This means that once the sender has encrypted a message using the recipient's encryption key, only the recipient is able to decrypt it. The sender also keeps an encrypted version of the message.
 Mailchain _cannot_ read your messages, the storage provider _cannot_ read your messages, your internet service provider _cannot_ read your messages.
 
 ### Where is my data stored?
