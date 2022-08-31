@@ -6,7 +6,7 @@ Using Mailchain you can send a message to any blockchain address. Only the owner
 
 ## Send your first message
 
-```typescript
+```ts
 import { Mailchain } from '@mailchain/sdk';
 
 const mnemonicPhrase = 'cat mail okay ...'; // securely include mnemonic phrase
