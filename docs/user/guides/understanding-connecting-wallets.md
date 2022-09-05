@@ -1,5 +1,5 @@
 ---
-title: 'Article: Connecting Wallets'
+title: 'Connecting & Registering Wallets'
 slug: './understanding-connecting-wallets'
 sidebar_position: 102
 ---
@@ -12,16 +12,16 @@ Use cases include receiving notifications and communications based on your on-ch
 
 ## How it works
 
-Your Mailchain account has an identity key, which is used to generate messaging keys. When you register an address, you prove that you own it. It can then be associated with a messaging key. When someone sends a message to your address, the application looks up your address at the registry lookup and receives a response containing the corresponding messaging key for your address.
+Your Mailchain account has an identity key, which is used to generate messaging keys. When you register an existing blockchain wallet address, you prove that you own it by signing a message of confirmation. This generates a verifiable proof without requiring a blockchain transaction or gas fee. It can then be associated with a messaging key. When someone sends a message to your address, the application looks up your address at the registry lookup and receives a response containing the corresponding messaging key for your address.
 
-## Bob and Alice Use Case Example
+## Bob and Alice use case example
 
-Bob wants to send a message to Alice to let her know he has a new art collection coming out. He only knows the ethereum address she used when she bought his last piece. Alice has registered her address in Mailchain by signing a an approval message with her wallet. Bob sends a message to Alice's address. In the background, the Mailchain application looks up Alice's address and gets the corresponding messaging key. The message is encrypted and routed using the messaging key details.
+Bob wants to send a message to Alice to let her know he has a new art collection coming out. He only knows the ethereum address she used when she bought his last piece. Alice has registered her ethereum address in Mailchain by signing a message confirming ownership with her wallet. Bob sends a message to Alice's address. In the background, the Mailchain application looks up Alice's address and gets the corresponding messaging key. The message is encrypted and routed using the messaging key details.
 
 When Alice opens her inbox, she can see a message from Bob sent to her ethereum address. Alice's identity and message key details are used by the application to obtain and decrypt the message body, but the private key information is never revealed.
 
 Bob has no way of knowing any other address Alice has linked to her Mailchain unified inbox.
-When Bob receives a reply from Alice, he can check that the message key details are valid.
+When Bob receives a reply from Alice, he can check that the message key details are valid without knowing anything else about Alice's identity.
 Alice never had to enter any sensitive information to Mailchain, and she retains full control and ownership of her private keys for encryption and decryption.
 
 ## How to connect and register your wallet address
@@ -32,7 +32,7 @@ Follow these steps to connect and register an existing blockchain wallet address
 
     ![](./img-understanding-connecting-wallets/connect-buttons.png)
 
-1. Select a wallet provider (e.g. Metamask, WalletConnect, etc.), then click 'Connect wallet'
+1. Select a wallet provider (e.g. Metamask), then click 'Connect'
 
     ![](./img-understanding-connecting-wallets/connect-wallet.png)
 
@@ -40,17 +40,17 @@ Follow these steps to connect and register an existing blockchain wallet address
 
     ![](./img-understanding-connecting-wallets/connect-address.png)
 
-1. Confirm to permit the Mailchain app to read your address.
+1. Click 'Connect' to confirm Mailchain should be able to read your address.
 
     ![](./img-understanding-connecting-wallets/connect-address-confirm.png)
 
-The address is now connected, but we need to register it in Mailchain. To do this:
+    The address is now connected, but we need to register it in Mailchain. To do this:
 
 1. Click 'Verify Address'
 
     ![](./img-understanding-connecting-wallets/verify-address-button.png)
 
-1. A 'Signature Request' will pop up in your wallet. It contains the following text:
+1. A 'Signature Request' will appear in your wallet. It contains the following text:
 
     > Message: <br />
     > Welcome to Mailchain! <br />
@@ -65,13 +65,17 @@ The address is now connected, but we need to register it in Mailchain. To do thi
     > Messaging key: `a_generated_messaging_key` <br />
     > Nonce: `a_number`
 
-    Review the request and click sign.
+    Review the request and click 'Sign'.
 
     ![](./img-understanding-connecting-wallets/wallet-signature-request.png)
-    &nbsp;
-    ![](./img-understanding-connecting-wallets/wallet-signature-request-sign.png)
 
-1. Your wallet will now be verified. You can click 'Done' to close the modal.
+    Your wallet is now verified.
+
+1. By default, Mailchain is able to receive messages for your existing blockchain wallet address before you sign up. Click 'Synchronize' to get these messages, or click 'Skip' to synchronize later.
+
+    ![](./img-understanding-connecting-wallets/wallet-sync.png)
+
+1. You can now click 'Done' to disconnect your wallet and close the modal, or choose to register another address.
 
     ![](./img-understanding-connecting-wallets/wallet-verified.png)
 
@@ -91,11 +95,11 @@ When you compose a message, you can select the address to send from in the messa
 
     ![](./img-understanding-connecting-wallets/sidebar-settings.png)
 
-1. Click on 'Delete' for the account you wish to remove.
+1. Click on 'Delete' for the address you wish to remove.
 
     ![](./img-understanding-connecting-wallets/delete-account-button.png)
 
-1. Confirm deletion by entering in the full address, then Confirm.
+1. Confirm deletion by entering in the full address, then click 'Confirm'.
 
     ![](./img-understanding-connecting-wallets/delete-account-confirm.png)
 

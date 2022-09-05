@@ -59,7 +59,7 @@ const config = {
 				items: [
 					{ to: 'welcome-to-mailchain', label: 'Home', position: 'left' },
 					{ to: 'developer', label: 'Developer Docs', position: 'left' },
-					{ to: 'user/guides', label: 'Tutorials and Guides', position: 'left' },
+					{ to: 'user/guides', label: 'Guides & Tutorials', position: 'left' },
 					{ to: 'user/faqs', label: 'FAQs', position: 'left' },
 					{
 						href: 'https://mailchain.com/',

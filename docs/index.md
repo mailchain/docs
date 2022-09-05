@@ -4,12 +4,15 @@ slug: welcome-to-mailchain
 
 # Welcome To Mailchain
 
-[Mailchain](https://app.mailchain.com) is a multi-protocol messaging and communications protocol for web3 addresses.
+[Mailchain](https://app.mailchain.com) is the communication layer for web3. It makes it possible for people to communicate in a crypto-native way. The platform consists of two parts:
 
-Account holders or owners of a public address often need to communicate in the context of the account or public address. Communication may relate to transactions, account actions or some type of notification.
+1. An open source, multi-chain protocol for sending encrypted messages between blockchain wallet addresses.
+2. A simple, unified inbox application that makes it easy for users to view and send messages using the protocol and to keep track of their on-chain activity. It's just like using email.
 
-Examples of use cases for blockchain messaging include invoicing, receipts, contacting users of a service or application developers.
+People often need to communicate in the context of their wallet or blockchain identity. Communication may be related to their transaction history, web3 activity or some type of important notification.
 
-The majority of blockchain protocols provide no standard way to handle messaging. Some account holders have sent messages as an encrypted or decrypted string included in transaction data. Some applications work around the problem by asking users to link another method of contact (e.g. email address, phone number etc.) to an application. This compromises anonymity by asking users to link or reveal an identity. It also increases exposure to security risks, and relies on additional centralized services.
+Use cases include trade receipts, transaction confirmations, peer-to-peer social messages, community updates, and other onchain events.
 
-Visit [Getting Started](user/guides/getting-started) to learn how to use the application and start sending and receiving messages.
+Web3 provides no standard way to handle communication. Some applications work around the problem by asking users to link another method of contact (e.g. email address, phone number etc.) to an application. This compromises privacy by asking users to link or reveal an identity. Keeping track of valuable, relevant information, such as NFT mints, DeFi positions, and DAO votes across these channels can become overwhelming, confusing, and pose a privacy risk.
+
+Visit [Getting Started](user/guides/getting-started) to learn how to use the Mailchain application and start sending and receiving messages.

@@ -8,15 +8,29 @@ sidebar_position: 2
 1. To create a Mailchain account, head to https://app.mailchain.com/register
 1. Fill in a username
 
-    > 💡 Note: Mailchain reserved some brand names and names under 5 characters long.<br />For more information, see [reserved names](#reserved-names) below.
+    :::note
+
+    Mailchain reserved some brand names and names under 5 characters long. For more information, see [reserved names](#reserved-names) below.
+
+    :::
 
 1. Choose a very strong password or passphrase.
 
-    > ⚠️ You cannot reset your Mailchain password and if you lose it, you may lose your Mailchain identity forever. Please add it to a password manager or write it down and store it somewhere safe. See [Understanding Mailchain Authentication](/user/guides/understanding-mailchain-authentication) for more information.
+    :::caution
 
-1. Take a moment to expand the 'Show advanced options' section and store your seed phrase.
+    You cannot reset your Mailchain password and if you lose it, you will need to restore your Mailchain identity using your Secret Recovery Phrase.
 
-    > ⚠️ Please add your seed phrase to a password manager or write it down and store it somewhere safe. Losing this will probably mean you lose access to your Mailchain identity forever, so please store it somewhere safe.
+    Please add your username and password to a password manager or write it down and store it somewhere safe. See [Understanding Mailchain Authentication](/user/guides/understanding-mailchain-authentication) for more information.
+
+    :::
+
+1. Take a moment to expand the 'Show advanced options' section and store your Secret Recovery Phrase.
+
+    :::tip
+
+    Please add your Secret Recovery Phrase to a password manager or write it down and store it somewhere safe. Losing this could mean you lose access to your Mailchain identity forever, so please store it somewhere safe.
+
+    :::
 
 1. Check the checkbox, assuming you have stored your password safely.
 
@@ -26,9 +40,11 @@ sidebar_position: 2
 
 1. Click 'Continue'.
 
-You now have access to your Mailchain inbox. Now you can [send a message...](./3-send-a-mailchain-message.md)
+1. Next, you will be asked if you would like to download your Secret Recovery Phrase. If you did not follow previous warnings to write down and store the phrase, please ensure you select 'Download' and store the file securely so that others do not have access to it. Otherwise you can skip this step.
+
+You now have access to your Mailchain inbox can either [register an existing blockchain wallet](/user/guides/understanding-connecting-wallets.md) or [send a message.](./3-send-a-mailchain-message.md)
 
 ## Reserved Names
 
-Mailchain reserved some usernames under 5 characters long, and some web3 brand names.
-If you would like to claim one of these, please [raise a ticket here](https://discord.gg/dS45WHwYEn).
+Mailchain reserved some usernames for known web3 projects and names under 5 characters.
+Please see [Reserved Usernames](/user/guides/understanding-reserved-usernames.md) for more information.

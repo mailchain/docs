@@ -1,5 +1,5 @@
 ---
-title: 'Article: Authentication In Mailchain'
+title: 'Authentication In Mailchain'
 slug: './understanding-mailchain-authentication'
 sidebar_position: 101
 ---
@@ -10,27 +10,33 @@ Your Mailchain account is your new identity.
 
 You can use it for messaging other Mailchain users or any blockchain addresses. Your identity is yours. Nobody, not even Mailchain has access to it. When you create a Mailchain account, two things happen:
 
-1. The Mailchain username that you choose is registered to your identity (which is linked to your [Seed Phrase](#your-seed-phrase)).
+1. The Mailchain username that you choose is registered to your identity (which is linked to your [Secret Recovery Phrase](#your-secret-recovery-phrase)).
 1. You create a [safe space](#your-safe-space) to keep your messages, registered addresses, labels, and other application data.
 
-## Your Seed Phrase
+## Your Secret Recovery Phrase
 
-Your Seed Phrase is a collection of words that can be used to access your identity. There is no way to recover this if you lose it. Store a copy it somewhere safe (for example a password manager or written down and locked away).
+Your _Secret Recovery Phrase_ is a collection of words that can be used to access your Mailchain identity.
+
+If you lose this, you may not be able to recover your account (see _"What happens if I forget or lose my Secret Recovery Phrase?"_ below). Store a copy of it somewhere safe (for example a password manager or written down and locked away).
 
 ## Your Safe Space
 
-All your data is encrypted with a key derived from your password. This password never leaves your browser. It should be a very strong password or passphrase. You should store a copy it somewhere safe (for example a password manager or written down and locked away).
+Your data is encrypted with a key derived from your Secret Recovery Phrase. This key never leaves your browser unencrypted. Your password is used to encrypt this key, which is stored on Mailchain's server. When you choose a password, it should be a very strong password or passphrase. You should store a copy of it somewhere safe (for example a password manager or written down and locked away).
 
 ## Important considerations
 
-### What happens if I forget my seed phrase for my identity?
+### What happens if I forget or lose my password?
 
-If you forget your seed phrase, you will no longer have access to your mailchain identity.
+If you forget or lose your password, you can recover your account using your Secret Recovery Phrase.
 
-You may still be able to recover your account if you have your Mailchain username and password. If not, you will need to register as a new user and re-register any addresses and re-create any labels.
+### What happens if I forget or lose my Secret Recovery Phrase?
 
-### What happens if I forget my password?
+If you forget or lose your Secret Recovery Phrase, you can recover your account if you know your Mailchain username and password.
 
-If you forget your password, you will no longer have access to your labels, registered addresses folders, historic messages, and other application data.
+### What happens if I forget my Secret Recovery Phrase and my password?
 
-To recover your account, you will need to log into Mailchain using your seed phrase, then re-register any addresses and re-create any labels.
+If you forget your Secret Recovery Phrase and your password, your account will be inaccessible.
+
+### Will my data be accessible after I have recovered my account?
+
+When you log in to Mailchain with your Secret Recovery Phrase or username and password combination, your messages, registered wallets, settings, etc. will be accessible to you.
