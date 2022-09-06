@@ -57,10 +57,11 @@ const config = {
 					src: 'img/logo.svg',
 				},
 				items: [
-					{ to: 'welcome-to-mailchain', label: 'Home', position: 'left' },
+					{ to: 'welcome-to-mailchain', label: 'Docs For Users', position: 'left' },
 					{ to: 'developer', label: 'Developer Docs', position: 'left' },
 					{ to: 'user/guides', label: 'Guides & Tutorials', position: 'left' },
 					{ to: 'user/faqs', label: 'FAQs', position: 'left' },
+					{ to: 'getting-help', label: 'Help & Support', position: 'left' },
 					{
 						href: 'https://mailchain.com/',
 						label: 'Mailchain',

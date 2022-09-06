@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # How To Send Mailchain Messages
 
-1. Log into your Mailchain account. (_Follow this guide to [create an account](./2-create-a-mailchain-account.md)_)
+1. Log into your Mailchain account. (_Follow this guide to [create an account](./create-a-mailchain-account)_)
 
 1. Click 'Compose' in the sidebar, and fill out the following fields:
 

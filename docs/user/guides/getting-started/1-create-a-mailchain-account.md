@@ -20,7 +20,7 @@ sidebar_position: 2
 
     You cannot reset your Mailchain password and if you lose it, you will need to restore your Mailchain identity using your Secret Recovery Phrase.
 
-    Please add your username and password to a password manager or write it down and store it somewhere safe. See [Understanding Mailchain Authentication](/user/guides/understanding-mailchain-authentication) for more information.
+    Please add your username and password to a password manager or write it down and store it somewhere safe. See [Understanding Mailchain Authentication](/user/concepts/understanding-mailchain-authentication) for more information.
 
     :::
 
@@ -42,9 +42,9 @@ sidebar_position: 2
 
 1. Next, you will be asked if you would like to download your Secret Recovery Phrase. If you did not follow previous warnings to write down and store the phrase, please ensure you select 'Download' and store the file securely so that others do not have access to it. Otherwise you can skip this step.
 
-You now have access to your Mailchain inbox can either [register an existing blockchain wallet](/user/guides/understanding-connecting-wallets.md) or [send a message.](./3-send-a-mailchain-message.md)
+You now have access to your Mailchain inbox can either [register an existing blockchain wallet](/user/concepts/understanding-connecting-wallets.md) or [send a message.](./3-send-a-mailchain-message.md)
 
 ## Reserved Names
 
 Mailchain reserved some usernames for known web3 projects and names under 5 characters.
-Please see [Reserved Usernames](/user/guides/understanding-reserved-usernames.md) for more information.
+Please see [Reserved Usernames](/user/concepts/understanding-reserved-usernames.md) for more information.

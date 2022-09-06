@@ -5,9 +5,9 @@ sidebar_position: 4
 
 # How To Read Mailchain Messages
 
-1. Log into your Mailchain account. (_Follow this guide to [create an account](./2-create-a-mailchain-account.md)_)
+1. Log into your Mailchain account (or follow this guide to [create an account](./create-a-mailchain-account)).
 
-1. If you have not yet [connected a wallet address](/user/guides/understanding-connecting-wallets), click 'Inbox' to view your messages.
+1. If you have not yet [connected a wallet address](/user/concepts/understanding-connecting-wallets), click 'Inbox' to view your messages.
 
     If you have registered wallet addresses, you can view all your messages in 'All Inboxes'. To view the messages sent to a specific address select the corresponding inbox.
 
