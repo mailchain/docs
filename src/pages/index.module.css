@@ -8,11 +8,15 @@
 	text-align: center;
 	position: relative;
 	overflow: hidden;
+	background: radial-gradient(90.28% 246.76% at 73.47% 35.25%, #f87247 0%, #274ff5 100%) !important;
+	margin: 0 20px;
+	border-radius: 20px;
 }
 
 @media screen and (max-width: 996px) {
 	.heroBanner {
 		padding: 2rem;
+		margin: 0 5px;
 	}
 }
 
