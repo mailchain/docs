@@ -40,3 +40,7 @@ If you forget your Secret Recovery Phrase and your password, your account will b
 ### Will my data be accessible after I have recovered my account?
 
 When you log in to Mailchain with your Secret Recovery Phrase or username and password combination, your messages, registered wallets, settings, etc. will be accessible to you.
+
+### What should I do if I suspect my Secret Recovery Phrase or username and password combination have been compromised?
+
+Any user who suspects their Secret Recovery Phrase or username and password combination has been compromised should create a new account and migrate their blockchain addresses by re-registering them with the new account. Any new messages will now use the messaging keys for the new account.
