@@ -5,6 +5,10 @@ sidebar_position: 2
 
 # How To Connect & Register A Wallet
 
+<video controls width="100%" poster="https://github.com/mailchain/video-tutorials/blob/main/posters/registering_a_wallet.png?raw=true">
+    <source src="https://github.com/mailchain/video-tutorials/blob/main/videos/registering_a_wallet.mp4?raw=true" />
+</video>
+
 If you have an existing blockchain wallet, you can register the wallet to receive messages sent to that address. Visit [connecting and registering wallets](/user/concepts/understanding-connecting-wallets) for more information.
 
 Follow these steps to connect and register an existing blockchain wallet address:

@@ -5,6 +5,10 @@ sidebar_position: 2
 
 # How To Create A Mailchain Account
 
+<video controls width="100%" poster="https://github.com/mailchain/video-tutorials/blob/main/posters/create_a_mailchain_account.png?raw=true">
+    <source src="https://github.com/mailchain/video-tutorials/blob/main/videos/create_a_mailchain_account.mp4?raw=true" />
+</video>
+
 1. To create a Mailchain account, head to https://app.mailchain.com/register
 1. Fill in a username
 

@@ -5,6 +5,10 @@ sidebar_position: 3
 
 # How To Send Mailchain Messages
 
+<video controls width="100%" poster="https://github.com/mailchain/video-tutorials/blob/main/posters/send_and_receive_a_message.png?raw=true">
+    <source src="https://github.com/mailchain/video-tutorials/blob/main/videos/send_and_receive_a_message.mp4?raw=true" />
+</video>
+
 1. Log into your Mailchain account. (_Follow this guide to [create an account](./create-a-mailchain-account)_)
 
 1. Click 'Compose' in the sidebar, and fill out the following fields:

@@ -3,6 +3,10 @@ title: Read A Mailchain Message
 sidebar_position: 4
 ---
 
+<video controls width="100%" poster="https://github.com/mailchain/video-tutorials/blob/main/posters/send_and_receive_a_message.png?raw=true">
+    <source src="https://github.com/mailchain/video-tutorials/blob/main/videos/send_and_receive_a_message.mp4?raw=true" />
+</video>
+
 # How To Read Mailchain Messages
 
 1. Log into your Mailchain account (or follow this guide to [create an account](./create-a-mailchain-account)).
