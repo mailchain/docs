@@ -25,3 +25,11 @@
 	align-items: center;
 	justify-content: center;
 }
+
+h1 {
+	font-size: 36px;
+}
+
+h2 {
+	font-size: 30px;
+}

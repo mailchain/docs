@@ -93,6 +93,12 @@ const sidebars = {
 			items: ['developer/guides/authenticate', 'developer/guides/send'],
 			// items: ['developer/guides/authenticate', 'developer/guides/send', 'developer/guides/register-address'],
 		},
+		{
+			type: 'category',
+			label: 'Other Resources',
+			collapsed: false,
+			items: ['developer/resources/cla'],
+		},
 	],
 };
 
