@@ -51,7 +51,7 @@ Businesses may want to run their own infrastructure to control how and where mes
 
 ### What is a Secret Recovery Phrase?
 
-A Secret Recovery Phrase, otherwise known as a mnemonic "Secret Recovery Phrase" is used to mathematically derive all the messaging keys, private keys, signatures and other secrets for your account.
+A Secret Recovery Phrase, sometimes known as a "mnemonic seed phrase" is used to mathematically derive all the messaging keys, private keys, signatures and other secrets for your account.
 
 It should never be shared with anyone because doing so would give full, irrevocable access to your account. A Secret Recovery Phrase cannot be changed or recovered.
 

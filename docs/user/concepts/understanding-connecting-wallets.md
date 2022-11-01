@@ -34,4 +34,4 @@ Alice never had to enter any sensitive information to Mailchain, and she retains
 You can find more information on registering and removing wallets here:
 
 -   [How to register a wallet](/user/guides/getting-started/register-a-wallet)
--   [How to remove a wallet](/user/guides/miscellaneous/remove-registered-address)
+-   [How to remove a wallet](/user/guides/settings/remove-registered-address)
