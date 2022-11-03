@@ -95,6 +95,12 @@ const sidebars = {
 		},
 		{
 			type: 'category',
+			label: 'Tutorials',
+			collapsed: false,
+			items: ['developer/tutorials/send-via-api'],
+		},
+		{
+			type: 'category',
 			label: 'Other Resources',
 			collapsed: false,
 			items: ['developer/resources/cla'],
