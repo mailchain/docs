@@ -107,7 +107,7 @@ npm installed Mailchain SDK and added it as dependency to your project. You can 
 // ...
 "dependencies": {
     // highlight-next-line
-    "@mailchain/sdk": "^0.7.5",
+    "@mailchain/sdk": "^0.9.0",
     "bcrypt": "^5.0.1",
     "class-transformer": "^0.5.1",
 // ...
