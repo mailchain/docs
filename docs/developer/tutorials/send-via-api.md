@@ -2,11 +2,11 @@
 title: 'Send mail via an API'
 ---
 
-At the end of this tutorial you will have built an Express App, that exposes and API you can use to send messages with Mailchain. Your app will use the [Mailchain SDK](https://www.npmjs.com/package/@mailchain/sdk) that handles signatures, encryption and sending the message. In most cases you would add a route to an existing Express App, but for this tutorial you'll create a new app.
+At the end of this tutorial, you will have built an Express App, that exposes an API you can use to send messages with Mailchain. Your app will use the [Mailchain SDK](https://www.npmjs.com/package/@mailchain/sdk) that handles signatures, encryption, and sending the message. In most cases, you would add a route to an existing Express App, but for this tutorial, you'll create a new app.
 
 ## Prerequisites
 
-To complete this tutorial, you will need to:
+To complete this tutorial, you need to first:
 
 1. Download and install [NodeJS](https://nodejs.org/en/download/).
 1. Install [npx](https://www.npmjs.com/package/npx) by running `npm install -g npx`.
@@ -16,7 +16,7 @@ To complete this tutorial, you will need to:
 
 ## Step 1 - New API server
 
-You will create an new [Express](https://expressjs.com) app that exposes and API, the simplest way to do that is with a tool that creates an Express App structure. There are various express generators, for this tutorial use [typescript-express-starter](https://www.npmjs.com/package/typescript-express-starter).
+You'll create a new [Express](https://expressjs.com) app that exposes an API, the simplest way to do that is with a generator that creates an Express App structure. There are various express generators, for this tutorial you'll use [typescript-express-starter](https://www.npmjs.com/package/typescript-express-starter).
 
 To begin, open a terminal window on your computer and run:
 
@@ -28,11 +28,11 @@ npx typescript-express-starter@9.2.0 mailchain-send-api
 
 `typescript-express-starter` does change from time to time, so using `typescript-express-starter@9.2.0` guarantees this tutorial completes successfully.
 
-If you get a message similar to below, likely it because its the first time using npx to run express generator, or this specific version. Press `y` to continue, you will only need to do this once.
+If you get a message similar to below, likely it because it's the first time using npx to run express generator, or this specific version. Press `y` to continue, you'll only need to do this once.
 
 ```
 Need to install the following packages:
-  typescript-express-starter@9.2.0
+ typescript-express-starter@9.2.0
 Ok to proceed? (y)
 ```
 
@@ -41,10 +41,10 @@ Ok to proceed? (y)
 `typescript-express-starter` will ask you for some details:
 
 1. Accept the `default` template, by pressing `enter`.
-1. Press `n` when asked to update to latest packages, this guarantees this tutorial completes successfully.
+1. Press `n` when asked to update to the latest packages, this guarantees this tutorial completes successfully.
 1. Press `y` when asked to `removed duplicate packages at npm`.
 
-`typescript-express-starter` can take a while to setup a new project as it's installing npm packages. Once completed you will get an a message confirming it completed successfully:
+`typescript-express-starter` can take a while to create a new project as it's installing npm packages. Once completed `typescript-express-starter` will confirm it's status:
 
 ```
 ? Please select the template you want default
@@ -57,7 +57,7 @@ Ok to proceed? (y)
 ✔ Complete setup project
 ```
 
-Your Express App is now created. Open `mailchain-send-api` in your favorite code editor. You'll see it contains example services, controllers, routes, etc. Later you will extend this functionality.
+Your Express App is now created. Open `mailchain-send-api` in your favorite code editor. You'll see it contains example services, controllers, routes, etc. Later you'll extend this functionality.
 
 Check you can start your `mailchain-send-api` app in development mode by running:
 
@@ -65,7 +65,7 @@ Check you can start your `mailchain-send-api` app in development mode by running
 cd mailchain-send-api && npm run dev
 ```
 
-The output should looks like:
+The output should look like:
 
 ```
 [nodemon] 2.0.20
@@ -91,7 +91,7 @@ Mailchain SDK is the easiest way to use Mailchain, it deals with all of the encr
 
 ### Install
 
-To install the Mailchain SDK you need to run an `npm` command in the base directory of your project `mailchain-send-api`. If you are following from Step 1, you should already be in this folder. Otherwise, open up a terminal window and navigate to your `mailchain-send-api` folder.
+To install the Mailchain SDK you need to run an `npm` command in the base directory of your project `mailchain-send-api`. If you are following Step 1, you should already be in this folder. Otherwise, open up a terminal window and navigate to your `mailchain-send-api` folder.
 
 Install Mailchain SDK using `npm`:
 
@@ -101,15 +101,15 @@ npm install --save @mailchain/sdk
 
 :::note
 
-npm installed Mailchain SDK and added it as dependency to your project. You can see this change by opening `package.json`, you will find an entry for `@mailchain/sdk`. This tells package the package manager that `@mailchain/sdk` is a dependency and should be installed along other dependencies.
+npm installed Mailchain SDK and added it as dependency to your project. You can see this change by opening `package.json`, you'll find an entry for `@mailchain/sdk`. This tells package the package manager that `@mailchain/sdk` is a dependency and should be installed with other dependencies.
 
 ```json title="package.json"
 // ...
 "dependencies": {
-    // highlight-next-line
-    "@mailchain/sdk": "^0.9.0",
-    "bcrypt": "^5.0.1",
-    "class-transformer": "^0.5.1",
+ // highlight-next-line
+ "@mailchain/sdk": "^0.9.0",
+ "bcrypt": "^5.0.1",
+ "class-transformer": "^0.5.1",
 // ...
 ```
 
@@ -119,7 +119,7 @@ You have not installed the Mailchain SDK and are ready to configure it.
 
 ### Secret Recovery Phrase
 
-A Mailchain account is web3 identity, this means that the account is created via a private key that the user owns and controls. In Mailchain's case the Secret Recovery Phrase creates the private key.
+A Mailchain account is web3 identity, this means that the account is created via a private key that the user owns and controls. In Mailchain's case, the Secret Recovery Phrase creates the private key.
 
 :::warning
 
@@ -127,7 +127,7 @@ Whoever has the Secret Recovery Phrase controls the account. You should treat Se
 
 :::
 
-We suggest for development and testing that you use a Secret Recovery Phrase from a test account. Go ahead and create a [new account](https://app.mailchain.com/register) if you don't already have one. Your Secret Recovery Phrase is available to view or download when you register your account. To get your Secret Recovery Phrase afterwards go to the [settings page](https://app.mailchain.com/settings) and look for the Secret Recovery Phrase section.
+We suggest for development and testing that you use a Secret Recovery Phrase from a test account. Go ahead and create a [new account](https://app.mailchain.com/register) if you don't already have one. Your Secret Recovery Phrase is available to view or download when you register your account. To get your Secret Recovery Phrase afterward go to the [settings page](https://app.mailchain.com/settings) and look for the Secret Recovery Phrase section.
 
 ### Configure
 
@@ -137,7 +137,7 @@ Environment variables let you set values that are passed to your server-side cod
 
 :::warning
 
-Care must be taken to avoid storing environment variables in source control. For this tutorial there is a `.gitignore` file. This tells git to ignores each of the existing environment files. This prevents changes to the existing environment files being stored in git. Make sure you add new environments to `.gitignore`.
+Care must be taken to avoid storing environment variables in source control. For this tutorial, there is a `.gitignore` file. This tells git to ignore each of the existing environment files. This prevents changes to the existing environment files from being stored in git. Make sure you add new environments to `.gitignore`.
 
 :::
 
@@ -166,7 +166,7 @@ CREDENTIALS = true
 SECRET_RECOVERY_PHRASE=enter your secret phrase here
 ```
 
-In your terminal window run `npm run dev` from the root directory of your `mailchain-send-api` app. You should get a response similar to below:
+In your terminal window run, `npm run dev` from the root directory of your `mailchain-send-api` app. You should get a response similar to below:
 
 ```
 info: =================================
@@ -179,15 +179,15 @@ This means is successfully started and listening on port 3000.
 
 :::note
 
-[nodemon](https://www.npmjs.com/package/nodemon) automatically restarts your API when file changes are detected. However it doesn't pickup changes to `.env.development.local` so you need to restart the server manually by pressing `ctrl` + `c` and running `npm run dev`. You will only need to do this when changing the `SECRET_RECOVERY_PHRASE` setting.
+[nodemon](https://www.npmjs.com/package/nodemon) automatically restarts your API when file changes are detected. However, it doesn't pick up changes to `.env.development.local` so you need to restart the server manually by pressing `ctrl` + `c` and running `npm run dev`. You'll only need to restart the app when changing the `SECRET_RECOVERY_PHRASE` setting.
 
 :::
 
 ---
 
-## Step 3 - Create a service for send mail
+## Step 3 - Create a service for sending mail
 
-Express uses services to perform tasks, in this case send a mail using the Mailchain SDK. The service will send messages using the account based on the SECRET_RECOVERY_PHRASE environment variable.
+Express uses services to perform tasks, in this case sending mail using the Mailchain SDK. The service will send messages using the account based on the SECRET_RECOVERY_PHRASE environment variable.
 
 `MailService` will perform the following actions:
 
@@ -202,7 +202,7 @@ import { Mailchain, SendMailParams, SendMailResult } from '@mailchain/sdk';
 
 class MailService {
 	async send(params: SendMailParams): Promise<SendMailResult> {
-		// use environment variable to provide your secret recovery phrase
+		// use the environment variable to provide your secret recovery phrase
 		const secretRecoveryPhrase = process.env.SECRET_RECOVERY_PHRASE;
 
 		if (secretRecoveryPhrase == null) {
@@ -229,7 +229,7 @@ Remember to save `mail.service.ts` after pasting the code.
 
 ## Step 4 - Create mail controller
 
-Controllers manage the incoming HTTP requests, and send the necessary data to the correct service.
+Controllers manage the incoming HTTP requests and send the necessary data to the correct service.
 
 `MailController` will perform the following actions:
 
@@ -267,7 +267,7 @@ RESTful API's are designed around paths and methods, in Express these are create
 
 ### Add mail route
 
-The API is called by clients using HTTP. The HTTP interface is modelled as a RESTful API making it familiar for developers and easy to discover. You will create an additional route that accepts mail parameters. The route will use the `sendMail` function you created in Step 3 above.
+The API is called by clients using HTTP. The HTTP interface is modeled as a RESTful API making it familiar for developers and easy to discover. You'll create an additional route that accepts mail parameters. The route will use the `sendMail` function you created in Step 3 above.
 
 `MailRoute` performs the following actions:
 
@@ -315,10 +315,7 @@ In your editor open the existing `server.ts` file in the `src/` folder. Replace 
 ```typescript title="src/server.ts"
 import App from '@/app';
 import IndexRoute from '@routes/index.route';
-import validateEnv from '@utils/validateEnv';
 import MailRoute from './routes/mail.route';
-
-validateEnv();
 
 const app = new App([new IndexRoute(), new MailRoute()]);
 
@@ -345,8 +342,8 @@ You can now test your API by sending a message. Open a new terminal window, and 
 
 ```bash
 curl http://localhost:3000/send -i -X POST \
-  -H 'Content-Type: application/json' \
-  -d '{"to": ["0xbb56FbD7A2caC3e4C17936027102344127b7a112@ethereum.mailchain.com"], "subject": "Sent via curl", "content": {"text": "Hello Mailchain 👋", "html": "<p>Hello Mailchain 👋</p>"}}'
+ -H 'Content-Type: application/json' \
+ -d '{"to": ["0xbb56FbD7A2caC3e4C17936027102344127b7a112@ethereum.mailchain.com"], "subject": "Sent via curl", "content": {"text": "Hello Mailchain 👋", "html": "<p>Hello Mailchain 👋</p>"}}'
 ```
 
 After a few seconds, you should get a response that looks a bit like this:
@@ -364,12 +361,12 @@ Access-Control-Allow-Credentials: true
 
 Want to try more? Edit the curl command above and give these go:
 
--   Send a message to your Mailchain account. Change the `to` address `"<username>@mailchain.com"`. Check your inbox and you will see your message. ✅
--   Want to send to an Ethereum address? Register your Ethereum address in the Mailchain application. Then send a message to `<ethereum-address>@ethereum.mailchain.com`. ✅
+-   Send a message to your Mailchain account. Change the `to` address `"<username>@mailchain.com"`. Check your inbox and you'll see your message. ✅
+-   Do you want to send mail to an Ethereum address? Register your Ethereum address in the Mailchain application. Then send a message to `<ethereum-address>@ethereum.mailchain.com`. ✅
 
 :::note
 
-I get a status `200 OK` but I can't see the message in the sent folder. 200 means the API responded correctly, the message should of been sent. Make sure you are logged in with your development/testing account and try refreshing the sent folder.
+I get status `200 OK` but I can't see the message in the sent folder. 200 means the API responded correctly, the message should have been sent. Make sure you are logged in with your development/testing account and try refreshing the sent folder.
 
 :::
 
