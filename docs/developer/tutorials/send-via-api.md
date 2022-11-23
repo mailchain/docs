@@ -4,6 +4,8 @@ title: 'Send mail via an API'
 
 At the end of this tutorial, you will have built an Express App, that exposes an API you can use to send messages with Mailchain. Your app will use the [Mailchain SDK](https://www.npmjs.com/package/@mailchain/sdk) that handles signatures, encryption, and sending the message. In most cases, you would add a route to an existing Express App, but for this tutorial, you'll create a new app.
 
+You can find the final code and working example in [mailchain/examples-js](https://github.com/mailchain/examples-js) on GitHub.
+
 ## Prerequisites
 
 To complete this tutorial, you need to first:
