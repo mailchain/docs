@@ -56,11 +56,11 @@ const sidebars = {
 				},
 				{
 					type: 'category',
-					label: 'Name Service Guides',
+					label: 'Web3 Domain Names',
 					collapsed: false,
 					link: {
 						type: 'generated-index',
-						title: 'Name Service Guides',
+						title: 'Web3 Domain Name Guides',
 						slug: 'user/guides/name-services',
 						keywords: ['guides', 'name service'],
 					},
@@ -77,6 +77,20 @@ const sidebars = {
 							items: [
 								'user/guides/name-services/ens/ens-getting-started',
 								'user/guides/name-services/ens/ens-faqs',
+							],
+						},
+						{
+							type: 'category',
+							label: 'Unstoppable Domains',
+							collapsed: true,
+							link: {
+								type: 'generated-index',
+								slug: 'user/guides/name-services/unstoppable-domains/',
+								keywords: ['guides', 'name service'],
+							},
+							items: [
+								'user/guides/name-services/unstoppable-domains/unstoppable-domains-getting-started',
+								'user/guides/name-services/unstoppable-domains/unstoppable-domains-faqs',
 							],
 						},
 					],

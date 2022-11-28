@@ -13,29 +13,29 @@ If you have an existing blockchain wallet, you can register the wallet to receiv
 
 Follow these steps to connect and register an existing blockchain wallet address:
 
-1. Click a button to open the connect wallet modal:
+1.  Click a button to open the connect wallet modal:
 
     ![](./img-register-a-wallet/connect-buttons.png)
 
-1. Select a wallet provider (e.g. Metamask), then click 'Connect'
+1.  Select a wallet provider (e.g. Metamask), then click 'Connect'
 
     ![](./img-register-a-wallet/connect-wallet.png)
 
-1. Choose the address to connect, then click Next.
+1.  Choose the address to connect, then click Next.
 
     ![](./img-register-a-wallet/connect-address.png)
 
-1. Click 'Connect' to confirm Mailchain should be able to read your address.
+1.  Click 'Connect' to confirm Mailchain should be able to read your address.
 
     ![](./img-register-a-wallet/connect-address-confirm.png)
 
     The address is now connected, but we need to register it in Mailchain. To do this:
 
-1. Click 'Verify Address'
+1.  Click 'Verify Address'
 
     ![](./img-register-a-wallet/verify-address-button.png)
 
-1. A 'Signature Request' will appear in your wallet. It contains the following text:
+1.  A 'Signature Request' will appear in your wallet. It contains the following text:
 
     > Message: <br />
     > Welcome to Mailchain! <br />
@@ -56,11 +56,23 @@ Follow these steps to connect and register an existing blockchain wallet address
 
     Your wallet is now verified.
 
-1. By default, Mailchain is able to receive messages for your existing blockchain wallet address before you sign up. Click 'Synchronize' to get these messages, or click 'Skip' to synchronize later.
+1.  Mailchain will check if you have any Web3 domain name services (e.g. ENS or Unstoppable Domains).<br/>For more information on configuring domain name services, please see [Web3 Domain Name Guides](/user/guides/name-services/).
+
+    ![](./img-register-a-wallet/name-sync.png)
+
+1.  You can optionally label your address to give it a friendly name and make your Inbox folders easier to manage.
+
+    ![](./img-register-a-wallet/address-label.png)
+
+1.  Click 'Apply' to save your changes.
+
+    ![](./img-register-a-wallet/apply-label.png)
+
+1.  By default, Mailchain is able to receive messages for your existing blockchain wallet address before you sign up. Click 'Synchronize' to get these messages, or click 'Skip' to synchronize later.
 
     ![](./img-register-a-wallet/wallet-sync.png)
 
-1. You can now click 'Done' to disconnect your wallet and close the modal, or choose to register another address.
+1.  You can now click 'Done' to disconnect your wallet and close the modal, or choose to register another address.
 
     ![](./img-register-a-wallet/wallet-verified.png)
 

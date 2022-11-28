@@ -34,7 +34,7 @@ When your ENS names expires, Mailchain messages will no longer be sent to the ad
 1. Check you are registering the intended wallet address
 2. Check your ENS Primary Resolver is configured to resolve your address in https://app.ens.domains
 
-### What happens if I make a change where my ENS address resolution?
+### What happens if I make a change where my ENS address resolves?
 
 Mailchain will always resolve the underlying name from the ENS contracts so it will reflect the latest changes returned by the resolver.
 
