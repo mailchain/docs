@@ -141,7 +141,7 @@ const sidebars = {
 			type: 'category',
 			label: 'Tutorials',
 			collapsed: false,
-			items: ['developer/tutorials/send-via-api'],
+			items: ['developer/tutorials/send-via-api', 'developer/tutorials/authenticated-webhook'],
 		},
 		{
 			type: 'category',

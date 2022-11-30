@@ -109,7 +109,7 @@ npm installed Mailchain SDK and added it as dependency to your project. You can 
 // ...
 "dependencies": {
  // highlight-next-line
- "@mailchain/sdk": "^0.9.0",
+ "@mailchain/sdk": "^0.9.3",
  "bcrypt": "^5.0.1",
  "class-transformer": "^0.5.1",
 // ...
@@ -153,17 +153,6 @@ After your `.env.development.local` should look similar to this:
 # PORT
 PORT = 3000
 
-# TOKEN
-SECRET_KEY = secretKey
-
-# LOG
-LOG_FORMAT = dev
-LOG_DIR = ../logs
-
-# CORS
-ORIGIN = *
-CREDENTIALS = true
-
 // highlight-next-line
 SECRET_RECOVERY_PHRASE=enter your secret phrase here
 ```
@@ -200,8 +189,6 @@ Express uses services to perform tasks, in this case sending mail using the Mail
 Inside `src/services/` create `mail.service.ts` and copy the code below into it.
 
 ```typescript title="src/services/mail.service.ts"
-import { Mailchain, SendMailParams, SendMailResult } from '@mailchain/sdk';
-
 class MailService {
 	async send(params: SendMailParams): Promise<SendMailResult> {
 		// use the environment variable to provide your secret recovery phrase
@@ -285,16 +272,16 @@ import { Routes } from '@interfaces/routes.interface';
 import MailController from '@/controllers/mail.controller';
 
 class MailRoute implements Routes {
-	public path = '/send';
 	public router = Router();
-	private mailController: MailController;
+	private readonly _mailController: MailController;
+
 	constructor() {
-		this.mailController = new MailController();
+		this._mailController = new MailController();
 		this.initializeRoutes();
 	}
 
 	private initializeRoutes() {
-		this.router.post(`${this.path}`, this.mailController.postMail);
+		this.router.post('/send', this._mailController.postMail);
 	}
 }
 
@@ -344,7 +331,7 @@ You can now test your API by sending a message. Open a new terminal window, and 
 
 ```bash
 curl http://localhost:3000/send -i -X POST \
- -H 'Content-Type: application/json' \
+ --header 'Content-Type: application/json' \
  -d '{"to": ["0xbb56FbD7A2caC3e4C17936027102344127b7a112@ethereum.mailchain.com"], "subject": "Sent via curl", "content": {"text": "Hello Mailchain 👋", "html": "<p>Hello Mailchain 👋</p>"}}'
 ```
 
@@ -361,7 +348,7 @@ Access-Control-Allow-Credentials: true
 
 `200 OK` means that it worked. 200 is the HTTP response code for success. You can check the message has been sent by looking in the [sent folder](https://app.mailchain.com/sent) in the Mailchain web app. Awesome you have sent a Mailchain message via your API.
 
-Want to try more? Edit the curl command above and give these go:
+Want to try more? Edit the curl command above and try to:
 
 -   Send a message to your Mailchain account. Change the `to` address `"<username>@mailchain.com"`. Check your inbox and you'll see your message. ✅
 -   Do you want to send mail to an Ethereum address? Register your Ethereum address in the Mailchain application. Then send a message to `<ethereum-address>@ethereum.mailchain.com`. ✅
@@ -374,4 +361,8 @@ I get status `200 OK` but I can't see the message in the sent folder. 200 means 
 
 ## Conclusion
 
-Congratulations 🎉 you have built an App that exposes an API. You can use this API to send messages from other services and apps, for example notifying your product's users.
+Congratulations 🎉 you've built an App that exposes an API. You can use this API to send messages from other services and apps, for example notifying your product's users.
+
+## What's next?
+
+Authenticate requests before sending. Extend this code by following the [authenticated webhook guide](./authenticated-webhook.md)
