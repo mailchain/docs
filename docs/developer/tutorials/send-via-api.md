@@ -117,7 +117,7 @@ npm installed Mailchain SDK and added it as dependency to your project. You can 
 
 :::
 
-You have not installed the Mailchain SDK and are ready to configure it.
+You have now installed the Mailchain SDK and are ready to configure it.
 
 ### Secret Recovery Phrase
 
