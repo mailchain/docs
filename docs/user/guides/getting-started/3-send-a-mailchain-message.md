@@ -1,6 +1,7 @@
 ---
 title: Send A Mailchain Message
 sidebar_position: 3
+image: 'img/thumbs/social-square-1.png'
 ---
 
 # How To Send Mailchain Messages

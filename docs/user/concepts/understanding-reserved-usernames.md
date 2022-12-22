@@ -2,6 +2,7 @@
 title: 'Reserved Usernames'
 slug: './understanding-reserved-usernames'
 sidebar_position: 105
+image: 'img/thumbs/social-square-1.png'
 ---
 
 # Introduction

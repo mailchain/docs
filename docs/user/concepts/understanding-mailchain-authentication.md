@@ -2,6 +2,7 @@
 title: 'Authentication In Mailchain'
 slug: './understanding-mailchain-authentication'
 sidebar_position: 101
+image: 'img/thumbs/social-square-1.png'
 ---
 
 # Introduction

@@ -1,6 +1,7 @@
 ---
 title: 'UD FAQs'
 sidebar_position: 4
+image: 'img/thumbs/mailchain-UD-compose.png'
 ---
 
 # Unstoppable Domains FAQs

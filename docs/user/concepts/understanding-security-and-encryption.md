@@ -2,6 +2,7 @@
 title: 'Security & Encryption'
 slug: './understanding-security-and-encryption'
 sidebar_position: 108
+image: 'img/thumbs/social-square-1.png'
 ---
 
 # Introduction

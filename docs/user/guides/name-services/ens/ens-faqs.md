@@ -1,6 +1,7 @@
 ---
 title: 'ENS FAQs'
 sidebar_position: 4
+image: 'img/thumbs/mailchain-mailto-messagetodaos.png'
 ---
 
 # ENS FAQs

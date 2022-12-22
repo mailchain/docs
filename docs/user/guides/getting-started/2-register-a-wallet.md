@@ -1,6 +1,7 @@
 ---
 title: 'Register A Wallet'
 sidebar_position: 2
+image: 'img/thumbs/social-square-1.png'
 ---
 
 # How To Connect & Register A Wallet

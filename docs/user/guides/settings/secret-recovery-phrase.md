@@ -1,6 +1,7 @@
 ---
 title: 'Secret Recovery Phrase: View or Download'
 sidebar_position: 2
+image: 'img/thumbs/social-square-1.png'
 ---
 
 # Secret Recovery Phrase Introduction
@@ -78,7 +79,6 @@ For more information, please see [Mailchain Account Security](/user/faqs#mailcha
 7. When you open the file, you will see your secret recovery phrase.
 
     ![open downloaded file](./img-secret-recovery-phrase/ens3_10.png)
-
 
 :::danger
 

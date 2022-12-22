@@ -2,6 +2,7 @@
 title: 'Connecting & Registering Wallets'
 slug: './understanding-connecting-wallets'
 sidebar_position: 102
+image: 'img/thumbs/social-square-1.png'
 ---
 
 # Introduction

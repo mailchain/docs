@@ -2,6 +2,7 @@
 title: 'Getting Help'
 slug: './getting-help'
 sidebar_position: 101
+image: 'img/thumbs/social-square-1.png'
 ---
 
 # Channels

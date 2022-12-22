@@ -1,6 +1,7 @@
 ---
 title: Read A Mailchain Message
 sidebar_position: 4
+image: 'img/thumbs/social-square-1.png'
 ---
 
 <video controls width="100%" poster="https://github.com/mailchain/video-tutorials/blob/main/posters/send_and_receive_a_message.png?raw=true">

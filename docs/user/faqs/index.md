@@ -1,3 +1,7 @@
+---
+image: 'img/thumbs/social-square-1.png'
+---
+
 # Frequently Asked Questions
 
 ## General

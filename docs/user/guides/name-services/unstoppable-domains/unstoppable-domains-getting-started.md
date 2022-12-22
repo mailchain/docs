@@ -1,6 +1,7 @@
 ---
 title: 'Getting Started with Unstoppable Domains'
 sidebar_position: 2
+image: 'img/thumbs/mailchain-UD-compose.png'
 ---
 
 Mailchain users can use their Unstoppable Domains to send and receive messages. It’s simple to get started…

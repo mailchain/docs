@@ -1,6 +1,7 @@
 ---
 title: 'Remove A Registered Wallet'
 sidebar_position: 4
+image: 'img/thumbs/social-square-1.png'
 ---
 
 # How To Remove A Registered Wallet

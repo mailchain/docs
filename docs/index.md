@@ -1,5 +1,6 @@
 ---
 slug: welcome-to-mailchain
+image: 'img/thumbs/social-square-1.png'
 ---
 
 # Welcome To Mailchain

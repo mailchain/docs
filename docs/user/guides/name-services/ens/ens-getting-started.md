@@ -1,6 +1,7 @@
 ---
 title: 'Getting Started with ENS'
 sidebar_position: 2
+image: 'img/thumbs/mailchain-mailto-messagetodaos.png'
 ---
 
 Mailchain users can use their ENS domain to send and receive messages. It’s simple to get started…

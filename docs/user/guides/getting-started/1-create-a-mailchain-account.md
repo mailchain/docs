@@ -1,6 +1,7 @@
 ---
 title: Create A Mailchain Account
 sidebar_position: 2
+image: 'img/thumbs/social-square-1.png'
 ---
 
 # How To Create A Mailchain Account
