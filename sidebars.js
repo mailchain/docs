@@ -67,6 +67,20 @@ const sidebars = {
 					items: [
 						{
 							type: 'category',
+							label: 'Aurora (.aurora)',
+							collapsed: true,
+							link: {
+								type: 'generated-index',
+								slug: 'user/guides/name-services/aurora/',
+								keywords: ['guides', 'name service'],
+							},
+							items: [
+								'user/guides/name-services/aurora/aurora-getting-started',
+								'user/guides/name-services/aurora/aurora-faqs',
+							],
+						},
+						{
+							type: 'category',
 							label: 'ENS (.eth)',
 							collapsed: true,
 							link: {

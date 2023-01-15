@@ -26,7 +26,7 @@ If you have not yet registered the wallet address with Mailchain, the protocol w
 
 ### What happens if I no longer own my UD name?
 
-If your address is no longer the owner of the UD name, it will not resolve and Mailchain messages will no longer be sent to the address. If someone else registers the address that owns the name in Mailchain, they will be able to receive messages sent to the UD name.
+If your address is no longer the owner of the UD name, it will not resolve and Mailchain messages will no longer be sent to the address. If someone else registers the address that owns the name in Mailchain, they will be able to receive messages sent to the UD name. This will not have any impact on messages already in your inbox.
 
 ### My UD name was not found, what should I check?
 
@@ -47,7 +47,7 @@ Yes, you need to "mint" your Unstoppable Domain to be able to use it with Mailch
 
 Mailchain supports sending and receiving messages for any Unstoppable Domain top-level domain (TLD).
 
-### Does Mailchain Support shorthand addressing for Unstoppable Domains?
+### Does Mailchain support shorthand addressing for Unstoppable Domains?
 
 | TLD         | Fully qualified Mailchain address                            | Shorthand Mailchain address |
 | ----------- | ------------------------------------------------------------ | --------------------------- |

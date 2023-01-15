@@ -1,5 +1,5 @@
 ---
-title: 'Getting Started with Unstoppable Domains'
+title: 'Getting Started With Unstoppable Domains'
 sidebar_position: 2
 image: 'img/thumbs/mailchain-UD-compose.png'
 ---
