@@ -29,6 +29,10 @@ Mailchain acts as your web3 inbox, receiving messages in the context of your ide
 
 Mailchain’s economic model is designed to be sustainable. It provides a "public good" quota of free messages for human users ensuring anyone can have access to secure, private communication at no cost. The model also supports the protocol and its infrastructure providers through message fees for high volume senders. Fees are targeted to be below $0.005.
 
+### Can I send a message to or receive email from a traditional email address?
+
+Not yet. Mailchain is a web3 communication protocol that works with web3 identities (e.g. blockchain wallet addresses and names), guaranteeing end-to-end encryption and verified sender origin. It does not support sending messages to or from traditional email. There is an open feature request here [https://go.mailchain.com/feat-traditional-email](https://go.mailchain.com/feat-traditional-email). We'd love to hear your thoughts on this.
+
 ## Protocol & Decentralization
 
 ### Why has Mailchain developed its own protocol?
