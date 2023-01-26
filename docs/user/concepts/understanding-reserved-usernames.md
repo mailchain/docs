@@ -7,10 +7,13 @@ image: 'img/thumbs/social-square-1.png'
 
 # Introduction
 
-Mailchain reserved some usernames for:
+Protecting Mailchain users is a priority for us. The decision to reserve usernames was taken to increase security and increase the chance in a fair way for community members to create an account with their preferred username. Mailchain usernames are non-transferable. They cannot be sold or traded so there is no benefit for someone to seize a collection of usernames for them to go unused.
 
--   Known web3 projects
--   Names under 5 characters
+Mailchain reserved usernames for:
+
+-   Names under 5 characters (see below for [how to request a name](#how-can-i-request-a-reserved-username))
+-   Known web3 projects (see below for [how to request a name](#how-can-i-request-a-reserved-username))
+-   Administrative and support keywords
 
 :::caution
 
@@ -38,4 +41,4 @@ DO NOT buy or accept a username from anyone. Once you create a Secret Recovery P
 
 ## How can I request a reserved username?
 
-If you would like to claim a reserved username, please [raise a support request](/getting-help) with details of the names you would like to register. If you represent a web3 project please provide details or justification.
+If you would like to claim a reserved username, please [raise a support request](/getting-help) with details of the name you would like to register. If you represent a web3 project please provide details or justification.
