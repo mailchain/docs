@@ -95,6 +95,20 @@ const sidebars = {
 						},
 						{
 							type: 'category',
+							label: 'Freename TLDs & SLDs',
+							collapsed: true,
+							link: {
+								type: 'generated-index',
+								slug: 'user/guides/name-services/freename/',
+								keywords: ['guides', 'name service'],
+							},
+							items: [
+								'user/guides/name-services/freename/freename-getting-started',
+								'user/guides/name-services/freename/freename-faqs',
+							],
+						},
+						{
+							type: 'category',
 							label: 'Unstoppable Domains',
 							collapsed: true,
 							link: {

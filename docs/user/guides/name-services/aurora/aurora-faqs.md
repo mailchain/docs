@@ -43,4 +43,4 @@ If your address is no longer the owner of the .aurora name, it will not resolve 
 
 | TLD     | Fully qualified Mailchain address                     | Shorthand Mailchain address |
 | ------- | ----------------------------------------------------- | --------------------------- |
-| .aurora | _yourname_.aurora<span>@</span>freename.mailchain.com | _yourname_.crypto           |
+| .aurora | _yourname_.aurora<span>@</span>freename.mailchain.com | _yourname_.aurora           |
