@@ -70,7 +70,7 @@ Freename ([https://freename.io](https://freename.io)) is a web3 domain registrar
 
     ![Untitled](../img-freename/freename-7.png)
 
-9. The next step checks for connected name services, including all any Freename names. This example found `epistola.hodl`. If you do not see your name here, you can manually search for it using the search box. If it still cannot be found, please see Freename FAQs >>LINK<<.
+9. The next step checks for connected name services, including all any Freename names. This example found `epistola.hodl`. If you do not see your name here, you can manually search for it using the search box. If it still cannot be found, please see Freename FAQs [_My Freename domain was not found, what should I check?_](freename-faqs.md#my-freename-domain-was-not-found-what-should-i-check).
 
     ![Untitled](../img-freename/freename-8.png)
 
@@ -119,7 +119,7 @@ With Mailchain you can send a Mailchain message from your Freename domain name t
 
 5.  Fill out the rest of the message, then click Send.
     Below, the recipients are:
-    allofweb3.hodl and sendto.moon@freename. To learn more about naming conventions, see >>LINK<<.
+    allofweb3.hodl and sendto.moon@freename. To learn more about naming conventions, see [shorthand addressing with Freename](freename-faqs.md#does-mailchain-support-shorthand-addressing-for-freename).
     ![Untitled](../img-freename/freename-16.png)
 6.  Your message should be successfully sent.
 
