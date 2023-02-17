@@ -169,7 +169,16 @@ const sidebars = {
 			type: 'category',
 			label: 'Tutorials',
 			collapsed: false,
-			items: ['developer/tutorials/send-via-api', 'developer/tutorials/authenticated-webhook'],
+			items: [
+				'developer/tutorials/send-via-api',
+				'developer/tutorials/authenticated-webhook',
+				{
+					type: 'category',
+					label: '3rd Party Integrations',
+					collapsed: false,
+					items: ['developer/tutorials/integrations/send-mail-on-address-activity-alchemy-notify'],
+				},
+			],
 		},
 		{
 			type: 'category',
