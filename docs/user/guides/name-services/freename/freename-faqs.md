@@ -45,7 +45,7 @@ If the Freename domain no longer resolves to your address, Mailchain messages wi
 
 ### Does Mailchain support shorthand addressing for Freename?
 
-| TLD          | Fully qualified Mailchain address                               | Shorthand Mailchain address |
-| ------------ | --------------------------------------------------------------- | --------------------------- |
-| .hodl        | _yourname_.hodl<span>@</span>freename.mailchain.com             | _yourname_.hodl             |
-| _Other TLDs_ | _yourname_._web3domainname_<span>@</span>freename.mailchain.com |                             |
+| TLD          | Fully qualified Mailchain address                               | Shorthand Mailchain address | Name service address                              |
+| ------------ | --------------------------------------------------------------- | --------------------------- | ------------------------------------------------- |
+| .hodl        | _yourname_.hodl<span>@</span>freename.mailchain.com             | _yourname_.hodl             | _yourname_.hodl<span>@</span>freename             |
+| _Other TLDs_ | _yourname_._web3domainname_<span>@</span>freename.mailchain.com |                             | _yourname_._web3domainname_<span>@</span>freename |

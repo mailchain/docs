@@ -152,7 +152,7 @@ const sidebars = {
 			// 	// type: 'generated-index',
 			// },
 			collapsed: false,
-			items: ['developer/installation'],
+			items: ['developer/installation', 'developer/address-formatting'],
 		},
 		{
 			type: 'category',
@@ -176,7 +176,10 @@ const sidebars = {
 					type: 'category',
 					label: '3rd Party Integrations',
 					collapsed: false,
-					items: ['developer/tutorials/integrations/send-mail-on-address-activity-alchemy-notify'],
+					items: [
+						'developer/tutorials/integrations/send-mail-on-address-activity-alchemy-notify',
+						'developer/tutorials/integrations/stytch-magic-link',
+					],
 				},
 			],
 		},

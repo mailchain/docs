@@ -125,3 +125,10 @@ Follow these steps to set up the ENS Primary Resolver for your ENS name:
 You have now set your Primary ENS Name. This will start to appear in Web3 applications you connect to. You can now register the name with Mailchain to start communicating messages
 
 </details>
+
+### Does Mailchain support shorthand addressing for ENS?
+
+| TLD          | Fully qualified Mailchain address                          | Shorthand Mailchain address | Name service address                         |
+| ------------ | ---------------------------------------------------------- | --------------------------- | -------------------------------------------- |
+| .eth         | _yourname_.eth<span>@</span>ens.mailchain.com              | _yourname_.eth              | _yourname_.eth<span>@</span>ens              |
+| _Other TLDs_ | _yourname_._web3domainname_<span>@</span>ens.mailchain.com |                             | _yourname_._web3domainname_<span>@</span>ens |

@@ -41,6 +41,6 @@ If your address is no longer the owner of the .aurora name, it will not resolve 
 
 ### Does Mailchain support shorthand addressing for .aurora?
 
-| TLD     | Fully qualified Mailchain address                     | Shorthand Mailchain address |
-| ------- | ----------------------------------------------------- | --------------------------- |
-| .aurora | _yourname_.aurora<span>@</span>freename.mailchain.com | _yourname_.aurora           |
+| TLD     | Fully qualified Mailchain address                     | Shorthand Mailchain address | Name service address                    |
+| ------- | ----------------------------------------------------- | --------------------------- | --------------------------------------- |
+| .aurora | _yourname_.aurora<span>@</span>freename.mailchain.com | _yourname_.aurora           | _yourname_.aurora<span>@</span>freename |

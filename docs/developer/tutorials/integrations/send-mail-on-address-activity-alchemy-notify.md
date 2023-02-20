@@ -163,14 +163,14 @@ To create our Mailchain message we will extract the `fromAddress` and `toAddress
 
 Next, let's define the `mailSubject` and `mailContent` of the mail that we are going to send out with Mailchain.
 
-Add the following code below the check for test notifications:
+Add the following code below the check for test event:
 
 ```ts
 const webhookEvent = req.body as AlchemyWebhookEvent;
 console.log(`Processing webhook event id: ${webhookEvent.id}`);
 
 if ((webhookEvent.event.eventDetails = '<EVENT_DETAILS>')) {
-	// this is test notification send from Alchemy. Return success.
+	// this is test event send from Alchemy. Return success.
 	return res.send('Alchemy Notify is the best!');
 }
 // highlight-start
