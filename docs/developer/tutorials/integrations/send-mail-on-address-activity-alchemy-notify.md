@@ -1,8 +1,8 @@
 ---
-title: 'Send mail based on address activity via Alchemy Notify API'
+title: 'Alchemy x Mailchain: On-Chain Event Notifications'
 ---
 
-At the end of this tutorial, we will have built a simple Express App that exposes an API to listen for ethereum address activity (e.g. ERC20, ERC721 and ERC1155 transfer events). 
+At the end of this tutorial, we will have built a simple Express App that exposes an API to listen for ethereum address activity (e.g. ERC20, ERC721 and ERC1155 transfer events).
 
 ![Final result image](./img-send-mail-on-address-activity-alchemy-notify/result.png)
 
@@ -29,7 +29,7 @@ git clone https://github.com/alchemyplatform/webhook-examples.git
 cd webhook-examples/node-express
 ```
 
-Now run `yarn` in this directory to install all the dependencies. 
+Now run `yarn` in this directory to install all the dependencies.
 
 :::note
 If you don't have yarn, please check [Yarn Installation instruction](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable).
@@ -124,13 +124,14 @@ async function main(): Promise<void> {
 	app.use(validateAlchemySignature(signingKey));
 
 	// Register handler for Alchemy Notify webhook events
-	// TODO: update to your own webhook path
 	app.post('/webhook-path', (req, res) => {
 		const webhookEvent = req.body as AlchemyWebhookEvent;
-
 		console.log(`Processing webhook event id: ${webhookEvent.id}`);
-		// Be sure to respond with 200 when you successfully process the event
-		res.send('Alchemy Notify is the best!');
+
+		if ((webhookEvent.event.eventDetails = '<EVENT_DETAILS>')) {
+			// this is test notification send from Alchemy. Return success.
+			return res.send('Alchemy Notify is the best!');
+		}
 	});
 
 	// Listen to Alchemy Notify webhook events
@@ -162,10 +163,16 @@ To create our Mailchain message we will extract the `fromAddress` and `toAddress
 
 Next, let's define the `mailSubject` and `mailContent` of the mail that we are going to send out with Mailchain.
 
-Add the following code right bellow the defined field `webhookEvent`.
+Add the following code below the check for test notifications:
 
 ```ts
 const webhookEvent = req.body as AlchemyWebhookEvent;
+console.log(`Processing webhook event id: ${webhookEvent.id}`);
+
+if ((webhookEvent.event.eventDetails = '<EVENT_DETAILS>')) {
+	// this is test notification send from Alchemy. Return success.
+	return res.send('Alchemy Notify is the best!');
+}
 // highlight-start
 if (webhookEvent.type !== 'ADDRESS_ACTIVITY') return res.status(400).send('Only ADDRESS_ACTIVITY event type supported');
 
