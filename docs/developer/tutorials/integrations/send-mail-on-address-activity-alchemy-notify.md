@@ -2,11 +2,11 @@
 title: 'Send mail based on address activity via Alchemy Notify API'
 ---
 
-At the end of this tutorial, you will have built a simple Express App that exposes an API to listen for ethereum address activity (e.g. ERC20, ERC721 and ERC1155 transfer events).
+At the end of this tutorial, we will have built a simple Express App that exposes an API to listen for ethereum address activity (e.g. ERC20, ERC721 and ERC1155 transfer events). 
 
 ![Final result image](./img-send-mail-on-address-activity-alchemy-notify/result.png)
 
-We will be using the [Alchemy Notify API quickstart](https://docs.alchemy.com/reference/notify-api-quickstart). It provides easy-to-use webhook triggers based on transactions and events, and supports multiple [webhook event types](https://docs.alchemy.com/reference/webhook-types). We will use the [Address Activity Webhook](https://docs.alchemy.com/reference/address-activity-webhook) to send a mail to our address if it is involved in a token transfer transaction (either for receiving or sending). The code for the webhook is based on the [Authenticated webhook tutorial](/developer/tutorials/authenticated-webhook.md), which is not a prerequisite, but might be a helpful consideration in your implementation.
+We will be using the [Alchemy Notify API quickstart](https://docs.alchemy.com/reference/notify-api-quickstart). It provides easy-to-use webhook triggers based on transactions and events, and supports multiple [webhook event types](https://docs.alchemy.com/reference/webhook-types). We will use the [Address Activity Webhook](https://docs.alchemy.com/reference/address-activity-webhook) to send a mail to your ethereum address when a transaction occurs. The code for the webhook is based on the [Authenticated webhook tutorial](/developer/tutorials/authenticated-webhook.md), which is not a prerequisite, but can be helpful to review.
 
 ## Prerequisites
 
@@ -14,19 +14,19 @@ To complete this tutorial, you need to first:
 
 1. Download and install [NodeJS](https://nodejs.org/en/download/).
 1. [Create a new Mailchain account](/user/guides/getting-started/1-create-a-mailchain-account.md) for development and testing purposes.
-1. [Register an Ethereum address in Mailchain](/user/guides/getting-started/2-register-a-wallet.md).<br/>It is recommended that you register a new address that you don't use anywhere else for testing purposes.
+1. [Register an Ethereum address in Mailchain](/user/guides/getting-started/2-register-a-wallet.md) to your dev and test account.
 1. [Sign in or create Alchemy account](https://www.alchemy.com/)
-1. [Ngrok account](https://dashboard.ngrok.com/signup) with [Ngrok installed](https://dashboard.ngrok.com/get-started/setup) on your machine.<br/>Ngrok will be used to expose the localhost to the internet in order to be accessible for the webhook. This is also [recommended by the Alchemy example](https://docs.alchemy.com/reference/notify-api-quickstart#test-webhooks-with-ngrok), but feel free to find your own solution how to expose localhost to the internet for testing purposes.
+1. [Ngrok account](https://dashboard.ngrok.com/signup) with [Ngrok installed](https://dashboard.ngrok.com/get-started/setup) on your machine.<br/> Ngrok will be used to expose the localhost to the internet in order to be accessible for the webhook, but feel free to use your own solution (e.g. gitpod.io) to expose the localhost for testing purposes.
 
 ## Step 1 - Clone Alchemy Notify example
 
-Alchemy has great getting started with [Notify API example repository on GitHub](https://github.com/alchemyplatform/webhook-examples). We will clone this repository and use the [Node Express example](https://github.com/alchemyplatform/webhook-examples/tree/master/node-express).
+Alchemy has a great ['Getting Started with Notify API' example](https://github.com/alchemyplatform/webhook-examples) repository on GitHub. We will clone this repository and use the [Node Express example](https://github.com/alchemyplatform/webhook-examples/tree/master/node-express).
 
-Run the following commands in your terminal to clone the Alchemy webhook examples and navigate into the correct folder for the tutorial:
+To clone the Alchemy webhook examples and navigate into the correct folder, run the following commands in a new terminal:
 
 ```bash
 git clone https://github.com/alchemyplatform/webhook-examples.git
-cd webhook-example/node-express
+cd webhook-examples/node-express
 ```
 
 Now run `yarn` in this directory to install all the dependencies. 
