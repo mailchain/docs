@@ -174,11 +174,18 @@ const sidebars = {
 				'developer/tutorials/authenticated-webhook',
 				{
 					type: 'category',
-					label: '3rd Party Integrations',
+					label: '🔒 Authentication Integrations',
+					collapsed: false,
+					items: ['developer/tutorials/integrations/stytch-magic-link'],
+				},
+				{
+					type: 'category',
+					label: '🔔 On-chain Events & Notifications',
 					collapsed: false,
 					items: [
 						'developer/tutorials/integrations/send-mail-on-address-activity-alchemy-notify',
-						'developer/tutorials/integrations/stytch-magic-link',
+						'developer/tutorials/integrations/hal-notify-on-chain-notifications',
+						'developer/tutorials/integrations/tenderly-on-chain-event-notifications',
 					],
 				},
 			],

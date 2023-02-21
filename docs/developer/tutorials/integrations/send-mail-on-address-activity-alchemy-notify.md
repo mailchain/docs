@@ -1,5 +1,5 @@
 ---
-title: 'Alchemy x Mailchain: On-Chain Event Notifications'
+title: 'Alchemy Notify via Mailchain'
 ---
 
 At the end of this tutorial, we will have built a simple Express App that exposes an API to listen for ethereum address activity (e.g. ERC20, ERC721 and ERC1155 transfer events).

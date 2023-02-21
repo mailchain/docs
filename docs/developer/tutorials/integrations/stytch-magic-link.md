@@ -1,16 +1,16 @@
 ---
-title: 'Mailchain x Stytch Magic Link'
+title: 'Stytch Passwordless Magic Link via Mailchain'
 ---
 
 At the end of this tutorial, you will have built an Express JS app that sends a passwordless magic link from the [Stytch auth platform](https://stytch.com/) to the user's wallet address using [Mailchain's SDK](https://www.npmjs.com/package/@mailchain/sdk) and protocol.
 
 ![The final result](./img-stytch-magic-link/final-result.png)
 
-Stytch supports multiple authentication methods, including the so-called [magic link](https://stytch.com/docs/magic-links). Magic links work by generating and sending a link with an unique authentication token to an address. 
+Stytch supports multiple authentication methods, including the so-called [magic link](https://stytch.com/docs/magic-links). Magic links work by generating and sending a link with an unique authentication token to an address.
 
 The recipient can prove they own the address by clicking on the link within the message. The link contains an unique and single use authentication token, When a user clicks the Magic Link, the application's authentication service processes and validates the authentication token and creates a user session. For more details and visual representation of the flow, check out Stytch's [Email Magic Link overview](https://stytch.com/docs/magic-links#email-magic-links).
 
-To send messages via Mailchain you need to use Stytch's [Embeddable Magic Link](https://stytch.com/docs/magic-links#embeddable-magic-links). This lets you send magic links via a custom channel. 
+To send messages via Mailchain you need to use Stytch's [Embeddable Magic Link](https://stytch.com/docs/magic-links#embeddable-magic-links). This lets you send magic links via a custom channel.
 
 Since Mailchain requires any registered wallet address to have sign a proof to verify ownership. Applications can build upon that proof, and Mailchain's built-in sender and recipient verification to reliably prove address ownership.
 .
@@ -48,7 +48,6 @@ Stytch is under active development so the Stytch SDK used in the example could b
 ```bash
 npm install stytch@latest
 ```
-
 
 ## Step 2 - Configure Stytch
 

@@ -1,5 +1,5 @@
 ---
-title: 'Authenticated webhook'
+title: 'Build an authenticated webhook'
 ---
 
 At the end of this tutorial, you will have built an Express App, that exposes an API to send messages via Mailchain. Your API accepts POST requests meaning applications may use your API as a webhook commonly used to trigger notifications. Your app will use the [Mailchain SDK](https://www.npmjs.com/package/@mailchain/sdk) to send messages and Bearer tokens to authenticate incoming requests. In most cases, you would add a route to an existing Express App, but for this tutorial, you'll create a new app.
