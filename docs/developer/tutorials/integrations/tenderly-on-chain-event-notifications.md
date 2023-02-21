@@ -164,7 +164,7 @@ ngrok http 8008
 
 Copy the `Forwarding` value from the output, it will be something like `https://012a-93-12-152-21.eu.ngrok.io` and leave the service running so the webhook can be reached by Tenderly.
 
-::warning
+:::warning
 
 If you stop Ngrok at any time, you may need to reconfigure the forwarding value in your Tenderly webhook when you restart it.
 

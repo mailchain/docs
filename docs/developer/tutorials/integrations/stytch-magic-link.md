@@ -26,6 +26,7 @@ Since Mailchain requires any registered wallet address to have sign a proof to v
 At the time of writing this tutorial, Stytch offers its Embeddable Magic Link feature on-demand to maintain good security practices.
 
 You can find out more about this here: [Create embeddable magic link](https://stytch.com/docs/api/create-magic-link), but in summary you need to send a message to `support@stytch.com` briefly explaining your use case (you can mention this tutorial and send a link). They will provide you with additional security and usage information then enable the feature for you. Requirements around this may change in future.
+
 :::
 
 ## Step 1 - Clone Stytch Node Magic Link example
