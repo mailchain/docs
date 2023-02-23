@@ -176,7 +176,10 @@ const sidebars = {
 					type: 'category',
 					label: '🔒 Authentication Integrations',
 					collapsed: false,
-					items: ['developer/tutorials/integrations/stytch-magic-link'],
+					items: [
+						'developer/tutorials/integrations/passport-magic-link-tutorial',
+						'developer/tutorials/integrations/stytch-magic-link',
+					],
 				},
 				{
 					type: 'category',
