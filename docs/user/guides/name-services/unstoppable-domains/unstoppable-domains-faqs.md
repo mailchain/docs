@@ -49,14 +49,17 @@ Mailchain supports sending and receiving messages for any Unstoppable Domain top
 
 ### Does Mailchain support shorthand addressing for Unstoppable Domains?
 
-| TLD         | Fully qualified Mailchain address                            | Shorthand Mailchain address | Name service address                           |
-| ----------- | ------------------------------------------------------------ | --------------------------- | ---------------------------------------------- |
-| .crypto     | _yourname_.crypto<span>@</span>unstoppable.mailchain.com     | _yourname_.crypto           | _yourname_.crypto<span>@</span>unstoppable     |
-| .nft        | _yourname_.nft<span>@</span>unstoppable.mailchain.com        | _yourname_.nft              | _yourname_.nft<span>@</span>unstoppable        |
-| .x          | _yourname_.x<span>@</span>unstoppable.mailchain.com          | _yourname_.x                | _yourname_.x<span>@</span>unstoppable          |
-| .wallet     | _yourname_.wallet<span>@</span>unstoppable.mailchain.com     | _yourname_.wallet           | _yourname_.wallet<span>@</span>unstoppable     |
-| .bitcoin    | _yourname_.bitcoin<span>@</span>unstoppable.mailchain.com    |                             | _yourname_.bitcoin<span>@</span>unstoppable    |
-| .dao        | _yourname_.dao<span>@</span>unstoppable.mailchain.com        | _yourname_.dao              | _yourname_.dao<span>@</span>unstoppable        |
-| .888        | _yourname_.888<span>@</span>unstoppable.mailchain.com        | _yourname_.888              | _yourname_.888<span>@</span>unstoppable        |
-| .zil        | _yourname_.zil<span>@</span>unstoppable.mailchain.com        |                             | _yourname_.zil<span>@</span>unstoppable        |
-| .blockchain | _yourname_.blockchain<span>@</span>unstoppable.mailchain.com | _yourname_.blockchain       | _yourname_.blockchain<span>@</span>unstoppable |
+| TLD           | Fully qualified Mailchain address                            | Shorthand Mailchain address | Name service address                           |
+| ------------- | ------------------------------------------------------------ | --------------------------- | ---------------------------------------------- |
+| .888          | _yourname_.888<span>@</span>unstoppable.mailchain.com        | _yourname_.888              | _yourname_.888<span>@</span>unstoppable        |
+| .bitcoin      | _yourname_.bitcoin<span>@</span>unstoppable.mailchain.com    |                             | _yourname_.bitcoin<span>@</span>unstoppable    |
+| .blockchain   | _yourname_.blockchain<span>@</span>unstoppable.mailchain.com | _yourname_.blockchain       | _yourname_.blockchain<span>@</span>unstoppable |
+| .crypto       | _yourname_.crypto<span>@</span>unstoppable.mailchain.com     | _yourname_.crypto           | _yourname_.crypto<span>@</span>unstoppable     |
+| .dao          | _yourname_.dao<span>@</span>unstoppable.mailchain.com        | _yourname_.dao              | _yourname_.dao<span>@</span>unstoppable        |
+| .hi           | _yourname_.hi<span>@</span>unstoppable.mailchain.com         |                             | _yourname_.hi<span>@</span>unstoppable         |
+| .klever       | _yourname_.klever<span>@</span>unstoppable.mailchain.com     |                             | _yourname_.klever<span>@</span>unstoppable     |
+| .nft          | _yourname_.nft<span>@</span>unstoppable.mailchain.com        | _yourname_.nft              | _yourname_.nft<span>@</span>unstoppable        |
+| .wallet       | _yourname_.wallet<span>@</span>unstoppable.mailchain.com     | _yourname_.wallet           | _yourname_.wallet<span>@</span>unstoppable     |
+| .x            | _yourname_.x<span>@</span>unstoppable.mailchain.com          | _yourname_.x                | _yourname_.x<span>@</span>unstoppable          |
+| .zil          | _yourname_.zil<span>@</span>unstoppable.mailchain.com        |                             | _yourname_.zil<span>@</span>unstoppable        |
+| _other names_ | _yourname_.othernames<span>@</span>unstoppable.mailchain.com |                             | _yourname_.othernames<span>@</span>unstoppable |
