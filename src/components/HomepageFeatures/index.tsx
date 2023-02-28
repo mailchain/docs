@@ -27,7 +27,7 @@ const FeatureList: FeatureItem[] = [
 	{
 		title: 'Develop',
 		Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-		description: <>Integrate messaging into your application or contribute to Mailchain protocol.</>,
+		description: <>Integrate communication into your application or contribute to Mailchain protocol.</>,
 	},
 ];
 

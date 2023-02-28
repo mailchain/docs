@@ -37,7 +37,7 @@ Not yet. Mailchain is a web3 communication protocol that works with web3 identit
 
 ### Why has Mailchain developed its own protocol?
 
-There is no purpose-built communication protocol that supports group or one-to-one, end-to-end encrypted messaging between web3 identities.
+There is no purpose-built communication protocol that supports group or one-to-one, end-to-end encrypted communication between web3 identities.
 
 There are big challenges related to using other protocols. Constraints include scalability, security, and price volatility challenges.
 

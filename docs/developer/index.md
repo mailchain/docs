@@ -6,9 +6,9 @@ description: Mailchain is designed to be easy for developers to send messages qu
 
 Keeping your users informed is important, but hard to do in Web3.
 
-Mailchain is a multi-chain communication protocol that helps you communicate with your users across any protocol. It provides end-to-end encryption by default, and supports 1:1, 1:many and group messaging.
+Mailchain is a multi-chain communication protocol that helps you communicate with your users across any protocol. It provides end-to-end encryption by default, and supports 1:1, 1:many and group communication.
 
-Using Mailchain you can easily send messages to any blockchain address on different protocols. Mailchain solves your messaging needs so you can focus on building your application.
+Using Mailchain you can easily send messages to any blockchain address on different protocols. Mailchain solves your communication needs so you can focus on building your application.
 
 ## SDK
 

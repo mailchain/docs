@@ -58,8 +58,8 @@ const config = {
 				},
 				items: [
 					{ to: 'welcome-to-mailchain', label: 'Docs For Users', position: 'left' },
-					{ to: 'developer', label: 'Developer Docs', position: 'left' },
-					{ to: 'user/guides', label: 'Guides & Tutorials', position: 'left' },
+					{ to: 'developer/', label: 'Developer Docs', position: 'left' },
+					{ to: 'user/guides', label: 'Getting Started Guides & Tutorials', position: 'left' },
 					{ to: 'user/faqs', label: 'FAQs', position: 'left' },
 					{ to: 'getting-help', label: 'Help & Support', position: 'left' },
 					{

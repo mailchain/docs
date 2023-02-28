@@ -9,7 +9,7 @@ image: 'img/thumbs/social-square-1.png'
 
 Your Mailchain account is your new identity.
 
-You can use it for messaging other Mailchain users or any blockchain addresses. Your identity is yours. Nobody, not even Mailchain has access to it. When you create a Mailchain account, two things happen:
+You can use it for communicating with other Mailchain users or any blockchain addresses. Your identity is yours. Nobody, not even Mailchain has access to it. When you create a Mailchain account, two things happen:
 
 1. The Mailchain username that you choose is registered to your identity (which is linked to your [Secret Recovery Phrase](#your-secret-recovery-phrase)).
 1. You create a [safe space](#your-safe-space) to keep your messages, registered addresses, labels, and other application data.
