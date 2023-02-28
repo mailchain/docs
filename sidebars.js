@@ -81,6 +81,20 @@ const sidebars = {
 						},
 						{
 							type: 'category',
+							label: 'Coinbase Decentralized ID (cb.id)',
+							collapsed: true,
+							link: {
+								type: 'generated-index',
+								slug: 'user/guides/name-services/coinbase-decentralized-id/',
+								keywords: ['guides', 'name service'],
+							},
+							items: [
+								'user/guides/name-services/coinbase-decentralized-id/coinbase-decentralized-id-getting-started',
+								'user/guides/name-services/coinbase-decentralized-id/coinbase-decentralized-id-faqs',
+							],
+						},
+						{
+							type: 'category',
 							label: 'ENS (.eth)',
 							collapsed: true,
 							link: {
@@ -105,6 +119,20 @@ const sidebars = {
 							items: [
 								'user/guides/name-services/freename/freename-getting-started',
 								'user/guides/name-services/freename/freename-faqs',
+							],
+						},
+						{
+							type: 'category',
+							label: 'Lens Protocol (.lens)',
+							collapsed: true,
+							link: {
+								type: 'generated-index',
+								slug: 'user/guides/name-services/lens/',
+								keywords: ['guides', 'name service'],
+							},
+							items: [
+								'user/guides/name-services/lens/lens-getting-started',
+								'user/guides/name-services/lens/lens-faqs',
 							],
 						},
 						{
