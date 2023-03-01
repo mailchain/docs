@@ -134,7 +134,7 @@ If you plan on implementing this in your production environment, further validat
 :::
 
 ```ts
-app.post('/login_or_create_user', async function (req, res) {
+app.post('/login_or_create_user', async (req, res) => {
 	const params = {
 		email: req.body.email,
 		login_magic_link_url: magicLinkUrl,
@@ -274,7 +274,7 @@ return mailchain
 
 ## Step 8 - Give it a spin!
 
-Now lets repeat same test as we did in Step 2 to verify that it is working correctly, but this time we will use a fully qualified Mailchain address. Mailchain supports many types of Web3 addresses and identities. You can read more about this in [address formatting](../../address-formatting).
+Now lets repeat same test as we did in Step 2 to verify that it is working correctly, but this time we will use a fully qualified Mailchain address. Mailchain supports many types of Web3 addresses and identities. You can read more about this in [address formatting]([address formatting](/developer/address-formatting.md).
 
 Start the application by running:
 

@@ -10,7 +10,7 @@ image: 'img/thumbs/social-square-1.png'
     <source src="https://github.com/mailchain/video-tutorials/blob/main/videos/send_and_receive_a_message.mp4?raw=true" />
 </video>
 
-1. Log into your Mailchain account. (_Follow this guide to [create an account](./create-a-mailchain-account)_)
+1. Log into your Mailchain account. (_Follow this guide to [create an account](/user/guides/getting-started/create-a-mailchain-account)_)
 
 1. Click 'Compose' in the sidebar, and fill out the following fields:
 
