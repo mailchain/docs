@@ -14,7 +14,7 @@ Your private key never leaves your machine.
 
 ## SDK Methods
 
-There are multiple way to provide your private key to the Mailchain SDK. You can authenticate with your Secret Recovery Phrase, seed bytes, or password (coming soon).
+There are multiple ways to provide your private key to the Mailchain SDK. You can authenticate with your Secret Recovery Phrase, seed bytes, or password (coming soon).
 
 :::warning
 
