@@ -157,10 +157,10 @@ Change the `to:` to the address or addresses you want to receive the notificatio
 -   for more examples, see [address formatting](/developer/address-formatting.md)
 
 ```tsx
-import { Mailchain, SendMailParams, SendMailResult } from '@mailchain/sdk';
+import { Mailchain, SendMailParams } from '@mailchain/sdk';
 
 class MailService {
-	async send(params: SendMailParams): Promise<SendMailResult> {
+	async send(params: SendMailParams) {
 		// use the environment variable to provide your secret recovery phrase
 		const secretRecoveryPhrase = process.env.SECRET_RECOVERY_PHRASE;
 

@@ -189,11 +189,10 @@ Express uses services to perform tasks, in this case sending mail using the Mail
 Inside `src/services/` create `mail.service.ts` and copy the code below into it.
 
 ```typescript title="src/services/mail.service.ts"
-import { Mailchain, SendMailParams, SendMailResult } from '@mailchain/sdk';
+import { Mailchain, SendMailParams } from '@mailchain/sdk';
 
 class MailService {
-	async send(params: SendMailParams): Promise<SendMailResult> {
-		// use the environment variable to provide your secret recovery phrase
+	async send(params: SendMailParams) {
 		const secretRecoveryPhrase = process.env.SECRET_RECOVERY_PHRASE;
 
 		if (secretRecoveryPhrase == null) {

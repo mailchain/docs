@@ -74,7 +74,7 @@ const app = express();
 const signingKey = '';
 
 app.get('/webhook', (req, res) => {
-	res.send('ok');
+	res.send('success');
 });
 
 app.post('/webhook', express.raw({ type: 'application/json' }), (request, response) => {
