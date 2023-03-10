@@ -216,12 +216,17 @@ const mailchain = Mailchain.fromSecretRecoveryPhrase(secretRecoveryPhrase);
 Now that we have included the mail content and have setup the SDK, sending a mail is very easy. Right after the declaration of the `mailSubject` and `mailContent` fields add the following snippet:
 
 ```ts
-await mailchain.sendMail({
+const { data: sentMail, error } = await mailchain.sendMail({
 	from: (await mailchain.user()).address,
 	to: [`${fromAddress}@ethereum.mailchain.com`, `${toAddress}@ethereum.mailchain.com`],
 	subject: mailSubject,
 	content: mailContent,
 });
+if (error) {
+	console.warn(`Failed sending mail for transaction ${hash}`);
+} else {
+	console.log(`Successfully send mail for transaction ${hash} with message id ${sentMail.savedMessageId}`);
+}
 ```
 
 For easier async logic, you also need to update the webhook-path route (`app.post('/webhook-path)...`) and make it an `async` function. Edit definition to inlude `async`.
