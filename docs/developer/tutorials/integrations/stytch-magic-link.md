@@ -258,18 +258,18 @@ return;
 with
 
 ```ts
-return mailchain
-	.sendMail({
-		from: (await mailchain.user()).address,
-		to: [params.email],
-		subject,
-		content,
-	})
-	.then((r) => res.render('emailSent'))
-	.catch((e) => {
-		console.error('Failed sending message', e);
-		return res.status(500).render('loginOrSignUp');
-	});
+const { data: sentMail, error } = await mailchain.sendMail({
+	from: (await mailchain.user()).address,
+	to: [params.email],
+	subject,
+	content,
+});
+if (error) {
+	console.error('Failed sending message', error);
+	return res.status(500).render('loginOrSignUp');
+}
+console.log('Successfully send message', sentMail);
+return res.render('emailSent');
 ```
 
 ## Step 8 - Give it a spin!
