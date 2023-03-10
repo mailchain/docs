@@ -268,7 +268,12 @@ Next, in the same file, add the following highlighted code block:
     						'">Sign in</a></p>',
     				},
     			};
-    			return await mailchain.sendMail(msg);
+    			const { data, error } = await mailchain.sendMail(msg);
+    			if (error) {
+    				throw new Error('Mailchain error', { cause: error });
+    			}
+    			console.log('sent mail', data);
+    			return data;
     		},
     		function verify(user) {
     			return new Promise(function (resolve, reject) {
