@@ -295,18 +295,17 @@ Add the following to the switch statement:
 switch (eventType) {
 	case 'TEST':
 		// highlight-start
-		try {
-			await mailchain.sendMail({
-				from: process.env.WEBHOOK_SENDER_ADDRESS,
-				to: [process.env.WEBHOOK_RECIPIENT_ADDRESS],
-				subject: 'Webhook Test',
-				content: {
-					text: `The webhook body:\n${JSON.stringify(body, null, 2)}`,
-					html: `<p>The webhook body:</p><pre>${JSON.stringify(body, null, 2)}</pre>`,
-				},
-			});
-		} catch (error) {
-			throw new Error(error);
+		const { data, error } = await mailchain.sendMail({
+			from: process.env.WEBHOOK_SENDER_ADDRESS,
+			to: [process.env.WEBHOOK_RECIPIENT_ADDRESS],
+			subject: 'Webhook Test',
+			content: {
+				text: `The webhook body:\n${JSON.stringify(body, null, 2)}`,
+				html: `<p>The webhook body:</p><pre>${JSON.stringify(body, null, 2)}</pre>`,
+			},
+		});
+		if (error) {
+			throw new Error('Mailchain error', { cause: error });
 		}
 		// highlight-end
 		break;
@@ -319,7 +318,7 @@ switch (eventType) {
 }
 ```
 
-We need the function handling `sendMail()` to be asynchrous. Update this line: `app.post('/webhook', express.raw...`, adding `async` to:
+We need the function handling `sendMail()` to be asynchronous. Update this line: `app.post('/webhook', express.raw...`, adding `async` to:
 
 ```jsx
 app.post('/webhook', express.raw({type: 'application/json'}), async (request, response) => {
