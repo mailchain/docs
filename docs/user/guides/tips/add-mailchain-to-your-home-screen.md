@@ -10,7 +10,7 @@ By bookmarking Mailchain on your mobile phone’s home screen, you’ll be able 
 
 ## Add Mailchain to your iPhone homescreen
 
-If you are a Mailchain user who wants to access the app quickly on your iPhone, you may want to bookmark it on your home screen. Here’s a step-by-step guide on how to do it:
+As Mailchain user who wants to access the app quickly on your phone, you can add Mailchain to your home screen. Here’s a step-by-step guide on how to do it:
 
 <video controls height="600px" poster="https://github.com/mailchain/video-tutorials/blob/main/posters/mobile_bookmark_iphone13.png?raw=true">
     <source src="https://github.com/mailchain/video-tutorials/blob/main/videos/mobile_bookmark_iphone13.mp4?raw=true" />
