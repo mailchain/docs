@@ -1,0 +1,77 @@
+.formWrapper {
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #f9f9f9;
+}
+
+.formGroup {
+	margin-bottom: 20px;
+}
+
+.formLabel {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.formInput {
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	font-size: 14px;
+}
+
+.linkGroup {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.submitLink {
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 5px;
+	padding: 10px 15px;
+}
+
+.primaryLink {
+	background-color: #007bff;
+	color: #fff;
+}
+
+.primaryLink:hover {
+	background-color: #0069d9;
+}
+
+.secondaryLink {
+	background-color: #28a745;
+	color: #fff;
+}
+
+.secondaryLink:hover {
+	background-color: #218838;
+}
+
+.errorText {
+	color: red;
+	font-size: 12px;
+	margin-top: 5px;
+}
+
+.infoText {
+	font-size: 12px;
+	margin-top: 5px;
+}
+
+.disabledLink {
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+h2 {
+	font-size: 24px;
+}
