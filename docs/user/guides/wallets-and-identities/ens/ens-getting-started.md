@@ -19,8 +19,8 @@ ENS’s job is to map human-readable names like ‘alice.eth’ to machine-reada
 
 ### Prerequisites:
 
--   [ ] You have an ENS name registered to your address (see [here](/user/guides/name-services/ens/ens-faqs#how-do-i-register-an-ens-domain))
--   [ ] You have configured the ENS Primary Resolver (see [here](/user/guides/name-services/ens/ens-faqs#how-do-i-set-an-ens-primary-resolver))
+-   [ ] You have an ENS name registered to your address (see [here](/user/guides/wallets-and-identities/ens/ens-faqs#how-do-i-register-an-ens-domain))
+-   [ ] You have configured the ENS Primary Resolver (see [here](/user/guides/wallets-and-identities/ens/ens-faqs#how-do-i-set-an-ens-primary-resolver))
 -   [ ] You have a Mailchain account (see [here](/user/guides/getting-started/create-a-mailchain-account))
 
 ### Add Your ENS Name to Mailchain
@@ -70,7 +70,7 @@ ENS’s job is to map human-readable names like ‘alice.eth’ to machine-reada
 
     ![sign to complete](../img-ens/ens_introduction/ens1_6.png)
 
-1. The next step checks for connected name services, including ENS names. This example found `happywriter.eth`. If you do not see your ENS name here, you can manually search for it using the search box. If it still cannot be found, please see ENS FAQs [here](/user/guides/name-services/ens/ens-faqs#my-ens-name-was-not-found-what-should-i-check).
+1. The next step checks for connected name services, including ENS names. This example found `happywriter.eth`. If you do not see your ENS name here, you can manually search for it using the search box. If it still cannot be found, please see ENS FAQs [here](/user/guides/wallets-and-identities/ens/ens-faqs#my-ens-name-was-not-found-what-should-i-check).
 
     ![search for address](../img-ens/ens_introduction/ens1_7.png)
 
@@ -96,10 +96,10 @@ With Mailchain you can send Mailchain message from your ENS name to other Mailch
 
 ### Prerequisites
 
--   [ ] You have an ENS name registered to your address (see [here](/user/guides/name-services/ens/ens-faqs#how-do-i-register-an-ens-domain))
--   [ ] You have configured the ENS Primary Resolver (see [here](/user/guides/name-services/ens/ens-faqs#how-do-i-set-an-ens-primary-resolver))
+-   [ ] You have an ENS name registered to your address (see [here](/user/guides/wallets-and-identities/ens/ens-faqs#how-do-i-register-an-ens-domain))
+-   [ ] You have configured the ENS Primary Resolver (see [here](/user/guides/wallets-and-identities/ens/ens-faqs#how-do-i-set-an-ens-primary-resolver))
 -   [ ] You have a Mailchain account (see [here](/user/guides/getting-started/create-a-mailchain-account))
--   [ ] You have added your ENS name to Mailchain (see [above](/user/guides/name-services/ens/ens-getting-started#how-to-add-your-ens-name-to-mailchain))
+-   [ ] You have added your ENS name to Mailchain (see [above](/user/guides/wallets-and-identities/ens/ens-getting-started#how-to-add-your-ens-name-to-mailchain))
 
 ### Compose And Send A Message From Your ENS Name
 

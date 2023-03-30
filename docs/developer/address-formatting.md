@@ -8,20 +8,18 @@ Mailchain addressing provides broad support for known address schemes, including
 
 Please refer to the table below for definition and examples:
 
-| Type                  | Template                                        | Examples                                                                                                                                     |
-| --------------------- | ----------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Mailchain             | `<username>@mailchain.com`                      | `alice@mailchain.com`<br />`bob@mailchain.com`                                                                                               |
-| Ethereum              | `<address>@ethereum.mailchain.com`              | `0xA6F44f3d978B5cf7dA7A71Db8A5947E5598a5a05@ethereum.mailchain.com`<br />`0xeffc29fe76F4d73B823C6d319E8fDE65c5D5719d@ethereum.mailchain.com` |
-| Namservices (generic) | `<nsDomain>@<nsName>.mailchain.com`             | `alice.eth@ens.mailchain.com`<br />`alice.crypto@unstoppable.mailchain.com`<br />`alice.hodl@freename.mailchain.com`                         |
-| ENS                   | `<ensDomain>@ens.mailchain.com`                 | `alice.eth@ens.mailchain.com`<br />`bob.cb.id@ens.mailchain.com`                                                                             |
-| Unstoppable           | `<unstoppableDomain>@unstoppable.mailchain.com` | `alice.crypto@unstoppable.mailchain.com`<br />`bob.wallet@unstoppable.mailchain.com`                                                         |
-| Freename              | `<freenameDomain>@freename.mailchain.com`       | `alice.hodl@freename.mailchain.com`<br />`bob.aurora@freename.mailchain.com`                                                                 |
+| Type                  | Template                                                                                                                                               | Examples                                                                                                                                     |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mailchain             | `<username>@mailchain.com`                                                                                                                             | `alice@mailchain.com`<br />`bob@mailchain.com`                                                                                               |
+| Namservices (generic) | `<addressPart>.<nsDomain>@<nsName>.mailchain.com`                                                                                                      | `alice.eth@ens.mailchain.com`<br />`alice.crypto@unstoppable.mailchain.com`<br />`alice.hodl@freename.mailchain.com`                         |
+| Aurora                | `<addressPart>.aurora@freename.mailchain.com`                                                                                                          | `alice.aurora@freename.mailchain.com`                                                                                                        |
+| Coinbase ID           | `<coinbaseProfile>.cb.id@ens.mailchain.com`                                                                                                            | `alice.cb.id@ens.mailchain.com`                                                                                                              |
+| ENS                   | `<ensDomain>.eth@ens.mailchain.com`<br/><small>Notes:<br/>[1] Resolvable DNSSEC ENS names are supported.<br/>[2] ENS subdomains are supported.</small> | `alice.eth@ens.mailchain.com`                                                                                                                |
+| Ethereum              | `<address>@ethereum.mailchain.com`                                                                                                                     | `0xA6F44f3d978B5cf7dA7A71Db8A5947E5598a5a05@ethereum.mailchain.com`<br />`0xeffc29fe76F4d73B823C6d319E8fDE65c5D5719d@ethereum.mailchain.com` |
+| Freename              | `<addressPart>.<freenameDomain>@freename.mailchain.com`                                                                                                | `alice.hodl@freename.mailchain.com`                                                                                                          |
+| Lens                  | `<lensHandle>.lens@lens.mailchain.com`                                                                                                                 | `alice.lens@lens.mailchain.com`<br />                                                                                                        |
+| Unstoppable           | `<addressPart>.<unstoppableDomain>@unstoppable.mailchain.com`                                                                                          | `alice.crypto@unstoppable.mailchain.com`<br />`bob.wallet@unstoppable.mailchain.com`                                                         |
 
 ## Shorthand Addresses
 
-Each name service may support a shorthand address format (e.g. `alice.eth` for ENS). Please see name service FAQs for specific name service shorthands:
-
--   [Aurora](/user/guides/name-services/aurora/aurora-faqs#does-mailchain-support-shorthand-addressing-for-aurora)
--   [ENS](/user/guides/name-services/ens/ens-faqs#does-mailchain-support-shorthand-addressing-for-ens)
--   [Freename](/user/guides/name-services/freename/freename-faqs#does-mailchain-support-shorthand-addressing-for-freename)
--   [Unstoppable Domains](/user/guides/name-services/unstoppable-domains/unstoppable-domains-faqs#does-mailchain-support-shorthand-addressing-for-unstoppable-domains)
+Each name service may support a shorthand address format (e.g. `alice.eth` for ENS, `alice.lens` for Lens, `alice.near` for NEAR, etc.). Please see [Registering Wallets & Identities](/user/guides/wallets-and-identities) FAQs for specific details for shorthand addresses.

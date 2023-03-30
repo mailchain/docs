@@ -56,12 +56,12 @@ const sidebars = {
 				},
 				{
 					type: 'category',
-					label: 'Web3 Domain Names',
+					label: 'Registering Wallets & Identities',
 					collapsed: false,
 					link: {
 						type: 'generated-index',
-						title: 'Web3 Domain Name Guides',
-						slug: 'user/guides/name-services',
+						title: 'Registering Wallets & Identities',
+						slug: 'user/guides/wallets-and-identities',
 						keywords: ['guides', 'name service'],
 					},
 					items: [
@@ -71,26 +71,26 @@ const sidebars = {
 							collapsed: true,
 							link: {
 								type: 'generated-index',
-								slug: 'user/guides/name-services/aurora/',
+								slug: 'user/guides/wallets-and-identities/aurora/',
 								keywords: ['guides', 'name service'],
 							},
 							items: [
-								'user/guides/name-services/aurora/aurora-getting-started',
-								'user/guides/name-services/aurora/aurora-faqs',
+								'user/guides/wallets-and-identities/aurora/aurora-getting-started',
+								'user/guides/wallets-and-identities/aurora/aurora-faqs',
 							],
 						},
 						{
 							type: 'category',
-							label: 'Coinbase Decentralized ID (cb.id)',
+							label: 'Coinbase ID (cb.id)',
 							collapsed: true,
 							link: {
 								type: 'generated-index',
-								slug: 'user/guides/name-services/coinbase-decentralized-id/',
+								slug: 'user/guides/wallets-and-identities/coinbase-decentralized-id/',
 								keywords: ['guides', 'name service'],
 							},
 							items: [
-								'user/guides/name-services/coinbase-decentralized-id/coinbase-decentralized-id-getting-started',
-								'user/guides/name-services/coinbase-decentralized-id/coinbase-decentralized-id-faqs',
+								'user/guides/wallets-and-identities/coinbase-decentralized-id/coinbase-decentralized-id-getting-started',
+								'user/guides/wallets-and-identities/coinbase-decentralized-id/coinbase-decentralized-id-faqs',
 							],
 						},
 						{
@@ -99,12 +99,12 @@ const sidebars = {
 							collapsed: true,
 							link: {
 								type: 'generated-index',
-								slug: 'user/guides/name-services/ens/',
+								slug: 'user/guides/wallets-and-identities/ens/',
 								keywords: ['guides', 'name service'],
 							},
 							items: [
-								'user/guides/name-services/ens/ens-getting-started',
-								'user/guides/name-services/ens/ens-faqs',
+								'user/guides/wallets-and-identities/ens/ens-getting-started',
+								'user/guides/wallets-and-identities/ens/ens-faqs',
 							],
 						},
 						{
@@ -113,12 +113,12 @@ const sidebars = {
 							collapsed: true,
 							link: {
 								type: 'generated-index',
-								slug: 'user/guides/name-services/freename/',
+								slug: 'user/guides/wallets-and-identities/freename/',
 								keywords: ['guides', 'name service'],
 							},
 							items: [
-								'user/guides/name-services/freename/freename-getting-started',
-								'user/guides/name-services/freename/freename-faqs',
+								'user/guides/wallets-and-identities/freename/freename-getting-started',
+								'user/guides/wallets-and-identities/freename/freename-faqs',
 							],
 						},
 						{
@@ -127,12 +127,26 @@ const sidebars = {
 							collapsed: true,
 							link: {
 								type: 'generated-index',
-								slug: 'user/guides/name-services/lens/',
+								slug: 'user/guides/wallets-and-identities/lens/',
 								keywords: ['guides', 'name service'],
 							},
 							items: [
-								'user/guides/name-services/lens/lens-getting-started',
-								'user/guides/name-services/lens/lens-faqs',
+								'user/guides/wallets-and-identities/lens/lens-getting-started',
+								'user/guides/wallets-and-identities/lens/lens-faqs',
+							],
+						},
+						{
+							type: 'category',
+							label: 'NEAR Protocol (.near)',
+							collapsed: true,
+							link: {
+								type: 'generated-index',
+								slug: 'user/guides/wallets-and-identities/near/',
+								keywords: ['guides', 'protocol'],
+							},
+							items: [
+								'user/guides/wallets-and-identities/near/near-getting-started',
+								'user/guides/wallets-and-identities/near/near-faqs',
 							],
 						},
 						{
@@ -141,12 +155,12 @@ const sidebars = {
 							collapsed: true,
 							link: {
 								type: 'generated-index',
-								slug: 'user/guides/name-services/unstoppable-domains/',
+								slug: 'user/guides/wallets-and-identities/unstoppable-domains/',
 								keywords: ['guides', 'name service'],
 							},
 							items: [
-								'user/guides/name-services/unstoppable-domains/unstoppable-domains-getting-started',
-								'user/guides/name-services/unstoppable-domains/unstoppable-domains-faqs',
+								'user/guides/wallets-and-identities/unstoppable-domains/unstoppable-domains-getting-started',
+								'user/guides/wallets-and-identities/unstoppable-domains/unstoppable-domains-faqs',
 							],
 						},
 					],

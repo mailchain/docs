@@ -16,14 +16,17 @@ image: 'img/thumbs/social-square-1.png'
 
     1. `To` is the intended recipient in any of the following formats:
 
-        | Identity Type              | Address Format     | Example              |
-        | -------------------------- | ------------------ | -------------------- |
-        | Mailchain                  | username@mailchain | alice@mailchain      |
-        | Ethereum                   | address@ethereum   | 0x123456789@ethereum |
-        | More protocols coming soon |
+        | Identity Type | Address Format     | Example              |
+        | ------------- | ------------------ | -------------------- |
+        | Mailchain     | username@mailchain | alice@mailchain      |
+        | Ethereum      | address@ethereum   | 0x123456789@ethereum |
+        | ENS           | address.eth        | alice.eth            |
+        | NEAR          | address.near       | alice.near           |
 
-        :::note
-        If you send a message to an Ethereum address that has not yet signed up, the message will be retained for up to six months. It will be delivered to owner when they register the address with Mailchain.
+        See [address formatting](/developer/address-formatting.md) for more information about address usage in Mailchain.
+
+        :::note Optimistic Sending
+        If you send a message to a valid, supported web3 identity (ENS name, Ethereum or .near account, etc.) that has not yet signed up, the message will be retained for up to 90 days. It will be delivered to owner when they register the address with Mailchain.
         :::
 
     1. `From` is the address you are sending from. It will be your Mailchain address or any registered address.

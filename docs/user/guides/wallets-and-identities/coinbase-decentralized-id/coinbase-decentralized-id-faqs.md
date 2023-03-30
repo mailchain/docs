@@ -19,7 +19,7 @@ If you have already registered the wallet address, then the mail will arrive in 
 
 ### What if I have not yet registered my Coinbase wallet address with Mailchain?
 
-If you have not yet registered your Coinbase wallet address with Mailchain, the protocol will still accept the encrypted mail and store it for up to 90 days. You can synchronise mails for this address when you register the wallet address. (See [How to add your Coinbase Decentralized ID to Mailchain](/user/guides/name-services/coinbase-decentralized-id/coinbase-decentralized-id-getting-started#how-to-add-your-coinbase-username-to-mailchain))
+If you have not yet registered your Coinbase wallet address with Mailchain, the protocol will still accept the encrypted mail and store it for up to 90 days. You can synchronize mails for this address when you register the wallet address. (See [How to add your Coinbase Decentralized ID to Mailchain](/user/guides/wallets-and-identities/coinbase-decentralized-id/coinbase-decentralized-id-getting-started#how-to-add-your-coinbase-username-to-mailchain))
 
 ### My Coinbase Decentralized ID was not found, what should I check?
 

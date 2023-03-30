@@ -68,7 +68,7 @@ Lens Protocol is a Web3 social graph on the Polygon Proof-of-Stake blockchain. I
 
     ![sign to complete](../img-lens/lens1_6.png)
 
-1. The next step checks for connected name services, including .lens handles. This example found `allofweb3.lens`. If you do not see your .lens handle here, you can manually search for it using the search box. If it still cannot be found, please see Lens FAQs [here](/user/guides/name-services/lens/lens-faqs#my-lens-handle-was-not-found-what-should-i-check).
+1. The next step checks for connected name services, including .lens handles. This example found `allofweb3.lens`. If you do not see your .lens handle here, you can manually search for it using the search box. If it still cannot be found, please see Lens FAQs [here](/user/guides/wallets-and-identities/lens/lens-faqs#my-lens-handle-was-not-found-what-should-i-check).
 
     ![search for address](../img-lens/lens1_7.png)
 
@@ -96,7 +96,7 @@ With Mailchain you can send Mailchain message from your .lens handle to other Ma
 
 -   [ ] You have an .lens handle registered to your address (visit [lens.xyz](https://lens.xyz))
 -   [ ] You have a Mailchain account (see [here](/user/guides/getting-started/create-a-mailchain-account))
--   [ ] You have added your .lens handle to Mailchain (see [above](/user/guides/name-services/lens/lens-getting-started#how-to-add-your-lens-handle-to-mailchain))
+-   [ ] You have added your .lens handle to Mailchain (see [above](/user/guides/wallets-and-identities/lens/lens-getting-started#how-to-add-your-lens-handle-to-mailchain))
 
 ### Compose and send a message from your .lens handle
 

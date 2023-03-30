@@ -6,11 +6,18 @@ image: 'img/thumbs/social-square-1.png'
 
 # How To Connect & Register A Wallet
 
+If you have an existing blockchain wallet, you can register the wallet to receive messages sent to that address. Visit [connecting and registering wallets](/user/concepts/understanding-connecting-wallets) to learn more about connecting wallets.
+
 <video controls width="100%" poster="https://github.com/mailchain/video-tutorials/blob/main/posters/registering_a_wallet.png?raw=true">
     <source src="https://github.com/mailchain/video-tutorials/blob/main/videos/registering_a_wallet.mp4?raw=true" />
 </video>
 
-If you have an existing blockchain wallet, you can register the wallet to receive messages sent to that address. Visit [connecting and registering wallets](/user/concepts/understanding-connecting-wallets) for more information.
+:::note
+This guide goes through the steps of connecting and registering an Ethereum (or EVM) wallet address with Mailchain.
+
+Guides for all supported protocols, web domain name services and identities can be found under [Registering Wallets & Identities](/user/guides/wallets-and-identities).
+
+:::
 
 Follow these steps to connect and register an existing blockchain wallet address:
 
@@ -57,7 +64,7 @@ Follow these steps to connect and register an existing blockchain wallet address
 
     Your wallet is now verified.
 
-1.  Mailchain will check if you have any Web3 domain name services (e.g. ENS or Unstoppable Domains).<br/>For more information on configuring domain name services, please see [Web3 Domain Name Guides](/user/guides/name-services/).
+1.  Mailchain will check if you have any Web3 domain name services (e.g. ENS or Unstoppable Domains).<br/>For more information on configuring domain name services, please see [Web3 Domain Name Guides](/user/guides/wallets-and-identities/).
 
     ![](./img-register-a-wallet/name-sync.png)
 

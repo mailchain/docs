@@ -70,7 +70,7 @@ You can register .aurora NFT names at [Freename.io](http://Freename.io), then �
 
     ![sign request](../img-aurora/aurora-7.png)
 
-9. The next step checks for connected name services, including .aurora names. This example found `epistola.aurora`. If you do not see your name here, you can manually search for it using the search box. If it still cannot be found, please see [Aurora FAQs](/user/guides/name-services/aurora/aurora-faqs)).
+9. The next step checks for connected name services, including .aurora names. This example found `epistola.aurora`. If you do not see your name here, you can manually search for it using the search box. If it still cannot be found, please see [Aurora FAQs](/user/guides/wallets-and-identities/aurora/aurora-faqs)).
 
     ![finding your name](../img-aurora/aurora-8.png)
 

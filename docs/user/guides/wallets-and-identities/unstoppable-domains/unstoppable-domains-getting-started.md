@@ -68,7 +68,7 @@ _[Unstoppable Domains](https://unstoppabledomains.com/) is an NFT domain name pr
 
     ![sign to complete](../img-unstoppable-domains/unstoppable-domains_introduction/ud1_6.png)
 
-9. The next step checks for connected name services, including UD names. This example found `epistola.crypto` & `mailchain.888`. If you do not see your UD name here, you can manually search for it using the search box. If it still cannot be found, please see Unstoppable Domains FAQs [here](/user/guides/name-services/unstoppable-domains/unstoppable-domains-faqs#my-ud-name-was-not-found-what-should-i-check).
+9. The next step checks for connected name services, including UD names. This example found `epistola.crypto` & `mailchain.888`. If you do not see your UD name here, you can manually search for it using the search box. If it still cannot be found, please see Unstoppable Domains FAQs [here](/user/guides/wallets-and-identities/unstoppable-domains/unstoppable-domains-faqs#my-ud-name-was-not-found-what-should-i-check).
    ![search for address](../img-unstoppable-domains/unstoppable-domains_introduction/ud1_7.png)
 
 10. You can add a custom label for your address. By default, Mailchain will populate your UD name. Click Apply to save and continue.
@@ -95,7 +95,7 @@ With Mailchain you can send Mailchain message from your Unstoppable Domain name 
 
 -   [ ] You need to have a valid, minted Unstoppable Domain owned by your address (see [Unstoppable Domains docs](https://support.unstoppabledomains.com/) for more information on how to do this)
 -   [ ] You have a Mailchain account (see [here](/user/guides/getting-started/create-a-mailchain-account))
--   [ ] You have added your Unstoppable Domain name to Mailchain (see [above](/user/guides/name-services/unstoppable-domains/unstoppable-domains-getting-started#how-to-add-your-unstoppable-domain-ud-name-to-mailchain))
+-   [ ] You have added your Unstoppable Domain name to Mailchain (see [above](/user/guides/wallets-and-identities/unstoppable-domains/unstoppable-domains-getting-started#how-to-add-your-unstoppable-domain-ud-name-to-mailchain))
 
 ### Compose And Send A Message From Your UD Name
 

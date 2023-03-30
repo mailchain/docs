@@ -65,7 +65,7 @@ Your Coinbase username (username.cb.id) is a “subdomain” tied to Coinbase’
 
     ![sign to complete](../img-coinbase-decentralized-id/cbid1_6.png)
 
-1. In next step, enter your .cb.id in the 'Manual name service lookup' field and click 'Search'. If it cannot be found, please see Coinbase Profiles FAQs [here](/user/guides/name-services/coinbase-decentralized-id/coinbase-decentralized-id-faqs#my-coinbase-decentralized-id-was-not-found-what-should-i-check):
+1. In next step, enter your .cb.id in the 'Manual name service lookup' field and click 'Search'. If it cannot be found, please see Coinbase Profiles FAQs [here](/user/guides/wallets-and-identities/coinbase-decentralized-id/coinbase-decentralized-id-faqs#my-coinbase-decentralized-id-was-not-found-what-should-i-check):
 
     ![search for address](../img-coinbase-decentralized-id/cbid1_7.png)
 

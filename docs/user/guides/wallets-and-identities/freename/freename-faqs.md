@@ -24,7 +24,7 @@ If you are the owner of the minted name, then the message will arrive in your in
 
 ### What if I have not yet registered my wallet address with Mailchain?
 
-If you have not yet registered the wallet address with Mailchain, the protocol will still accept the encrypted message and store it for up to 90 days. You can synchronize messages for this address when you register the wallet address. (See [How to add your Freename domain to Mailchain](/user/guides/name-services/freename/freename-getting-started#how-to-add-your-freename-domain-name-to-mailchain))
+If you have not yet registered the wallet address with Mailchain, the protocol will still accept the encrypted message and store it for up to 90 days. You can synchronize messages for this address when you register the wallet address. (See [How to add your Freename domain to Mailchain](/user/guides/wallets-and-identities/freename/freename-getting-started#how-to-add-your-freename-domain-name-to-mailchain))
 
 ### My Freename domain was not found, what should I check?
 

@@ -22,7 +22,7 @@ If you have already registered the wallet address, then the message will arrive 
 
 ### What if I have not yet registered my wallet address with Mailchain?
 
-If you have not yet registered the wallet address with Mailchain, the protocol will still accept the encrypted message and store it for up to 90 days. You can synchronise messages for this address when you register the wallet address. (See [How to add your Unstoppable Domain to Mailchain](/user/guides/name-services/unstoppable-domains/unstoppable-domains-getting-started#how-to-add-your-unstoppable-domain-to-mailchain))
+If you have not yet registered the wallet address with Mailchain, the protocol will still accept the encrypted message and store it for up to 90 days. You can synchronize messages for this address when you register the wallet address. (See [How to add your Unstoppable Domain to Mailchain](/user/guides/wallets-and-identities/unstoppable-domains/unstoppable-domains-getting-started#how-to-add-your-unstoppable-domain-to-mailchain))
 
 ### What happens if I no longer own my UD name?
 
