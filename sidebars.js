@@ -197,7 +197,6 @@ const sidebars = {
 			id: 'developer/index',
 			label: 'Introduction',
 		},
-
 		{
 			type: 'category',
 			label: 'Getting Started',
@@ -216,8 +215,6 @@ const sidebars = {
 			// },
 			collapsed: false,
 			items: ['developer/guides/authenticate', 'developer/guides/send'],
-			// items: ['developer/guides/authenticate', 'developer/guides/send', 'developer/guides/register-address'],
-			//sss
 		},
 		{
 			type: 'category',
@@ -245,6 +242,19 @@ const sidebars = {
 						'developer/tutorials/integrations/tenderly-on-chain-event-notifications',
 					],
 				},
+			],
+		},
+		{
+			type: 'category',
+			label: 'Advanced',
+			// link: {
+			// 	type: 'generated-index',
+			// },
+			collapsed: false,
+			items: [
+				'developer/advanced/private-messaging-key',
+				'developer/advanced/resolve-address',
+				'developer/advanced/send-from-address',
 			],
 		},
 		{

@@ -1,0 +1,55 @@
+---
+title: 'Resolve address'
+---
+
+import Admonition from '@theme/Admonition';
+import CodeBlock from '@theme/CodeBlock';
+import ValidAddress from '!!raw-loader!./snippets/resolve-address/valid.ts';
+import RegisteredAddress from '!!raw-loader!./snippets/resolve-address/registered.ts';
+
+Mailchain supports addresses on multiple protocols and name services. This guide shows how to resolve an address this checks if the address is supported, valid, and registered.
+
+### Mailable addresses
+
+You can send a message to any supported protocol or name service. Mailchain addresses are fully qualified, they contain the address, protocol/name service and domain. E.g. an Ethereum address looks like this `0xbb56FbD7A2caC3e4C17936027102344127b7a112@ethereum.mailchain.com`, see [address format](../../address-formatting/) for more information.
+
+First install the packages needed.
+
+```bash npm2yarn
+npm install @mailchain/sdk
+```
+
+The code below checks if the address is mailable, that is a mail can be sent to it with Mailchain.
+
+<CodeBlock language="ts">{ValidAddress}</CodeBlock>
+
+This should give the below output. This means the address is valid and reachable.
+
+```bash
+0xbb56FbD7A2caC3e4C17936027102344127b7a112@ethereum.mailchain.com is reachable.
+```
+
+### Registered addresses and optimistic delivery
+
+Mailchain lets you send a mail to all supported and valid addresses, even if they have not yet registered. This is helpful as new users can still read mails sent to them before they registered.
+
+A `ResolvedAddress` has two states, `registered` and `vended` (not registered). The `registered` state means a used has registered their address by providing messaging key which will be used for end-to-end encrypted communication. The `vended` state means the address is not yet registered, and a Mailchain provided messaging key is used for encrypted communication.
+
+There are some situations when it's advisable to check if an address is registered before sending a mail. Examples include:
+
+-   You wish to send a time sensitive mail, and it's not helpful if the user receives the mail at some point in the future.
+-   You wish to share secrets or sensitive information. Secrets or sensitive information should only be sent to registered users.
+
+First install the packages needed.
+
+```bash npm2yarn
+npm install @mailchain/sdk
+```
+
+The code below shows the different states for a resolved address.
+
+<CodeBlock language="ts">{RegisteredAddress}</CodeBlock>
+
+<Admonition type="warning">
+	<p>Secrets or sensitive information should only be sent to registered users.</p>
+</Admonition>

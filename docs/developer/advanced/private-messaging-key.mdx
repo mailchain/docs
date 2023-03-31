@@ -1,0 +1,65 @@
+---
+title: 'Private messaging key'
+---
+
+import Admonition from '@theme/Admonition';
+import CodeBlock from '@theme/CodeBlock';
+import FromKeyRing from '!!raw-loader!./snippets/private-messaging-key/fromKeyRing.ts';
+import FromBytes from '!!raw-loader!./snippets/private-messaging-key/fromBytes.ts';
+
+Mailchain uses a keyring to derive key pairs for different operations and create messaging keys for each registered address. This guide shows you how to obtain the private messaging key for a registered address in your Mailchain keyring and use it within an application with the Mailchain SDK.
+
+To retrieve a private messaging key, the key must be registered in the account associated with your Secret Recovery Phrase. The address can be:
+
+-   Mailchain user - e.g. `username@mailchain.com`
+-   Registered protocol address = e.g. `0xbb56FbD7A2caC3e4C17936027102344127b7a112@ethereum.mailchain.com`
+-   Registered protocol address with name service = e.g. `alice.eth@ens.mailchain.com`
+
+### Get private messaging key for an address
+
+The code below code shows how to retrieve your private messaging key for a registered address from your Mailchain keyring.
+
+First install the packages needed.
+
+```bash npm2yarn
+npm install @mailchain/sdk @mailchain/encoding @mailchain/keyring
+```
+
+The code uses your Secret Recovery Phrase to create your keyring, then retrieves the private messaging key for your registered address. Behind the scenes it:
+
+-   Checks the address is registered and gets latest public messaging key by [resolving the address](../resolve-address).
+-   Gets latest nonce for the address.
+-   Checks messaging key from the resolved address matches keyring messaging key.
+
+<CodeBlock language="ts">{FromKeyRing}</CodeBlock>
+
+<Admonition type="info">
+	<p>
+		Public messaging keys are designed to be shared freely. Messaging keys are available publicly and{' '}
+		<a href="../resolve-address">looked up using an address</a>.
+	</p>
+</Admonition>
+
+<Admonition type="warning">
+	<p>
+		Private messaging keys must be kept securely. If you suspect your private messaging key has been compromised,{' '}
+		<a href="../../../user/guides/getting-started/register-a-wallet/">re-register</a> your wallet or protocol
+		address to generate a new private messaging key.
+	</p>
+</Admonition>
+
+### Send a message outside the keyring
+
+Your private messaging key can be used outside of your keyring. This is useful if you want to send from an address without having access to your Mailchain Secret Recovery Phrase.
+
+To use the messaging key without the keyring, you first need to get the private messaging key which you can do following the [instructions above](#get-address-private-messaging-key).
+
+Next install the packages needed:
+
+```bash npm2yarn
+npm install @mailchain/crypto @mailchain/encoding
+```
+
+The code below shows how to create a private messaging key from bytes.
+
+<CodeBlock language="ts">{FromBytes}</CodeBlock>

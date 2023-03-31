@@ -1,13 +1,21 @@
 ---
-title: 'Sending messages'
+title: 'Sending mails'
 slug: './send'
 ---
 
-# Sending Messages
+# Sending mails
 
-Using Mailchain you can send a message to any blockchain address. Only the owner of the address will be able to receive and read the message.
+Using Mailchain you can send a mail to any blockchain address. Only the owner of the address will be able to receive and read the mail.
 
-## Send your first message
+## Send your first mail
+
+First install the packages needed.
+
+```bash npm2yarn
+npm install @mailchain/sdk
+```
+
+The code below sends a mail.
 
 ```ts
 import { Mailchain } from '@mailchain/sdk';

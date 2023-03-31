@@ -40,6 +40,7 @@ const config = {
 					// editUrl:
 					// 	'https://github.com/mailchain/monorepo/tree/main/apps/',
 					routeBasePath: '/', // changing from 'docs' removes the docs folder from path
+					remarkPlugins: [[require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }]],
 				},
 				theme: {
 					customCss: require.resolve('./src/css/custom.css'),

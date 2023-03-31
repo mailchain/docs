@@ -1,3 +1,0 @@
-# Register wallet
-
-TODO:

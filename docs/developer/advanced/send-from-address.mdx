@@ -1,0 +1,32 @@
+---
+title: 'Send from address'
+---
+
+import Admonition from '@theme/Admonition';
+import CodeBlock from '@theme/CodeBlock';
+import SendFromAddress from '!!raw-loader!./snippets/send-from-address/send.ts';
+
+Mailchain's SDK provides a [simple method to send a mail](../../guides/send) via your inbox. It uses your Secret Recovery Phrase to access your Mailchain account, meaning you can send from any registered address and the mail is saved in your sent folder.
+
+Alternatively you can send a mail using an address's private messaging key. This is useful when you want to send a mail from an address without needing to expose your Secret Recovery Phrase.
+
+<Admonition type="info">
+	<p>
+		Mail sent using the private messaging key will not be saved in the sent folder. Instead you should keep track of
+		send messages in another store.
+	</p>
+</Admonition>
+
+First install the packages needed.
+
+```bash npm2yarn
+npm install @mailchain/sdk @mailchain/crypto @mailchain/encoding
+```
+
+The code below shows how to send a mail using the private messaging key. To get the private messaging key you can use the [SDK's `getPrivateMessagingKey` method](../private-messaging-key).
+
+<CodeBlock language="ts">{SendFromAddress}</CodeBlock>
+
+<Admonition type="info">
+	<p>Make sure you use the correct private messaging key. If you use the wrong key the mail will not be sent.</p>
+</Admonition>
