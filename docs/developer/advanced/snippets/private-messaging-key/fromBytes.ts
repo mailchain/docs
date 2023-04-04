@@ -3,7 +3,7 @@ import { ED25519PrivateKey } from '@mailchain/crypto';
 
 const privateMessagingKeyBytes = '...'; // securely supply private messaging key hex bytes
 
-const recoveredPrivateMessagingKey = ED25519PrivateKey.fromSeed(decodeHex(privateMessagingKeyBytes));
+const recoveredPrivateMessagingKey = ED25519PrivateKey.fromSecretKey(decodeHex(privateMessagingKeyBytes));
 
 // The private messaging key for the address MUST be kept secure.
 console.log(`Private messaging - ${encodeHex(recoveredPrivateMessagingKey.bytes)}`);
