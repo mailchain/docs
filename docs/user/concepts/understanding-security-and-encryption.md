@@ -25,7 +25,7 @@ Please see [FAQs](/user/faqs/) for more information on account recovery.
 
 Mailchain uses a messaging key in place of your wallet key to encrypt and decrypt messages for each address. Messaging keys are more secure for encryption and mean you don’t expose your wallet’s private key.
 
-When you register a wallet address with your Mailchain account, a new messaging key is generated. With your wallet, you sign a confirmation to indicate this key should be used for messaging. Signing this confirmation creates a proof that users can independently verify. The messaging private key is known only to you.
+When you register a wallet address with your Mailchain account, a new messaging key is generated. With your wallet, you sign a confirmation to indicate this key should be used for messaging. Signing this confirmation creates a proof that users can independently verify. The private messaging key is known only to you.
 
 Registered addresses are encrypted before being stored, and you only need to verify ownership of your wallet address once. Mailchain disconnects your wallet after your wallet has created the proof. Your wallet private key is never exposed.
 

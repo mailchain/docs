@@ -13,20 +13,20 @@ Alternatively you can send a mail using an address's private messaging key. This
 <Admonition type="info">
 	<p>
 		Mail sent using the private messaging key will not be saved in the sent folder. Instead you should keep track of
-		send messages in another store.
+		send messages within your application or in another store.
 	</p>
 </Admonition>
 
-First install the packages needed.
+1. First install the packages needed.
 
-```bash npm2yarn
-npm install @mailchain/sdk @mailchain/crypto @mailchain/encoding
-```
+    ```bash npm2yarn
+    npm install @mailchain/sdk
+    ```
 
-The code below shows how to send a mail using the private messaging key. To get the private messaging key you can use the [SDK's `getPrivateMessagingKey` method](../private-messaging-key).
+2. The code below shows how to send a mail using the private messaging key. To get the private messaging key you can use the [SDK's `getPrivateMessagingKey` method](../private-messaging-key).
 
-<CodeBlock language="ts">{SendFromAddress}</CodeBlock>
+    <CodeBlock language="ts">{SendFromAddress}</CodeBlock>
 
-<Admonition type="info">
-	<p>Make sure you use the correct private messaging key. If you use the wrong key the mail will not be sent.</p>
-</Admonition>
+    <Admonition type="info">
+    	<p>Make sure you use the correct private messaging key. If you use the wrong key the mail will not be sent.</p>
+    </Admonition>

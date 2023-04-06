@@ -1,5 +1,4 @@
-import { getPrivateMessagingKey } from '@mailchain/sdk/internal';
-import { encodeHex } from '@mailchain/encoding';
+import { getPrivateMessagingKey, privateMessagingKeyToHex, publicMessagingKeyToHex } from '@mailchain/sdk/internal';
 import { KeyRing } from '@mailchain/keyring';
 
 const keyRing = KeyRing.fromSecretRecoveryPhrase('....'); // securely supply 24 word secret recovery phrase
@@ -18,6 +17,6 @@ if (getPrivateMessagingKeyError) {
 }
 
 // The private messaging key for the address MUST be kept secure.
-console.log(`Private messaging key for ${address} - ${encodeHex(privateMessagingKey.bytes)}`);
+console.log(`Private messaging key for ${address} - ${privateMessagingKeyToHex(privateMessagingKey)}`);
 // The public messaging key for the address can be shared.
-console.log(`Public messaging key for ${address} - ${encodeHex(privateMessagingKey.publicKey.bytes)}`);
+console.log(`Public messaging key for ${address} - ${publicMessagingKeyToHex(privateMessagingKey.publicKey)}`);
