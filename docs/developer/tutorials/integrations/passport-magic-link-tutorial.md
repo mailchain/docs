@@ -1,5 +1,5 @@
 ---
-title: 'Passport Magic Links with Mailchain'
+Title: 'Passport Magic Links with Mailchain'
 ---
 
 This tutorial shows you how to create and send ‘login’ Magic links to any EVM-compatible blockchain address, ENS name or Unstoppable domain.
@@ -23,32 +23,28 @@ A working development environment with [Node.js](https://nodejs.org/) and [Gi
 You will start by creating a starter app, which has all the scaffolding needed to build a todo list.
 
 Open a new terminal window on your computer, and run:
-
-    ```bash
+```bash
     git clone https://github.com/passport/todos-express-starter.git mailchain-tutorial
-    ```
+```
 
-    You now have a directory named `'mailchain-tutorial'`.
+   You now have a directory named `'mailchain-tutorial'`.
 
 In your terminal, navigate into the directory by running:
-
-    ```bash
+```bash
     cd mailchain-tutorial
-    ```
+```
 
-    You are in the folder with the starter app file.
+   You are in the folder with the starter app file.
 
 Install the dependencies by running the following command in your terminal:
-
-    ```bash
+```bash
     npm install
-    ```
+```
 
 Start the server:
-
-    ```bash
+```bash
     npm start
-    ```
+```
 
 Check to see if it’s working by opening <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> in your browser.
 
@@ -65,16 +61,14 @@ Congratulations! You're ready to add authentication to this very simple app.
 To let users sign in with any valid wallet address, Web3 identity or Mailchain account. For that, you need to create a login page that prompts the user to enter one of these addresses.
 
 In your terminal, create a file that will contain the authentication-related routes:
-
-    ```bash
+```bash
     touch routes/auth.js
-    ```
+```
 
 Open the mailchain-tutorial folder in your favorite code editor and navigate to the `auth.js` file you have just created in `routes`
 
 In `routes/auth.js` add the following code, which creates a login route that will render the login page.
-
-    ```js
+```js
     var express = require('express');
 
     var router = express.Router();
@@ -84,29 +78,26 @@ In `routes/auth.js` add the following code, which creates a login route that wil
     });
 
     module.exports = router;
-    ```
+```
 
 Now add the route to the app. To do this, open `'app.js'` and add the newly created auth route by adding the highlighted code below:
-
-    ```js
+```js
     var indexRouter = require('./routes/index');
     // highlight-next-line
     var authRouter = require('./routes/auth'); // require your auth route
 
     var app = express();
-    ```
+```
 
 Now use the `authRouter` in the app. Below `indexRouter`, add the following highlighted line:
-
-    ```js
+```js
     app.use('/', indexRouter);
     // highlight-next-line
     app.use('/', authRouter); // app should 'use' your auth router
-    ```
+```
 
 Now you will update the login page so the user can enter a Mailchain address. Open the existing `login.ejs` file in the `views` folder and add the following highlighted form under the heading:
-
-    ```html
+```html
     <section class="prompt">
     	<h3>todos</h3>
     	<h1>Sign in</h1>
@@ -130,7 +121,7 @@ Now you will update the login page so the user can enter a Mailchain address. Op
     	<hr />
     	<p class="help">Don't have an account? <a href="/signup">Sign up</a></p>
     </section>
-    ```
+```
 
 Restart your app in the terminal (`ctrl` + `c` if it's running the run `npm start`). Click sign in.
 
@@ -154,18 +145,16 @@ Go to **Settings > [Secret Recovery Phrase](https://app.mailchain.com/settings/
 Now that you have the Secret Recovery Phrase and a Mailchain address, you should create a file to store it.
 
     In your editor create a new file in mailchain-tutorial and label it `.env`. Open the `.env` file and add the following environment variables, setting your `FROM_ADDRESS` to your test account, with the associated`SECRET_RECOVERY_PHRASE`:
-
-    ```txt
+```txt
     # Mailchain Environment Variables
     FROM_ADDRESS=**user@mailchain.com**
     SECRET_RECOVERY_PHRASE=**INSERT_SECRET_RECOVERY_PHRASE**
-    ```
+```
 
 You also need to update your database schema to store an authenticating user's Mailchain address and verification status.
 
     Open `'db.js'`and insert the following highlighted lines to the CREATE user statement:
-
-    ```js
+```js
       db.run("CREATE TABLE IF NOT EXISTS users ( \
         id INTEGER PRIMARY KEY, \
         username TEXT UNIQUE, \
@@ -179,7 +168,7 @@ You also need to update your database schema to store an authenticating user's M
         email TEXT UNIQUE, \
         email_verified INTEGER \
       )");
-    ```
+```
 
 Now you need to delete the database and re-create it because you have already created the database in previous steps when testing the landing page.
 
@@ -190,10 +179,9 @@ Now you need to delete the database and re-create it because you have already cr
     :::
 
     To delete the database, open a new terminal in your editor and run:
-
-    ```bash
+```bash
     rm ./var/db/todos.db
-    ```
+```
 
 Nice work! You're now ready to configure the Passport JS login strategy.
 
@@ -204,16 +192,14 @@ Nice work! You're now ready to configure the Passport JS login strategy.
 Now that you've set up Mailchain, you are ready to configure Passport and the `passport-magic-link`strategy.
 
 In the terminal, install the necessary dependencies:
-
-    ```bash
+```bash
     npm install passport
     npm install passport-magic-link
     npm install @mailchain/sdk
-    ```
+```
 
 Open `auth.js` in the routes folder and `require` the newly installed packages or files as highlighted below:
-
-    ```js
+```js
     var express = require('express');
     // highlight-start
     var passport = require('passport');
@@ -222,11 +208,10 @@ Open `auth.js` in the routes folder and `require` the newly installed packages
     var db = require('../db');
     // highlight-end
     var router = express.Router();
-    ```
+```
 
 Next, in the same file, add the following highlighted code block:
-
-    ```js
+```js
     var router = express.Router();
     // highlight-start
     var mailchain = Mailchain.fromSecretRecoveryPhrase(process.env.SECRET_RECOVERY_PHRASE);
@@ -314,7 +299,7 @@ Next, in the same file, add the following highlighted code block:
     router.get('/login', function (req, res, next) {
     	res.render('login');
     });
-    ```
+```
 
 The `MagicLinkStrategy` is now configured. The strategy will sanitize the input address, then send mails containing a magic link using Mailchain. When the user clicks on the magic link, the user record associated with the Mailchain address will be found. If a user record does not exist, one is created the first time someone signs in.
 
@@ -325,8 +310,7 @@ Now that you have prompted the user for their Mailchain address, and have the st
 You should still be working in the `auth.js` file in `routes` but if not, open it now.
 
 Add the following `route` below `login` route:
-
-    ```js
+```js
     router.get('/login', function (req, res, next) {
     	res.render('login');
     });
@@ -345,13 +329,12 @@ Add the following `route` below `login` route:
     //highlight-end
 
     module.exports = router;
-    ```
+```
 
     This route will process the form data from the login page and call the `'/login/mailchain/check'` route to send a Mailchain message to that user.
 
 Continuing within `auth.js`, add the route for `'/login/mailchain/check'`:
-
-    ```js
+```js
         	}),
     	function (req, res, next) {
     		res.redirect('/login/mailchain/check');
@@ -365,7 +348,7 @@ Continuing within `auth.js`, add the route for `'/login/mailchain/check'`:
     //highlight-end
 
     module.exports = router;
-    ```
+```
 
 This `route` will render a page instructing the user to check their Mailchain account and to click the link to authenticate login.
 
@@ -376,8 +359,7 @@ This `route` will render a page instructing the user to check their Mailchain ac
 Now that the application can send the user a Mailchain message with a magic link, the next step is to verify the Mailchain address when they click the link.
 
 Within `auth.js` in your `routes` section, add this `route` in the highlighted section below the `/login/mailchain/check` route:
-
-    ```js
+```js
     router.get('/login/mailchain/check', function (req, res, next) {
     	res.render('login/mailchain/check');
     });
@@ -391,20 +373,18 @@ Within `auth.js` in your `routes` section, add this `route` in the highlighted 
     	}),
     );
     // highlight-end
-    ```
+```
 
     This route will verify the Mailchain address when the link is clicked.
 
 Now in the terminal, create a folder and corresponding view for our route, by running the following commands in the terminal:
-
-    ```bash
+```bash
     mkdir views/login/mailchain
     touch views/login/mailchain/check.ejs
-    ```
+```
 
 In your code editor, navigate to the file you have just created, (`views/login/mailchain/check.ejs`and add the following code:
-
-    ```html
+```html
     <!DOCTYPE html>
     <html lang="en">
     	<head>
@@ -437,11 +417,10 @@ In your code editor, navigate to the file you have just created, (`views/login/m
     		</footer>
     	</body>
     </html>
-    ```
+```
 
 Now, update `views/index.ejs` to include the `user.mailchain_address` field. Change the highlighted the line to match the snippet below:
-
-    ```js
+```js
     <nav class="nav">
       <ul>
       // highlight-next-line
@@ -453,7 +432,7 @@ Now, update `views/index.ejs` to include the `user.mailchain_address` field. Ch
         </li>
       </ul>
     </nav>
-    ```
+```
 
 You have now configured the flow for users to click "Sign in", then enter a Mailchain address or ENS name. When the user clicks "Sign in with Mailchain", the app will send a magic link.
 
@@ -466,26 +445,23 @@ Next you need to be able to establish a login session for an authenticated user.
 Once you've verified the user's Mailchain address, you need to establish a login session for the user as they navigate the app. To do that, you can add session support.
 
 Start by running the following code in the terminal to instal the necessary dependencies:
-
-    ```bash
+```bash
     npm install express-session
     npm install connect-sqlite3
-    ```
+```
 
 Open `app.js` and `require` the additional dependencies highlighted in the snippet below:
-
-    ```js
+```js
     var logger = require('morgan');
     // highlight-start
     var passport = require('passport');
     var session = require('express-session');
     var SQLiteStore = require('connect-sqlite3')(session);
     // highlight-end
-    ```
+```
 
 In the same file, add the following highlighted section of code:
-
-    ```js
+```js
     app.use(express.static(path.join(__dirname, 'public')));
 
     // highlight-start
@@ -502,11 +478,10 @@ In the same file, add the following highlighted section of code:
 
     app.use('/', indexRouter);
     app.use('/', authRouter);
-    ```
+```
 
 Now you can configure Passport to manage the login session. Open `auth.js` before the `routes` section, add the following highlighted code snippet:
-
-    ```js
+```js
     //highlight-start
     passport.serializeUser(function (user, cb) {
     	process.nextTick(function () {
@@ -524,13 +499,12 @@ Now you can configure Passport to manage the login session. Open `auth.js` befor
     router.get('/login', function (req, res, next) {
     	res.render('login');
     });
-    ```
+```
 
 Now try signing in again. In the terminal, run:
-
-    ```bash
+```bash
     npm start
-    ```
+```
 
 Open <a href="http://localhost:3000" target="_blank">http://localhost:3000</a>, click "Sign in", enter your Mailchain address or your ENS name and click "Sign in with Mailchain".
 
@@ -549,8 +523,7 @@ Now users can sign in with Mailchain! Next, in the last step of this tutorial, y
 Now that users can sign in, they'll need a way to sign out.
 
 Open 'routes/auth.js' and a new route for `logout` below the '/login/mailchain/verify' route:
-
-    ```js
+```js
     router.get(
     	'/login/mailchain/verify',
     	passport.authenticate('magiclink', {
@@ -569,7 +542,7 @@ Open 'routes/auth.js' and a new route for `logout` below the '/login/mailchain/v
     	});
     });
     //highlight-end
-    ```
+```
 
 Restart your app in the terminal (`ctrl` + `c`), then go back to your browser window. You should already be signed in, and can now click "Sign out."
 
