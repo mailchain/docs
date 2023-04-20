@@ -3,8 +3,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
+import HomepageFeatures, { FeatureItem } from '../../../components/src/featureList';
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -23,17 +22,38 @@ function HomepageHeader() {
 		</header>
 	);
 }
-
+const featureList: FeatureItem[] = [
+	{
+		title: 'Explore',
+		Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+		description: (
+			<>
+				Explore Mailchain's key concepts, covering security, identity, encryption, tokenomics, governance, and
+				more.
+			</>
+		),
+	},
+	{
+		title: 'Learn',
+		Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+		description: <>Learn how to use Mailchain with clear guides, tutorials, and frequently asked questions.</>,
+	},
+	{
+		title: 'Develop',
+		Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+		description: <>Integrate communication into your application or contribute to Mailchain protocol.</>,
+	},
+];
 export default function Home(): JSX.Element {
 	const { siteConfig } = useDocusaurusContext();
 	return (
 		<Layout
-			title={`Welcome to ${siteConfig.title} Documentation`}
-			description="Everything you need to get started with Mailchain"
+			title={`Welcome to ${siteConfig.title} Docs`}
+			description="Everything you need to get hands on with Mailchain"
 		>
 			<HomepageHeader />
 			<main>
-				<HomepageFeatures />
+				<HomepageFeatures featureList={featureList} />
 			</main>
 		</Layout>
 	);
