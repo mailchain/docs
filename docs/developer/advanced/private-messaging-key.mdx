@@ -7,6 +7,7 @@ import CodeBlock from '@theme/CodeBlock';
 import FromKeyRing from '!!raw-loader!./snippets/private-messaging-key/fromKeyRing.ts';
 import PrivateFromHex from '!!raw-loader!./snippets/private-messaging-key/privateFromHex.ts';
 import PublicFromHex from '!!raw-loader!./snippets/private-messaging-key/publicFromHex.ts';
+import CheckAddressMessagingKey from '!!raw-loader!./snippets/private-messaging-key/checkAddressMessagingKey.ts';
 
 Mailchain uses a keyring to derive key pairs for different operations and create messaging keys for each registered address. This guide shows you how to obtain the private messaging key for a registered address in your Mailchain keyring and use it within an application with the Mailchain SDK.
 
@@ -94,3 +95,19 @@ Use `privateMessagingKeyFromHex` to create your messaging key from your [retriev
     Public messaging keys can also be created from hex.
 
     <CodeBlock language="ts">{PublicFromHex}</CodeBlock>
+
+### Check address messaging key
+
+You can check the private messaging key matches the public messaging key for an address stored on the key registry.
+
+1. Install the packages needed:
+
+    ```bash npm2yarn
+    npm install @mailchain/sdk
+    ```
+
+2. The code below shows how to create a private messaging key from hex.
+
+    <CodeBlock language="ts">{CheckAddressMessagingKey}</CodeBlock>
+
+If the code errors then it means the private key is not valid for the address. Since the latest key is required for sending it's possible the messaging key has been rotated. Get the latest messaging key [from code](#from-code) or the [web app](#from-web).

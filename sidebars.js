@@ -258,6 +258,11 @@ const sidebars = {
 			],
 		},
 		{
+			type: 'doc',
+			id: 'developer/errors/codes',
+			label: 'Error codes',
+		},
+		{
 			type: 'category',
 			label: 'Other Resources',
 			collapsed: false,
