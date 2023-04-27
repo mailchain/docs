@@ -13,15 +13,19 @@ Below is a list of possible error codes, along with additional information about
 
 #### `address_invalid`
 
-Address is invalid. Make sure address is syntax correct. See [address formatting](../address-formatting.md) to check format is correct.
+Address is invalid. Make sure address is syntax correct. Check error's `cause` for the underlying `error`. See [address formatting](../address-formatting.md) for correct address formatting.
 
 #### `identity_not_found`
 
-Identity is not found. Check address and try again.
+Identity is not found. Check address exists on supplied identity provider. When searching for name service providers check name is registered and resolves to the default protocol address.
+
+### `identity_provider_unsupported`
+
+Identity provider is not support. Check list of supported identity providers.
 
 #### `messaging_key_contact_call_error`
 
-Failed calling messaging key contract or contract response is invalid. Check your connection and try again.
+Failed calling messaging key contract or contract response is invalid. Check your connection, then try again.
 
 #### `messaging_key_validation_failed`
 
