@@ -128,7 +128,7 @@ async function main(): Promise<void> {
 		const webhookEvent = req.body as AlchemyWebhookEvent;
 		console.log(`Processing webhook event id: ${webhookEvent.id}`);
 
-		if ((webhookEvent.event.eventDetails = '<EVENT_DETAILS>')) {
+		if (webhookEvent.event.eventDetails === '<EVENT_DETAILS>') {
 			// this is test notification send from Alchemy. Return success.
 			return res.send('Alchemy Notify is the best!');
 		}
@@ -169,7 +169,7 @@ Add the following code below the check for test event:
 const webhookEvent = req.body as AlchemyWebhookEvent;
 console.log(`Processing webhook event id: ${webhookEvent.id}`);
 
-if ((webhookEvent.event.eventDetails = '<EVENT_DETAILS>')) {
+if (webhookEvent.event.eventDetails === '<EVENT_DETAILS>') {
 	// this is test event send from Alchemy. Return success.
 	return res.send('Alchemy Notify is the best!');
 }
