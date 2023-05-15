@@ -151,6 +151,20 @@ const sidebars = {
 						},
 						{
 							type: 'category',
+							label: 'Space ID (.bnb & .arb)',
+							collapsed: true,
+							link: {
+								type: 'generated-index',
+								slug: 'user/guides/wallets-and-identities/spaceid/',
+								keywords: ['guides', 'name service'],
+							},
+							items: [
+								'user/guides/wallets-and-identities/spaceid/spaceid-getting-started',
+								'user/guides/wallets-and-identities/spaceid/spaceid-faqs',
+							],
+						},
+						{
+							type: 'category',
 							label: 'Unstoppable Domains',
 							collapsed: true,
 							link: {
