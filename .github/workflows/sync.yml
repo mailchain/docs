@@ -1,0 +1,22 @@
+on:
+    pull_request_target:
+jobs:
+    sync-repo:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
+
+            - uses: mailchain/copybara-action@1.0
+              with:
+                  ssh_key: ${{ secrets.SSH_KEY }}
+                  access_token: ${{ secrets.ACCESS_TOKEN }}
+                  sot_repo: mailchain/monorepo
+                  destination_repo: mailchain/docs
+                  pr_include: '**'
+                  pr_exclude: '.github/**'
+                  push_include: 'apps/docs/**'
+                  push_exclude: '.github/**'
+                  pr_move: |
+                      ||apps/docs
