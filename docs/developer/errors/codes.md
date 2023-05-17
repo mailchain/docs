@@ -19,7 +19,7 @@ Address is invalid. Make sure address is syntax correct. Check error's `cause` f
 
 Identity is not found. Check address exists on supplied identity provider. When searching for name service providers check name is registered and resolves to the default protocol address.
 
-### `identity_provider_unsupported`
+#### `identity_provider_unsupported`
 
 Identity provider is not support. Check list of supported identity providers.
 
