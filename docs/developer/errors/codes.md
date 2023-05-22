@@ -19,6 +19,10 @@ Address is invalid. Make sure address is syntax correct. Check error's `cause` f
 
 Identity is not found. Check address exists on supplied identity provider. When searching for name service providers check name is registered and resolves to the default protocol address.
 
+#### `identity_provider_address_unsupported`
+
+Identity provider does not support address. Although identity provider is valid and address MAY be valid, Mailchain does not support this address. Check supported addresses.
+
 #### `identity_provider_unsupported`
 
 Identity provider is not support. Check list of supported identity providers.
