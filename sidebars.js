@@ -165,6 +165,20 @@ const sidebars = {
 						},
 						{
 							type: 'category',
+							label: 'Tezos & Tezos Domains (.tez)',
+							collapsed: true,
+							link: {
+								type: 'generated-index',
+								slug: 'user/guides/wallets-and-identities/tezos/',
+								keywords: ['guides', 'name service'],
+							},
+							items: [
+								'user/guides/wallets-and-identities/tezos/tezos-getting-started',
+								'user/guides/wallets-and-identities/tezos/tezos-faqs',
+							],
+						},
+						{
+							type: 'category',
 							label: 'Unstoppable Domains',
 							collapsed: true,
 							link: {
