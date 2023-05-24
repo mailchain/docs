@@ -1,7 +1,7 @@
 ---
 title: 'Tezos FAQs'
 sidebar_position: 4
-# image: 'img/thumbs/mailchain-mailto-messagetodaos.png'
+image: 'img/thumbs/mailchain-tezos-message.png'
 ---
 
 # Tezos FAQs
@@ -29,11 +29,15 @@ When your Tezos Domains names expire, Mailchain messages will no longer be sent 
 ### My Tezos Domains name was not found, what should I check?
 
 1. Check you are registering the intended wallet address
-2. Check your Tezos Domains name is configured with a reverse record in https://app.tezos.domains/
+2. Check your Tezos Domains name correctly points to a valid Tezos address and is configured with a reverse record in https://app.tezos.domains/
 
 ### What happens if I make a change to where my .tez name resolves?
 
 Mailchain will always resolve the underlying name from the Tezos contracts so it will reflect the latest changes returned by the resolver.
+
+### What happens if my .tez name does not point to or resolve to an address
+
+If your .tez name does not point to or resolve an address, Mailchain will not be able to discover your name.
 
 ### How Do I Register A .tez Name?
 

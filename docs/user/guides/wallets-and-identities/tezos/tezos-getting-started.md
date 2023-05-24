@@ -1,10 +1,12 @@
 ---
 title: 'Getting Started with Tezos'
 sidebar_position: 2
-# image: 'img/thumbs/mailchain-mailto-messagetodaos.png'
+image: 'img/thumbs/mailchain-tezos-message.png'
 ---
 
 Mailchain users can use their Tezos wallet address or Tezos domain to send and receive messages. It’s simple to get started…
+
+![Mailchain message between Tezos Domains and Tezos address](../img-tezos/mailchain-tezos-message.png)
 
 # Introduction
 
@@ -31,13 +33,23 @@ The main function is to translate a meaningful and user-friendly alias to its co
 
 1. Click “Register Your Wallet”.
 
+    ![register your wallet](../img-tezos/tezos1_1.png)
+
 1. A modal will open. Choose 'Tezos', then click 'Connect'
+
+    ![select wallet](../img-tezos/tezos1_2.png)
 
 1. Choose your preferred wallet (e.g. in this article we'll use "Temple Browser Extension").
 
+    ![choose your preferred wallet](../img-tezos/tezos1_3.png)
+
 1. Choose the account or address to connect, then click Connect.
 
+    ![choose address](../img-tezos/tezos1_4.png)
+
 1. The address is now connected, but we need to register it in Mailchain. To do this, click 'Verify Address'
+
+    ![address connected](../img-tezos/tezos1_5.png)
 
 1. A 'Signature Request' will appear in your wallet. It contains the following text:
 
@@ -56,17 +68,31 @@ The main function is to translate a meaningful and user-friendly alias to its co
     Nonce: `a_number`
     ```
 
+    ![signature request](../img-tezos/tezos1_6_1.png)
+
 1. Review the request and click 'Sign' to complete verification.
+
+    ![sign to complete](../img-tezos/tezos1_6_2.png)
 
 1. The next step checks for connected name services, including Tezos Domains. This example found `creativeminds.tez`. If you do not see your Tezos Domains name here, you can manually search for it using the search box. If it still cannot be found, please see Tezos FAQs [here](/user/guides/wallets-and-identities/tezos/tezos-faqs/#my-tezos-name-was-not-found-what-should-i-check).
 
+    ![search for address](../img-tezos/tezos1_7.png)
+
 1. You can add an optional custom label for your address. By default, Mailchain will populate your Tezos Domain name or abbreviated address (in that order). Click Apply to save and continue.
+
+    ![add label](../img-tezos/tezos1_8.png)
 
 1. Mailchain is able to receive messages for your wallet address before you register it. Click 'Synchronize' to retrieve these messages, or click 'Skip' to synchronize later. Any synchronized messages will appear in your inbox.
 
+    ![check for existing messages](../img-tezos/tezos1_9.png)
+
 1. You can now click 'Done' to disconnect your wallet and close the modal, or choose to register another address.
 
+    ![done and wallet disconnect](../img-tezos/tezos1_10.png)
+
 1. You will now see the newly added inbox on the left. This will be labelled with the label you provided when registering the address. Any messages sent to that address or the Tezos Domains name will appear in this inbox.
+
+    ![new mailbox added](../img-tezos/tezos1_11.png)
 
 ## How To Send A Message Using Your .tez Name
 
@@ -75,8 +101,7 @@ With Mailchain you can send Mailchain message from your .tez name to other Mailc
 ### Prerequisites
 
 -   [ ] You have a Mailchain account (see [here](/user/guides/getting-started/create-a-mailchain-account))
--   [ ] (Optional) You have a Tezos Domains name registered to your address (see [here](/user/guides/wallets-and-identities/tezos/tezos-faqs/#how-do-i-register-a-tezos-domain))
--   [ ] (Optional) You have configured the Tezos Domains reverse record (see [here](/user/guides/wallets-and-identities/tezos/tezos-faqs/#how-do-i-set-a-tezos-domains-reverse-record))
+-   [ ] You have a Tezos Domains name registered to your address (see [here](/user/guides/wallets-and-identities/tezos/tezos-faqs/#how-do-i-register-a-tezos-domain))
 -   [ ] You have added your Tezos Domains name to Mailchain (see [above](/user/guides/wallets-and-identities/tezos/tezos-getting-started/#how-to-add-your-tezos-address-or-tez-domain-to-mailchain))
 
 ### Compose And Send A Message From Your Tezos Address or .tez Name
@@ -85,12 +110,18 @@ With Mailchain you can send Mailchain message from your .tez name to other Mailc
 
 1. Click 'Compose' in the sidebar.
 
-1. In the New Message window, click the “From” dropdown menu.
+    ![compose message](../img-tezos/tezos2_1.png)
 
-1. Select your Tezos address or .tez name.
+1. In the New Message window, click the “From” dropdown menu and select your Tezos address or .tez name.
+
+    ![choose from address](../img-tezos/tezos2_2.png)
 
 1. Fill out the rest of the message, then click Send
 
+    ![write message](../img-tezos/tezos2_3.png)
+
 1. Your message should be successfully sent.
+
+    ![message sent](../img-tezos/tezos2_4.png)
 
 Done! Your recipient will receive your message from your .tez name.
