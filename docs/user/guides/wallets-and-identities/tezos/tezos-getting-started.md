@@ -1,5 +1,5 @@
 ---
-title: 'Getting Started with Tezos'
+title: 'Getting Started With Tezos'
 sidebar_position: 2
 image: 'img/thumbs/mailchain-tezos-message.png'
 ---
@@ -101,8 +101,8 @@ With Mailchain you can send Mailchain message from your .tez name to other Mailc
 ### Prerequisites
 
 -   [ ] You have a Mailchain account (see [here](/user/guides/getting-started/create-a-mailchain-account))
--   [ ] You have a Tezos Domains name registered to your address (see [here](/user/guides/wallets-and-identities/tezos/tezos-faqs/#how-do-i-register-a-tezos-domain))
--   [ ] You have added your Tezos Domains name to Mailchain (see [above](/user/guides/wallets-and-identities/tezos/tezos-getting-started/#how-to-add-your-tezos-address-or-tez-domain-to-mailchain))
+-   [ ] (optional) You have a Tezos Domains name registered to your address (see [here](/user/guides/wallets-and-identities/tezos/tezos-faqs/#how-do-i-register-a-tezos-domain))
+-   [ ] (optional) You have added your Tezos Domains name to Mailchain (see [above](/user/guides/wallets-and-identities/tezos/tezos-getting-started/#how-to-add-your-tezos-address-or-tez-domain-to-mailchain))
 
 ### Compose And Send A Message From Your Tezos Address or .tez Name
 

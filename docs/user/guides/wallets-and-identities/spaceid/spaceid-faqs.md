@@ -58,4 +58,4 @@ To set a primary SPACE ID domain, please see <a href="https://docs.space.id/gett
 | TLD  | Fully qualified Mailchain address                 | Shorthand Mailchain address | Name service address                |
 | ---- | ------------------------------------------------- | --------------------------- | ----------------------------------- |
 | .arb | _yourname_.arb<span>@</span>spaceid.mailchain.com |                             | _yourname_.arb<span>@</span>spaceid |
-| .bnb | _yourname_.bnb<span>@</span>spaceid.mailchain.com |                             | _yourname_.bnb<span>@</span>spaceid |
+| .bnb | _yourname_.bnb<span>@</span>spaceid.mailchain.com | _yourname_.bnb              | _yourname_.bnb<span>@</span>spaceid |

@@ -87,7 +87,7 @@ Mailchain users can use their SPACE ID domains (`.bnb` & `.arb`) to send and rec
 
 ## How To Send A Message Using Your SPACE ID Domain
 
-With Mailchain you can send Mailchain message from your SPACE ID domain to other Mailchain users.
+With Mailchain you can send Mailchain messages from your SPACE ID domain to other Mailchain users.
 
 ### Prerequisites
 

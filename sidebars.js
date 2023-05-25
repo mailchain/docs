@@ -81,6 +81,20 @@ const sidebars = {
 						},
 						{
 							type: 'category',
+							label: 'Binance BNB Smart Chain (.bnb)',
+							collapsed: true,
+							link: {
+								type: 'generated-index',
+								slug: 'user/guides/wallets-and-identities/binance/',
+								keywords: ['guides', 'name service'],
+							},
+							items: [
+								'user/guides/wallets-and-identities/binance/binance-getting-started',
+								'user/guides/wallets-and-identities/binance/binance-faqs',
+							],
+						},
+						{
+							type: 'category',
 							label: 'Coinbase ID (cb.id)',
 							collapsed: true,
 							link: {
