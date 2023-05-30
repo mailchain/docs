@@ -17,7 +17,7 @@ The Mailchain application encrypts your data in your browser before storing it w
 
 ## Logging in to Mailchain
 
-After you successfully authenticate with your username and password, a key that is known only to you, is used to encrypt your Secret Recovery Phrase. Your password is never sent to Mailchain in any form. This also means we have no way recover your account if you lose your password or are unable to complete any other account recovery options.
+After you successfully authenticate with your username and password, a key that is known only to you, is used to encrypt your Secret Recovery Phrase. Your password is never sent to Mailchain in any form. This also means we have no way to recover your account if you lose your password or are unable to complete any other account recovery options.
 
 Please see [FAQs](/user/faqs/) for more information on account recovery.
 
