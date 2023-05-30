@@ -47,7 +47,7 @@ image: 'img/thumbs/social-square-1.png'
 
 1. Next, you will be asked if you would like to download your Secret Recovery Phrase. If you did not follow previous warnings to write down and store the phrase, please ensure you select 'Download' and store the file securely so that others do not have access to it. Otherwise you can skip this step.
 
-You now have access to your Mailchain inbox and can either [register an existing blockchain wallet](/user/concepts/understanding-connecting-wallets.md) or [send a message.](./3-send-a-mailchain-message.md)
+You now have access to your Mailchain inbox can either [register an existing blockchain wallet](/user/concepts/understanding-connecting-wallets.md) or [send a message.](./3-send-a-mailchain-message.md)
 
 ## Reserved Names
 

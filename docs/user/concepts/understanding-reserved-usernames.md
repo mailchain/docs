@@ -17,7 +17,7 @@ Mailchain reserved usernames for:
 
 :::caution
 
-Usernames in Mailchain are non-transferable. Once a username has been taken, it cannot be reused.
+Usernames in Mailchain are non-transferrable. Once a username has been taken, it cannot be reused.
 
 DO NOT buy or accept a username from anyone. Once you create a Secret Recovery Phrase for an account, it cannot be changed. The original owner will always know the Secret Recovery Phrase associated with that Mailchain identity and can access its account data.
 
