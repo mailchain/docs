@@ -16,15 +16,16 @@ You can find an example of the final result here [https://github.com/mailchain/t
 
 To complete this tutorial, you need:
 
-* A working development environment with [Node.js](https://nodejs.org/) and [Git](https://git-scm.com/)
-* An editor and terminal of your choosing. 
-* A [Mailchain](https://mailchain.com/) account for development and testing purposes.
+-   A working development environment with [Node.js](https://nodejs.org/) and [Git](https://git-scm.com/)
+-   An editor and terminal of your choosing.
+-   A [Mailchain](https://mailchain.com/) account for development and testing purposes.
 
 ## Step 1 - Create a Starter App
 
 You will start by creating a starter app, which has all the scaffolding needed to build a todo list.
 
 Open a new terminal window on your computer, and run:
+
 ```bash
 git clone https://github.com/passport/todos-express-starter.git mailchain-tutorial
 ```
@@ -32,18 +33,21 @@ git clone https://github.com/passport/todos-express-starter.git mailchain-tutori
 You now have a directory named `'mailchain-tutorial'`.
 
 In your terminal, navigate into the directory by running:
+
 ```bash
 cd mailchain-tutorial
 ```
 
-   You are in the folder with the starter app file.
+You are in the folder with the starter app file.
 
 Install the dependencies by running the following command in your terminal:
+
 ```bash
 npm install
 ```
 
 Start the server:
+
 ```bash
 npm start
 ```
@@ -63,6 +67,7 @@ Congratulations! You're ready to add authentication to this very simple app.
 To let users sign in with any valid wallet address, Web3 identity or Mailchain account. For that, you need to create a login page that prompts the user to enter one of these addresses.
 
 In your terminal, create a file that will contain the authentication-related routes:
+
 ```bash
 touch routes/auth.js
 ```
@@ -70,12 +75,13 @@ touch routes/auth.js
 Open the mailchain-tutorial folder in your favorite code editor and navigate to the `auth.js` file you have just created in `routes`
 
 In `routes/auth.js` add the following code, which creates a login route that will render the login page.
+
 ```js
 var express = require('express');
 
 var router = express.Router();
 
-router.get('/login', function (req, res, next) {
+router.get('/login', (req, res, next) => {
 	res.render('login');
 });
 
@@ -93,6 +99,7 @@ var app = express();
 ```
 
 Now use the `authRouter` in the app. Below `indexRouter`, add the following highlighted line:
+
 ```js
 app.use('/', indexRouter);
 // highlight-next-line
@@ -100,6 +107,7 @@ app.use('/', authRouter); // app should 'use' your auth router
 ```
 
 Now you will update the login page so the user can enter a Mailchain address. Open the existing `login.ejs` file in the `views` folder and add the following highlighted form under the heading:
+
 ```html
 <section class="prompt">
 	<h3>todos</h3>
@@ -159,20 +167,20 @@ You also need to update your database schema to store an authenticating user's M
 
 Open `'db.js'`and insert the following highlighted lines to the CREATE user statement:
 
-```js
-db.run("CREATE TABLE IF NOT EXISTS users ( \
+```js {7-8}
+db.run(
+	'CREATE TABLE IF NOT EXISTS users ( \
 	id INTEGER PRIMARY KEY, \
 	username TEXT UNIQUE, \
 	hashed_password BLOB, \
 	salt BLOB, \
 	name TEXT, \
-	//highlight-start
 	mailchain_address TEXT UNIQUE, \
 	mailchain_address_verified INTEGER, \
-	//highlight-end
 	email TEXT UNIQUE, \
 	email_verified INTEGER \
-)");
+)',
+);
 ```
 
 Now you need to delete the database and re-create it because you have already created the database in previous steps when testing the landing page.
@@ -206,24 +214,26 @@ npm install @mailchain/sdk
 ```
 
 Open `auth.js` in the routes folder and `require` the newly installed packages or files as highlighted below:
+
 ```js
 var express = require('express');
 // highlight-start
 var passport = require('passport');
 var MagicLinkStrategy = require('passport-magic-link').Strategy;
-var Mailchain = require('@mailchain/sdk').Mailchain;
+var { Mailchain } = require('@mailchain/sdk');
 var db = require('../db');
 // highlight-end
 var router = express.Router();
 ```
 
 Next, in the same file, add the following highlighted code block:
+
 ```js
 var router = express.Router();
 // highlight-start
 var mailchain = Mailchain.fromSecretRecoveryPhrase(process.env.SECRET_RECOVERY_PHRASE);
 var fromAddress = process.env['FROM_ADDRESS'] || mailchain.user().address;
-let createMailchainAddress = function (address) {
+const createMailchainAddress = function (address) {
 	switch (address) {
 		case address.match(/^[\d\w\-\_]*@mailchain\.com$/)?.input: // Mailchain address:
 			return address;
@@ -245,7 +255,7 @@ passport.use(
 			tokenField: 'token',
 			verifyUserAfterToken: true,
 		},
-		async function send(user, token) {
+		async (user, token) => {
 			var link = 'http://localhost:3000/login/mailchain/verify?token=' + token;
 
 			var msg = {
@@ -267,43 +277,39 @@ passport.use(
 			console.log('sent mail', data);
 			return data;
 		},
-		function verify(user) {
-			return new Promise(function (resolve, reject) {
-				db.get(
-					'SELECT * FROM users WHERE mailchain_address = ?',
-					[user.mailchain_address],
-					function (err, row) {
-						if (err) {
-							return reject(err);
-						}
-						if (!row) {
-							db.run(
-								'INSERT INTO users (mailchain_address, mailchain_address_verified) VALUES (?, ?)',
-								[user.mailchain_address, 1],
-								function (err) {
-									if (err) {
-										return reject(err);
-									}
-									var id = this.lastID;
-									var obj = {
-										id: id,
-										mailchain_address: user.mailchain_address,
-									};
-									return resolve(obj);
-								},
-							);
-						} else {
-							return resolve(row);
-						}
-					},
-				);
+		(user) => {
+			return new Promise((resolve, reject) => {
+				db.get('SELECT * FROM users WHERE mailchain_address = ?', [user.mailchain_address], (err, row) => {
+					if (err) {
+						return reject(err);
+					}
+					if (!row) {
+						db.run(
+							'INSERT INTO users (mailchain_address, mailchain_address_verified) VALUES (?, ?)',
+							[user.mailchain_address, 1],
+							function (err) {
+								if (err) {
+									return reject(err);
+								}
+								var id = this.lastID;
+								var obj = {
+									id,
+									mailchain_address: user.mailchain_address,
+								};
+								return resolve(obj);
+							},
+						);
+					} else {
+						return resolve(row);
+					}
+				});
 			});
 		},
 	),
 );
 
 // highlight-end
-router.get('/login', function (req, res, next) {
+router.get('/login', (req, res, next) => {
 	res.render('login');
 });
 ```
@@ -311,6 +317,7 @@ router.get('/login', function (req, res, next) {
 The `MagicLinkStrategy` is now configured. The strategy will sanitize the input address, then send mails containing a magic link using Mailchain. When the user clicks on the magic link, the user record associated with the Mailchain address will be found. If a user record does not exist, one is created the first time someone signs in.
 
 ---
+
 ## Step 5 - Send Magic Link
 
 Now that you have prompted the user for their Mailchain address, and have the strategy configured, the next step is to send the user a Mailchain message containing the Magic Link when they click "Sign in with Mailchain.”
@@ -320,7 +327,7 @@ You should still be working in the `auth.js` file in `routes` but if not, open 
 Add the following `route` below `login` route:
 
 ```js
-router.get('/login', function (req, res, next) {
+router.get('/login', (req, res, next) => {
 	res.render('login');
 });
 //highlight-start
@@ -331,7 +338,7 @@ router.post(
 		action: 'requestToken',
 		failureRedirect: '/login',
 	}),
-	function (req, res, next) {
+	(req, res, next) => {
 		res.redirect('/login/mailchain/check');
 	},
 );
@@ -342,17 +349,11 @@ module.exports = router;
 
 This route will process the form data from the login page and call the `'/login/mailchain/check'` route to send a Mailchain message to that user.
 
-Continuing within `auth.js`, add the route for `'/login/mailchain/check'`:
+Continuing within `auth.js`, add the route for `'/login/mailchain/check'` before `module.exports = router;`:
 
 ```js
-		}),
-	function (req, res, next) {
-		res.redirect('/login/mailchain/check');
-	},
-);
 //highlight-start
-
-router.get('/login/mailchain/check', function (req, res, next) {
+router.get('/login/mailchain/check', (req, res, next) => {
 	res.render('login/mailchain/check');
 });
 //highlight-end
@@ -371,7 +372,7 @@ Now that the application can send the user a Mailchain message with a magic link
 Within `auth.js` in your `routes` section, add this `route` in the highlighted section below the `/login/mailchain/check` route:
 
 ```js
-router.get('/login/mailchain/check', function (req, res, next) {
+router.get('/login/mailchain/check', (req, res, next) => {
 	res.render('login/mailchain/check');
 });
 // highlight-start
@@ -396,6 +397,7 @@ touch views/login/mailchain/check.ejs
 ```
 
 In your code editor, navigate to the file you have just created, (`views/login/mailchain/check.ejs`and add the following code:
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -432,7 +434,8 @@ In your code editor, navigate to the file you have just created, (`views/login/m
 ```
 
 Now, update `views/index.ejs` to include the `user.mailchain_address` field. Change the highlighted the line to match the snippet below:
-```js
+
+```jsx
 <nav class="nav">
 	<ul>
 		// highlight-next-line
@@ -457,12 +460,14 @@ Next you need to be able to establish a login session for an authenticated user.
 Once you've verified the user's Mailchain address, you need to establish a login session for the user as they navigate the app. To do that, you can add session support.
 
 Start by running the following code in the terminal to instal the necessary dependencies:
+
 ```bash
 npm install express-session
 npm install connect-sqlite3
 ```
 
 Open `app.js` and `require` the additional dependencies highlighted in the snippet below:
+
 ```js
 var logger = require('morgan');
 // highlight-start
@@ -473,6 +478,7 @@ var SQLiteStore = require('connect-sqlite3')(session);
 ```
 
 In the same file, add the following highlighted section of code:
+
 ```js
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -493,27 +499,29 @@ app.use('/', authRouter);
 ```
 
 Now you can configure Passport to manage the login session. Open `auth.js` before the `routes` section, add the following highlighted code snippet:
+
 ```js
 //highlight-start
-passport.serializeUser(function (user, cb) {
-	process.nextTick(function () {
+passport.serializeUser((user, cb) => {
+	process.nextTick(() => {
 		cb(null, { id: user.id, mailchain_address: user.mailchain_address });
 	});
 });
 
-passport.deserializeUser(function (user, cb) {
-	process.nextTick(function () {
+passport.deserializeUser((user, cb) => {
+	process.nextTick(() => {
 		return cb(null, user);
 	});
 });
 
 //highlight-end
-router.get('/login', function (req, res, next) {
+router.get('/login', (req, res, next) => {
 	res.render('login');
 });
 ```
 
 Now try signing in again. In the terminal, run:
+
 ```bash
 npm start
 ```
@@ -535,6 +543,7 @@ Now users can sign in with Mailchain! Next, in the last step of this tutorial, y
 Now that users can sign in, they'll need a way to sign out.
 
 Open 'routes/auth.js' and a new route for `logout` below the '/login/mailchain/verify' route:
+
 ```js
 router.get(
 	'/login/mailchain/verify',
@@ -545,8 +554,8 @@ router.get(
 );
 
 //highlight-start
-router.post('/logout', function (req, res, next) {
-	req.logout(function (err) {
+router.post('/logout', (req, res, next) => {
+	req.logout((err) => {
 		if (err) {
 			return next(err);
 		}
