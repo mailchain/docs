@@ -1,0 +1,197 @@
+// .eslintrc file (no extension)
+{
+	"root": true,
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"plugins": ["sort-class-members", "@typescript-eslint", "markdown", "json", "eslint-plugin-import"],
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react/recommended",
+		"plugin:react/jsx-runtime"
+	],
+	"settings": {
+		// Adding new import aliases require a change in tsconfig.json, .eslintrc, jest.config.ts and webpack.resolve.ts files
+		"import/internal-regex": "^@(assets|hooks|consts|UI|components|services|utils|APIs|providers|localTypes|localTypes|config)/",
+		"react": {
+			"version": "18.2"
+		}
+	},
+	"rules": {
+		// REACT RULES:
+		"react/jsx-boolean-value": ["warn", "never"],
+		"react/react-in-jsx-scope": "off",
+		"react/jsx-curly-brace-presence": ["warn", "never"],
+		"react/self-closing-comp": "warn",
+		"react/display-name": "error",
+		"react/prop-types": "off",
+		"react-hooks/exhaustive-deps": "off",
+		// TYPESCRIPT RULES:
+		"@typescript-eslint/no-empty-interface": "warn",
+		"@typescript-eslint/ban-ts-comment": "warn",
+		"@typescript-eslint/no-empty-function": "warn",
+		"@typescript-eslint/no-inferrable-types": "warn",
+		"@typescript-eslint/no-unused-expressions": "warn",
+		"@typescript-eslint/no-unused-vars": [
+			"error",
+			{
+				"argsIgnorePattern": "^_",
+				"varsIgnorePattern": "^_",
+				"caughtErrorsIgnorePattern": "^_",
+				"ignoreRestSiblings": true
+			}
+		],
+		"@typescript-eslint/no-shadow": "error",
+		// GENERAL RULES:
+		"no-case-declarations": "off",
+		"no-useless-escape": "warn",
+		"no-async-promise-executor": "warn",
+		"prefer-arrow-callback": "warn",
+		"import/no-default-export": "warn",
+		"object-shorthand": "warn",
+		"no-empty": "warn",
+		"no-unused-vars": "off",
+		"no-duplicate-imports": "error",
+		"no-restricted-globals": "off",
+		"no-else-return": "error",
+		"no-nested-ternary": "error",
+		"prefer-const": "warn",
+		"no-console": ["warn", { "allow": ["warn", "error", "debug"] }],
+		"no-mixed-spaces-and-tabs": ["warn", "smart-tabs"],
+		// COMPLEX RULES:
+		"prefer-destructuring": [
+			"warn",
+			{
+				"VariableDeclarator": {
+					"array": false,
+					"object": true
+				},
+				"AssignmentExpression": {
+					"array": false,
+					"object": false
+				}
+			},
+			{
+				"enforceForRenamedProperties": false
+			}
+		],
+		"import/order": [
+			"warn",
+			{
+				"groups": ["builtin", "external", "internal", "parent", "sibling", "index"]
+			}
+		],
+		"no-restricted-imports": "off",
+		"@typescript-eslint/no-restricted-imports": [
+			"error",
+			{
+				"paths": [
+					{
+						"name": "lodash",
+						"message": "Import [module] from lodash/[module] instead"
+					},
+					{
+						"name": "@mui/material",
+						"message": "Import [module] from @mui/material/[module] instead",
+						"allowTypeImports": true
+					}
+				],
+				"patterns": [
+					{
+						"group": ["@material-ui/*/*/*", "!@material-ui/core/test-utils/*"],
+						"message": "usage of material-ui private modules not allowed."
+					},
+					{
+						"group": ["@mui/*/*/*", "!@mui/material/test-utils/*"],
+						"message": "usage of mui private modules not allowed."
+					}
+				]
+			}
+		],
+		"@typescript-eslint/naming-convention": [
+			"error",
+			{
+				"selector": "variable",
+				"format": ["camelCase", "PascalCase", "UPPER_CASE"],
+				"leadingUnderscore": "allow"
+			},
+			{
+				"selector": "typeLike",
+				"format": ["PascalCase"]
+			},
+			{
+				"selector": "function",
+				"format": ["camelCase", "PascalCase"]
+			},
+			{
+				"selector": "interface",
+				"format": ["PascalCase"],
+				"custom": {
+					"regex": "^I[A-Z]",
+					"match": false
+				}
+			},
+			{
+				"selector": "enumMember",
+				"format": ["UPPER_CASE"]
+			},
+			{
+				"selector": "classProperty",
+				"format": ["camelCase"],
+				"modifiers": ["private"],
+				"leadingUnderscore": "require"
+			}
+		],
+		"sort-class-members/sort-class-members": [
+			"warn",
+			{
+				"order": [
+					"[properties]",
+					"constructor",
+					"[accessor-pairs]",
+					"[getters]",
+					"[setters]",
+					"[arrow-function-properties]",
+					"[methods]"
+				],
+				"accessorPairPositioning": "getThenSet"
+			}
+		]
+	},
+	"overrides": [
+		{
+			"files": ["**/*.mdx"],
+			"extends": ["plugin:mdx/recommended"],
+			"settings": {
+				"mdx/code-blocks": false
+			}
+		},
+		{
+			// 2. Enable the Markdown processor for all .md files.
+			"files": ["**/*.md"],
+			"processor": "markdown/markdown"
+		},
+		{
+			"files": ["**/*.md/*.ts"],
+			"rules": {
+				"@typescript-eslint/no-unused-vars": "off",
+				"@typescript-eslint/no-var-requires": "off",
+				"no-console": "off"
+			}
+		},
+		{
+			"files": ["**/*.md/*.js"],
+			"rules": {
+				"@typescript-eslint/no-unused-vars": "off",
+				"@typescript-eslint/no-var-requires": "off",
+				"@typescript-eslint/no-shadow": "off",
+				"no-console": "off",
+				"no-undef": "off"
+			}
+		}
+	]
+}
