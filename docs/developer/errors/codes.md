@@ -15,6 +15,10 @@ Below is a list of possible error codes, along with additional information about
 
 Address is invalid. Make sure address is syntax correct. Check error's `cause` for the underlying `error`. See [address formatting](../address-formatting.md) for correct address formatting.
 
+#### `identity_expired`
+
+Identity has expired. Check the identity provider settings. Owner of the identity must renew domain to continue using it for messaging.
+
 #### `identity_not_found`
 
 Identity is not found. Check address exists on supplied identity provider. When searching for name service providers check name is registered and resolves to the default protocol address.
