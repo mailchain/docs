@@ -52,6 +52,7 @@ If you ever need to transmit your private messaging key (although this scenario 
 :::caution
 Mailchain will never ask you for your private keys for your wallet, and it never transmits your private messaging keys.
 :::
+
 ### Unauthorized Access
 
 The most substantial risk associated with private messaging keys is unauthorized access. If a malicious actor obtains your key, they can send or receive messages as you. This can lead to a range of problems from identity theft to corporate data leaks.
