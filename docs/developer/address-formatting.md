@@ -23,7 +23,7 @@ Please refer to the table below for definition and examples:
 | Tezos                 | `<address>@tezos.mailchain.com`                                                                                                                        | `tz1UenW36rnMpobJ8roNW5Bwevpry4YHmQzR@tezos.mailchain.com`                                                                                   |
 | Tezos Domains         | `<addressPart>.tez@tezosdomains.mailchain.com`                                                                                                         | `alice.tez@tezosdomains.mailchain.com`                                                                                                       |
 | Unstoppable           | `<addressPart>.<unstoppableDomain>@unstoppable.mailchain.com`                                                                                          | `alice.crypto@unstoppable.mailchain.com`<br />`bob.wallet@unstoppable.mailchain.com`                                                         |
-| Avvy                  | `<addressPart>.avax@avvy.mailchain.com`                                                                                                                | `alice.avax@avvy.mailchain.com`                                                                                                              |
+| Avvy                  | `<addressPart>.avax@avvy.mailchain.com`                                                                                                                | `alice.avax@avvy.mailchain.com`                                                                                                        |
 
 ## Shorthand Addresses
 
