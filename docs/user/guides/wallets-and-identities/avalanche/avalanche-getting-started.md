@@ -69,7 +69,7 @@ _**.avax domain names** are provided by [Avvy Domains](https://avvy.domains/), a
 
 1. The next step checks for connected name services, including .avax names. If you do not see your .avax name here, you can manually search for it using the search box. Note: Enhanced Privacy domains will not appear automatically and need to be manually searched for.
 
-    If it still cannot be found, please see Avalanche FAQs [here](/user/guides/wallets-and-identities/spaceid/spaceid-faqs/#my-space-id-domain-was-not-found-what-should-i-check) and ensure your .avax name is configured to resolve correctly.
+    If it still cannot be found, please see Avalanche FAQs [here](/user/guides/wallets-and-identities/avalanche/avalanche-faqs/#my-avax-domain-domain-was-not-found-what-should-i-check) and ensure your .avax name is configured to resolve correctly.
 
     ![search for web3 domain names](../img-avalanche/avalanche1_7.png)
 
@@ -97,7 +97,7 @@ With Mailchain you can send Mailchain messages from your .avax name or C-Chain a
 
 -   [ ] You have a Mailchain account (see [here](/user/guides/getting-started/create-a-mailchain-account))
 -   [ ] (Optional) You have an .avax name, registered through Avvy Domains, configured to resolve to your address (see [here](/user/guides/wallets-and-identities/avalanche/avalanche-faqs/#how-do-i-configure-my-avax-domain))
--   [ ] (optional) You have added your .avax domain to Mailchain (see [above](/user/guides/wallets-and-identities/avalanche/ valanche-getting-started/#add-your-avax-domain-name-to-mailchain))
+-   [ ] (optional) You have added your .avax domain to Mailchain (see [above](/user/guides/wallets-and-identities/avalanche/avalanche-getting-started/#add-your-avax-domain-name-to-mailchain))
 
 ### Compose And Send A Message From Your .avax Name or Avalanche Address
 
