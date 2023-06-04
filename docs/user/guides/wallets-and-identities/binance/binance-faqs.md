@@ -12,7 +12,7 @@ Frequently asked questions for working with BNB Smart Chain (BSC), .bnb names an
 
 You can ask anyone to send messages to your BSC address or your .bnb name… it’s a Web3 identity afterall!
 
-### Are .bnb domains supported for for communication?
+### Are .bnb domains supported for communication?
 
 Yes. `.bnb` domains registered through SPACE ID are supported in Mailchain.
 
