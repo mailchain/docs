@@ -1,6 +1,6 @@
 {
 	"name": "@apps/docs",
-	"version": "0.0.9",
+	"version": "0.0.10",
 	"private": true,
 	"scripts": {
 		"docusaurus": "docusaurus",
@@ -22,7 +22,7 @@
 		"@docusaurus/core": "2.2.0",
 		"@docusaurus/preset-classic": "2.2.0",
 		"@docusaurus/remark-plugin-npm2yarn": "^2.4.0",
-		"@mailchain/sdk": "0.19.1",
+		"@mailchain/sdk": "0.19.2",
 		"@mdx-js/react": "^1.6.22",
 		"clsx": "1.1.1",
 		"prism-react-renderer": "^1.3.3",
