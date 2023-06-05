@@ -81,6 +81,20 @@ const sidebars = {
 						},
 						{
 							type: 'category',
+							label: 'Avalanche (.avax)',
+							collapsed: true,
+							link: {
+								type: 'generated-index',
+								slug: 'user/guides/wallets-and-identities/avalanche/',
+								keywords: ['guides', 'protocol', 'name service'],
+							},
+							items: [
+								'user/guides/wallets-and-identities/avalanche/avalanche-getting-started',
+								'user/guides/wallets-and-identities/avalanche/avalanche-faqs',
+							],
+						},
+						{
+							type: 'category',
 							label: 'Binance BNB Smart Chain (.bnb)',
 							collapsed: true,
 							link: {

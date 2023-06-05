@@ -75,7 +75,7 @@ Mailchain users can use their SPACE ID domains (`.bnb` & `.arb`) to send and rec
 
 1. Mailchain is able to receive messages for your wallet address before you sign up. Click 'Synchronize' to retrieve these messages, or click 'Skip' to synchronize later. Any synchronized messages will appear in your inbox.
 
-    ![check for existing addresses](../img-spaceid/spaceid1_9.png)
+    ![check for existing messages](../img-spaceid/spaceid1_9.png)
 
 1. You can now click 'Done' to disconnect your wallet and close the modal, or choose to register another address.
 
