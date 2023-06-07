@@ -14,7 +14,7 @@
 		"write-heading-ids": "docusaurus write-heading-ids",
 		"typecheck": "tsc",
 		"test": "echo docks has no tests",
-		"lint": "prettier --write ."
+		"lint": "prettier --config .prettierrc --loglevel warn --write ."
 	},
 	"dependencies": {
 		"@algolia/client-search": "4.14.2",

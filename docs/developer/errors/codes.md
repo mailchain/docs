@@ -15,6 +15,10 @@ Below is a list of possible error codes, along with additional information about
 
 Address is invalid. Make sure address is syntax correct. Check error's `cause` for the underlying `error`. See [address formatting](../address-formatting.md) for correct address formatting.
 
+#### `badly_formatted_address`
+
+Address format is invalid. Check that the format follows the Mailchain address standard. See [address formatting](../address-formatting.md) for correct address formatting.
+
 #### `identity_expired`
 
 Identity has expired. Check the identity provider settings. Owner of the identity must renew domain to continue using it for messaging.
@@ -23,9 +27,13 @@ Identity has expired. Check the identity provider settings. Owner of the identit
 
 Identity is not found. Check address exists on supplied identity provider. When searching for name service providers check name is registered and resolves to the default protocol address.
 
+#### `identity_provider_address_invalid`
+
+Address is not valid for the identity provider. Check the format of the address before the `@` follows the rules of the identity provider.
+
 #### `identity_provider_address_unsupported`
 
-Identity provider does not support address. Although identity provider is valid and address MAY be valid, Mailchain does not support this address. Check supported addresses.
+Identity provider address not supported. Although identity provider is valid and address MAY be valid, Mailchain does not support this address. Check supported addresses.
 
 #### `identity_provider_unsupported`
 
