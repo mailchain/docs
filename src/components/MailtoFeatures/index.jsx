@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { checkAddressForErrors } from '@mailchain/addressing';
 import styles from './MailtoLinkCreator.module.css';
 
 const MailtoLinkCreator = () => {
@@ -39,17 +40,14 @@ const MailtoLinkCreator = () => {
 		}
 	};
 
-	const validateMailchainAddress = (address) => {
-		// const mailchainAddressRegex = /$/;
-		// return mailchainAddressRegex.test(address);
-		return address !== '';
-	};
-
 	const handleToChange = (e) => {
 		setTo(e.target.value);
 		setFormNew(false);
-		if (!validateMailchainAddress(e.target.value)) {
-			setToError('Enter one or more valid addresses');
+		const addresses = e.target.value.split(/[\s,;]/).filter((i)=> i !== undefined && i.length >0).map((i)=>i.trim());
+
+        const addressesErrors = addresses.map((address)=> [address, checkAddressForErrors(address)]).filter(a => a[1] != null)
+		if (addressesErrors.length > 0) {
+		    setToError(`Following addresses are invalid: ${addressesErrors.map(a => a[0]).join(',')}`)
 		} else {
 			setToError('');
 		}
@@ -68,7 +66,7 @@ const MailtoLinkCreator = () => {
 					className={styles.formInput}
 					value={to}
 					onChange={handleToChange}
-					placeholder="hi@mailchain, epistola.eth, allofweb3.lens, etc..."
+					placeholder="hi@mailchain.com, epistola.eth@ens.mailchain.com, allofweb3.lens@lens.mailchain.com, etc..."
 				/>
 				{formNew ? (
 					<div className={styles.infoText}>Enter a Mailchain address</div>

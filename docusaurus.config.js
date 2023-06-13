@@ -184,6 +184,7 @@ const config = {
 				},
 			},
 		],
+		require.resolve('./src/plugins/webPack'),
 	],
 };
 
