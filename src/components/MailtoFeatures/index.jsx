@@ -43,11 +43,16 @@ const MailtoLinkCreator = () => {
 	const handleToChange = (e) => {
 		setTo(e.target.value);
 		setFormNew(false);
-		const addresses = e.target.value.split(/[\s,;]/).filter((i)=> i !== undefined && i.length >0).map((i)=>i.trim());
+		const addresses = e.target.value
+			.split(/[\s,;]/)
+			.filter((i) => i !== undefined && i.length > 0)
+			.map((i) => i.trim());
 
-        const addressesErrors = addresses.map((address)=> [address, checkAddressForErrors(address)]).filter(a => a[1] != null)
+		const addressesErrors = addresses
+			.map((address) => [address, checkAddressForErrors(address)])
+			.filter((a) => a[1] != null);
 		if (addressesErrors.length > 0) {
-		    setToError(`Following addresses are invalid: ${addressesErrors.map(a => a[0]).join(',')}`)
+			setToError(`Following addresses are invalid: ${addressesErrors.map((a) => a[0]).join(',')}`);
 		} else {
 			setToError('');
 		}
