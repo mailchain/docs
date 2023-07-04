@@ -1,7 +1,6 @@
 ---
 title: 'Freename FAQs'
 sidebar_position: 4
-image: 'img/thumbs/freenameXmc.png'
 ---
 
 # Freename FAQs

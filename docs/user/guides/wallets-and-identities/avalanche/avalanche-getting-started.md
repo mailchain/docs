@@ -17,77 +17,29 @@ _**.avax domain names** are provided by [Avvy Domains](https://avvy.domains/), a
 
 ### Prerequisites:
 
--   [ ] You have a Mailchain account (see [here](/user/guides/getting-started/create-a-mailchain-account))
 -   [ ] (Optional) You have an .avax name, registered through Avvy Domains, configured to resolve to your address (see [here](/user/guides/wallets-and-identities/avalanche/avalanche-faqs/#how-do-i-configure-my-avax-domain))
+-   [ ] You have a Mailchain account (see [here](/user/guides/getting-started/create-a-mailchain-account))
 
-### Add Your .avax Domain Name to Mailchain
+import MetamaskConnect from '/docs/user/guides/getting-started/register-a-wallet-partials/\_metamask_connect.mdx'
+import MetamaskVerify from '/docs/user/guides/getting-started/register-a-wallet-partials/\_metamask_verify.mdx'
+import NameserviceAvalanche from '/docs/user/guides/getting-started/register-a-wallet-partials/\_nameservice_avax.mdx'
+import MetamaskDisconnect from '/docs/user/guides/getting-started/register-a-wallet-partials/\_metamask_disconnect.mdx'
 
-1. Log in to your Mailchain Account.
+### Step 1: Connect your wallet
 
-1. Click “Register Your Wallet”.
+<MetamaskConnect />
 
-    ![register your wallet](../img-avalanche/avalanche1_1.png)
+### Step 2: Verify your address
 
-1. A modal will open. Select a wallet provider (e.g. Metamask), then click 'Connect'
+<MetamaskVerify />
 
-    ![select wallet](../img-avalanche/avalanche1_2.png)
+### Step 3: Adding your .avax domain name
 
-1. Choose the address to connect, then click Next.
+<NameserviceAvalanche />
 
-    ![choose address](../img-avalanche/avalanche1_3.png)
+### Step 4: Disconnect your wallet
 
-1. Click 'Connect' to confirm Mailchain should be able to read your address.
-
-    ![connect wallet](../img-avalanche/avalanche1_3-1.png)
-
-1. The address is now connected, but we need to register it in Mailchain. To do this, click 'Verify Address'
-
-    ![address connected](../img-avalanche/avalanche1_4.png)
-
-1. A 'Signature Request' will appear in your wallet. It contains the following text:
-
-    ```bash
-    Message:
-    Welcome to Mailchain!
-
-    Please sign to start using this address with Mailchain. This will not trigger a blockchain transaction or cost any gas fees.
-
-    What's happening?
-    A messaging key will be registered with this address and used only for messaging. It will replace any existing registered messaging keys.
-
-    Technical Details:
-    Address: `your_address`
-    Messaging key: `a_generated_messaging_key`
-    Nonce: `a_number`
-    ```
-
-    ![signature request](../img-avalanche/avalanche1_5.png)
-
-1. Review the request and click 'Sign' to complete verification.
-
-    ![sign to complete](../img-avalanche/avalanche1_6.png)
-
-1. The next step checks for connected name services, including .avax names. If you do not see your .avax name here, you can manually search for it using the search box. Note: Enhanced Privacy domains will not appear automatically and need to be manually searched for.
-
-    If it still cannot be found, please see Avalanche FAQs [here](/user/guides/wallets-and-identities/avalanche/avalanche-faqs/#my-avax-domain-domain-was-not-found-what-should-i-check) and ensure your .avax name is configured to resolve correctly.
-
-    ![search for web3 domain names](../img-avalanche/avalanche1_7.png)
-
-1. You can add a custom label for your address. By default, Mailchain will populate the label with the first name it finds. Click Apply to save and continue.
-
-    ![add label](../img-avalanche/avalanche1_7-1.png)
-
-1. Mailchain is able to receive messages for your wallet address before you sign up. Click 'Synchronize' to retrieve these messages, or click 'Skip' to synchronize later. Any synchronized messages will appear in your inbox.
-
-    ![check for existing messages](../img-avalanche/avalanche1_8.png)
-
-1. You can now click 'Done' to disconnect your wallet and close the modal, or choose to register another address.
-
-    ![disconnect wallet](../img-avalanche/avalanche1_9.png)
-
-1. You will now see the newly added inbox on the left. This will be labelled with the label you provided when registering the address. Any messages sent to that address or your .avax name will appear in this inbox.
-
-    ![new address added](../img-avalanche/avalanche1_10.png)
+<MetamaskDisconnect imagePath="/img/user/guides/getting-started/img-register-a-wallet/example-sub-inbox-avax.png"/>
 
 ## How To Send A Message From Your Avalanche Address or .avax Name
 
@@ -97,7 +49,7 @@ With Mailchain you can send Mailchain messages from your .avax name or C-Chain a
 
 -   [ ] You have a Mailchain account (see [here](/user/guides/getting-started/create-a-mailchain-account))
 -   [ ] (Optional) You have an .avax name, registered through Avvy Domains, configured to resolve to your address (see [here](/user/guides/wallets-and-identities/avalanche/avalanche-faqs/#how-do-i-configure-my-avax-domain))
--   [ ] (optional) You have added your .avax domain to Mailchain (see [above](/user/guides/wallets-and-identities/avalanche/avalanche-getting-started/#add-your-avax-domain-name-to-mailchain))
+-   [ ] (optional) You have added your .avax domain to Mailchain (see [above](/user/guides/wallets-and-identities/avalanche/avalanche-getting-started/#how-to-add-your-avalanche-address-or-avax-domain-name-to-mailchain))
 
 ### Compose And Send A Message From Your .avax Name or Avalanche Address
 
@@ -105,18 +57,10 @@ With Mailchain you can send Mailchain messages from your .avax name or C-Chain a
 
 1. Click 'Compose' in the sidebar.
 
- <!-- ![compose message](../img-avalanche/avalanche2_1.png) -->
-
 1. In the New Message window, click the “From” dropdown menu and select your C-Chain address or .avax name.
-
- <!-- ![select sender](../img-avalanche/avalanche2_2.png) -->
 
 1. Fill out the rest of the message, then click Send.
 
- <!-- ![write message](../img-avalanche/avalanche2_3.png) -->
-
 1. Your message should be successfully sent.
-
- <!-- ![message sent](../img-avalanche/avalanche2_4.png) -->
 
 Done! Your recipient will receive your message from your address or .avax name.

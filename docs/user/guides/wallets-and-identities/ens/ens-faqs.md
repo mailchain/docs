@@ -108,8 +108,7 @@ Follow these steps to set up the ENS Primary Resolver for your ENS name:
 
 4.  To set the Primary ENS Name record, click on the drop-down and select the ENS name you want to be your Primary ENS Name.
     (The example below shows happywriter.eth, and ENS subdomain has been configure to resolve to 0xc1db...89d7)
-    ![Untitled](../img-ens/ens\_
-    tips/Untitled%2010.png)
+    ![Untitled](../img-ens/ens_faqs/Untitled%2010.png)
 5.  Click "Save".
 
     ![Untitled](../img-ens/ens_faqs/Untitled%2011.png)

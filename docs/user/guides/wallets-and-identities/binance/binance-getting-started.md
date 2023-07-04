@@ -3,7 +3,7 @@ title: 'Getting Started with BNB Smart Chain and .bnb Names'
 sidebar_position: 2
 ---
 
-Mailchain users can use their BNB Smart Chain (BSC) wallet addresses and .bnb names to send and receive messages. It’s simple to get started…
+Mailchain users can use their BNB Chain wallet addresses and .bnb names to send and receive messages. It’s simple to get started…
 
 # Introduction
 
@@ -22,68 +22,26 @@ _**.bnb domain names** are provided by [SPACE ID](https://space.id/), a company 
 
 ### Add Your SPACE ID Domain to Mailchain
 
-1. Log in to your Mailchain Account.
+import MetamaskConnect from '/docs/user/guides/getting-started/register-a-wallet-partials/\_metamask_connect.mdx'
+import MetamaskVerify from '/docs/user/guides/getting-started/register-a-wallet-partials/\_metamask_verify.mdx'
+import NameserviceBinance from '/docs/user/guides/getting-started/register-a-wallet-partials/\_nameservice_bnb.mdx'
+import MetamaskDisconnect from '/docs/user/guides/getting-started/register-a-wallet-partials/\_metamask_disconnect.mdx'
 
-1. Click “Register Your Wallet”.
+### Step 1: Connect your wallet
 
- <!-- ![register your wallet](../img-binance/binance1_1.png) -->
+<MetamaskConnect />
 
-1. A modal will open. Select a wallet provider (e.g. Metamask), then click 'Connect'
+### Step 2: Verify your address
 
- <!-- ![select wallet](../img-binance/binance1_2.png) -->
+<MetamaskVerify />
 
-1. Choose the address to connect, then click Next.
+### Step 3: Adding your .bnb name
 
- <!-- ![choose address](../img-binance/binance1_3.png) -->
+<NameserviceBinance />
 
-1. Click 'Connect' to confirm Mailchain should be able to read your address.
+### Step 4: Disconnect your wallet
 
- <!-- ![connect wallet](../img-binance/binance1_3-1.png) -->
-
-1. The address is now connected, but we need to register it in Mailchain. To do this, click 'Verify Address'
-
- <!-- ![address connected](../img-binance/binance1_4.png) -->
-
-1. A 'Signature Request' will appear in your wallet. It contains the following text:
-
-    ```bash
-    Message:
-    Welcome to Mailchain!
-
-    Please sign to start using this address with Mailchain. This will not trigger a blockchain transaction or cost any gas fees.
-
-    What's happening?
-    A messaging key will be registered with this address and used only for messaging. It will replace any existing registered messaging keys.
-
-    Technical Details:
-    Address: `your_address`
-    Messaging key: `a_generated_messaging_key`
-    Nonce: `a_number`
-    ```
-
-    <!-- ![signature request](../img-binance/binance1_5.png) -->
-
-1. Review the request and click 'Sign' to complete verification.
-
- <!-- ![sign to complete](../img-binance/binance1_6.png) -->
-
-1. The next step checks for connected name services, including .bnb names. If you do not see your .bnb name here, you can manually search for it using the search box. If it still cannot be found, please see SPACE ID FAQs [here](/user/guides/wallets-and-identities/spaceid/spaceid-faqs/#my-space-id-domain-was-not-found-what-should-i-check).
-
-1. You can add a custom label for your address. By default, Mailchain will populate your primary SPACE ID domain or the first one it finds. In this example, the name has been manually changed. Click Apply to save and continue.
-
- <!-- ![add label](../img-binance/binance1_8.png) -->
-
-1. Mailchain is able to receive messages for your wallet address before you sign up. Click 'Synchronize' to retrieve these messages, or click 'Skip' to synchronize later. Any synchronized messages will appear in your inbox.
-
- <!-- ![check for existing addresses](../img-binance/binance1_9.png) -->
-
-1. You can now click 'Done' to disconnect your wallet and close the modal, or choose to register another address.
-
- <!-- ![disconnect wallet](../img-binance/binance1_10.png) -->
-
-1. You will now see the newly added inbox on the left. This will be labelled with the label you provided when registering the address. Any messages sent to that address or your .bnb name will appear in this inbox.
-
- <!-- ![new address added](../img-binance/binance1_11.png) -->
+<MetamaskDisconnect imagePath="/img/user/guides/getting-started/img-register-a-wallet/example-sub-inbox-bnb.png"/>
 
 ## How To Send A Message From Your BNB Smart Chain Address or .bnb Name
 
@@ -103,7 +61,7 @@ With Mailchain you can send Mailchain messages from your .bnb name or BSC addres
 
  <!-- ![compose message](../img-binance/binance2_1.png) -->
 
-1. In the New Message window, click the “From” dropdown menu and select your BSC address or .bnb name.
+1. In the New Message window, click the “From” dropdown menu and select your BNB Chain address or .bnb name.
 
  <!-- ![select your web3 identity](../img-binance/binance2_2.png) -->
 
