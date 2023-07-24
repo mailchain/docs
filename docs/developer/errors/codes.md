@@ -25,7 +25,12 @@ Identity has expired. Check the identity provider settings. Owner of the identit
 
 #### `identity_not_found`
 
-Identity is not found. Check address exists on supplied identity provider. When searching for name service providers check name is registered and resolves to the default protocol address.
+Identity is not found. Check address exists on supplied identity provider. The identity provider is indicated after the `@` symbol.
+
+Checks:
+
+-   Name service address - check the check name is registered correctly and resolves to a valid protocol address.
+-   Token address - check the token identifier exists in the smart contract.
 
 #### `identity_provider_address_invalid`
 
@@ -37,7 +42,10 @@ Identity provider address not supported. Although identity provider is valid and
 
 #### `identity_provider_unsupported`
 
-Identity provider is not support. Check list of supported identity providers.
+Identity provider is not supported. The identity provider is indicated after the `@` symbol.
+
+-   Check list of supported identity providers.
+-   Token address - check the smart contract implements the supported interface.
 
 #### `messaging_key_contact_call_error`
 
