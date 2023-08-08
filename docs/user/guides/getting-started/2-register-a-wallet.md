@@ -6,11 +6,15 @@ image: 'img/thumbs/social-square-1.png'
 
 import MetamaskConnect from '/docs/user/guides/getting-started/register-a-wallet-partials/\_metamask_connect.mdx'
 import WalletconnectConnect from '/docs/user/guides/getting-started/register-a-wallet-partials/\_walletconnect_connect.mdx'
+import CoinbasewalletConnect from '/docs/user/guides/getting-started/register-a-wallet-partials/\_coinbasewallet_connect.mdx'
 import MetamaskVerify from '/docs/user/guides/getting-started/register-a-wallet-partials/\_metamask_verify.mdx'
 import WalletconnectVerify from '/docs/user/guides/getting-started/register-a-wallet-partials/\_walletconnect_verify.mdx'
+import CoinbasewalletVerify from '/docs/user/guides/getting-started/register-a-wallet-partials/\_coinbasewallet_verify.mdx'
 import NameserviceNone from '/docs/user/guides/getting-started/register-a-wallet-partials/\_nameservice_none.mdx'
+import NameserviceCoinbasewallet from '/docs/user/guides/getting-started/register-a-wallet-partials/\_nameservice_coinbasewallet.mdx'
 import MetamaskDisconnect from '/docs/user/guides/getting-started/register-a-wallet-partials/\_metamask_disconnect.mdx'
 import WalletconnectDisconnect from '/docs/user/guides/getting-started/register-a-wallet-partials/\_walletconnect_disconnect.mdx'
+import CoinbasewalletDisconnect from '/docs/user/guides/getting-started/register-a-wallet-partials/\_coinbasewallet_disconnect.mdx'
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -38,6 +42,9 @@ Guides for all supported protocols, web domain name services and identities can 
   <TabItem value="walletconnect" label="WalletConnect">
     <WalletconnectConnect />  
   </TabItem>
+  <TabItem value="coinbasewallet" label="Coinbase Wallet">
+    <CoinbasewalletConnect />  
+  </TabItem>
 </Tabs>
 
 ### Step 2: Verify your address
@@ -49,11 +56,24 @@ Guides for all supported protocols, web domain name services and identities can 
     <TabItem value="walletconnect" label="WalletConnect">
         <WalletconnectVerify />
   </TabItem>
+    <TabItem value="coinbasewallet" label="Coinbase Wallet">
+        <CoinbasewalletVerify />
+  </TabItem>
 </Tabs>
 
 ### Step 3: Web3 domain names and customization
 
-<NameserviceNone />
+<Tabs groupId="nameservice">
+    <TabItem value="metamask" label="Metamask">
+        <NameserviceNone />
+    </TabItem>
+    <TabItem value="walletconnect" label="WalletConnect">
+        <NameserviceNone />
+    </TabItem>
+    <TabItem value="coinbasewallet" label="Coinbase Wallet">
+        <NameserviceCoinbasewallet />
+    </TabItem>
+</Tabs>
 
 ### Step 4: Disconnect your wallet
 
@@ -63,5 +83,8 @@ Guides for all supported protocols, web domain name services and identities can 
     </TabItem>
     <TabItem value="walletconnect" label="WalletConnect">
         <WalletconnectDisconnect />
+    </TabItem>
+    <TabItem value="coinbasewallet" label="Coinbase Wallet">
+        <CoinbasewalletDisconnect />
     </TabItem>
 </Tabs>
