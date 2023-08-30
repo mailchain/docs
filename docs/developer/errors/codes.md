@@ -19,6 +19,10 @@ Address is invalid. Make sure address is syntax correct. Check error's `cause` f
 
 Address format is invalid. Check that the format follows the Mailchain address standard. See [address formatting](../address-formatting.md) for correct address formatting.
 
+#### `create_distribution_requests_failures`
+
+Before sending, the SDK prepares each distributions for the recipients. One or more distributions failed to prepare. Check the error's `failures` attribute for the failed distributions and corresponding errors.
+
 #### `identity_expired`
 
 Identity has expired. Check the identity provider settings. Owner of the identity must renew domain to continue using it for messaging.
@@ -62,10 +66,6 @@ Messaging key is not yet registered. Register messaging key for address then ret
 #### `preflight_check_failed`
 
 Failed when performing checks before preparing a mail for sending. Check the error's `message` attribute for further information on what check failed.
-
-#### `prepare_distributions_failures`
-
-Before sending a mail, the SDK prepares each distributions for the recipients. One or more distributions failed to prepare. Check the error's `failures` attribute for the failed distributions and corresponding errors.
 
 #### `protocol_unsupported`
 
