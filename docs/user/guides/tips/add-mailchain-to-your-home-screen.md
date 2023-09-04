@@ -1,6 +1,6 @@
 ---
 title: 'Add Mailchain To Your Mobile Home Screen'
-sidebar_position: 1
+sidebar_position: 5
 image: 'img/thumbs/social-square-1.png'
 ---
 
