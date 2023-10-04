@@ -15,6 +15,10 @@ Below is a list of possible error codes, along with additional information about
 
 Address is invalid. Make sure address is syntax correct. Check error's `cause` for the underlying `error`. See [address formatting](../address-formatting.md) for correct address formatting.
 
+#### `address_unregistered`
+
+Address is not yet registered. Register address to create a messaging key, then retry operation.
+
 #### `badly_formatted_address`
 
 Address format is invalid. Check that the format follows the Mailchain address standard. See [address formatting](../address-formatting.md) for correct address formatting.
@@ -59,10 +63,6 @@ Failed calling messaging key contract or contract response is invalid. Check you
 
 Messaging key proof verification failed. The SDK will not use the messaging key for this address.
 
-#### `messaging_key_unregistered`
-
-Messaging key is not yet registered. Register messaging key for address then retry.
-
 #### `preflight_check_failed`
 
 Failed when performing checks before preparing a mail for sending. Check the error's `message` attribute for further information on what check failed.
@@ -71,17 +71,17 @@ Failed when performing checks before preparing a mail for sending. Check the err
 
 Mailchain only supports certain protocols. Check you are using the latest version of the SDK and the protocol is supported then try again.
 
+#### `provided_messaging_key_incorrect`
+
+The address messaging key is incorrect. Check the sender messaging key matches, the latest entry in the key registry for the [`from` address](../advanced/resolve-address.mdx#check-address-messaging-key).
+
 #### `resolve_addresses_failures`
 
 Before preparing a mail to send, the SDK resolves all addresses in the `from`, `to`, `cc` and `bcc` fields. One or more of these addresses failed to resolve. Check the error's `failures` attribute for the failed addresses and corresponding errors.
 
-#### `send_mail_delivery_request_failures`
+#### `send_payload_distribution_request_failures`
 
 Delivery requests are sent to each recipient in the `to`, `cc` and `bcc` fields. One or more delivery requests failed to send. Check the error's `failures` attribute for the failed delivery requests and their corresponding errors.
-
-#### `sender_messaging_key_incorrect`
-
-The `from` address messaging key is incorrect. Check the sender messaging key matches, the latest entry in the the key registry for the [`from` address](../advanced/resolve-address.mdx#check-address-messaging-key).
 
 #### `unexpected_error`
 
