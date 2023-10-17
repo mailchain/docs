@@ -193,6 +193,20 @@ const sidebars = {
 						},
 						{
 							type: 'category',
+							label: 'Solana & Solana Name Service (.sol)',
+							collapsed: true,
+							link: {
+								type: 'generated-index',
+								slug: 'user/guides/wallets-and-identities/solana/',
+								keywords: ['guides', 'name service'],
+							},
+							items: [
+								'user/guides/wallets-and-identities/solana/solana-getting-started',
+								'user/guides/wallets-and-identities/solana/solana-faqs',
+							],
+						},
+						{
+							type: 'category',
 							label: 'Tezos & Tezos Domains (.tez)',
 							collapsed: true,
 							link: {
