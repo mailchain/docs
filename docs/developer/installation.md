@@ -35,3 +35,65 @@ yarn add @mailchain/sdk
 </TabItem>
 </Tabs>
 ```
+
+## Browser support
+
+As Mailchain SDK is to be run primary by Node applications, it requires some polyfills to be used in the browser. Depending on your setup, you may need to polyfill [Buffer](https://nodejs.org/api/buffer.html), [crypto](https://nodejs.org/api/crypto.html) and [stream](https://nodejs.org/api/stream.html).
+
+```mdx-code-block
+<Tabs>
+<TabItem value="Webpack 5">
+```
+
+```bash
+yarn add crypto-browserify stream-browserify
+npm install crypto-browserify stream-browserify
+```
+
+```js
+// webpack.config.js
+const webpack = require('webpack');
+
+module.exports = {
+	// ...
+	resolve: {
+		fallback: {
+			crypto: require.resolve('crypto-browserify'),
+			stream: require.resolve('stream-browserify'),
+		},
+	},
+	plugins: [
+		// ...
+		new webpack.ProvidePlugin({
+			Buffer: ['buffer', 'Buffer'],
+		}),
+	],
+};
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="Vite">
+```
+
+```bash
+yarn add -D vite-plugin-node-polyfills
+npm install --save-dev vite-plugin-node-polyfills
+```
+
+```js
+module.exports = defineConfig({
+	// ...
+	plugins: [
+		// ...
+		nodePolyfills({
+			include: ['buffer', 'crypto', 'stream'],
+		}),
+	],
+});
+```
+
+```mdx-code-block
+</TabItem>
+</Tabs>
+```
