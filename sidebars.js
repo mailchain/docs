@@ -151,6 +151,20 @@ const sidebars = {
 						},
 						{
 							type: 'category',
+							label: 'IDriss',
+							collapsed: true,
+							link: {
+								type: 'generated-index',
+								slug: 'user/guides/wallets-and-identities/idriss/',
+								keywords: ['guides', 'name service'],
+							},
+							items: [
+								'user/guides/wallets-and-identities/idriss/idriss-getting-started',
+								'user/guides/wallets-and-identities/idriss/idriss-faqs',
+							],
+						},
+						{
+							type: 'category',
 							label: 'Lens Protocol (.lens)',
 							collapsed: true,
 							link: {

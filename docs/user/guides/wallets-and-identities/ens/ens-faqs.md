@@ -39,91 +39,15 @@ When your ENS names expires, Mailchain messages will no longer be sent to the ad
 
 Mailchain will always resolve the underlying name from the ENS contracts so it will reflect the latest changes returned by the resolver.
 
-### How Do I Register An ENS Domain?
+### How do I register an ENS domain?
 
-<details><summary>
-Follow these steps to register an ENS name:
+Follow the steps in this article, [ENS Docs: The Primary Name](https://support.ens.domains/en/articles/7890756-the-primary-name), to set your ENS Primary Resolver.
 
-_NOTE: You will need some ETH to purchase an ENS name. At the time of writing, >0.01ETH was required to complete this section._
+### How do I set an ENS Primary Resolver?
 
-</summary>
-
-1. Go to [https://app.ens.domains/](https://app.ens.domains/), then connect your wallet.
-
-    ![connect wallet to ens](../img-ens/ens_faqs/Untitled.png)
-
-2. Search for an available name, then click search. (We used happywriter.eth in this guide)
-
-    ![search for ens name](../img-ens/ens_faqs/Untitled%201.png)
-
-3. The app will show you if the name is available.
-
-    ![found ens name](../img-ens/ens_faqs/Untitled%202.png)
-
-4. Choose the length of the registration period you would like, then click “Request to Register”.
-
-    ![click request register](../img-ens/ens_faqs/Untitled%203.png)
-
-5. Check the transaction details, then confirm it to complete step 1.
-
-    ![check and confirm transaction details](../img-ens/ens_faqs/Untitled%204.png)
-
-6. Once the transaction is confirmed, you will need to wait for a period of 1 minute (step 2), before proceeding to step 3.
-7. Click “Register” to proceed with the registration.
-
-    ![confirm registration](../img-ens/ens_faqs/Untitled%205.png)
-
-8. Check the transaction details, then confirm it to complete the registration.
-
-    ![check transaction](../img-ens/ens_faqs/Untitled%206.png)
-
-9. Once successful, the app will confirm.
-
-    If you would like to use the ENS name to send messages from Mailchain, then click on “Set As Primary ENS Name” and follow the guide: _Set an ENS Primary Resolver._
-
-    ![set resolver](../img-ens/ens_faqs/Untitled%207.png)
-
-</details>
-
-### How Do I Set An ENS Primary Resolver?
-
-<details><summary>
 An ENS Primary Resolver designates one of your ENS names to represent your Ethereum account and act as your cross-platform Web3 username and profile.
 
-Follow these steps to set up the ENS Primary Resolver for your ENS name:
-
-</summary>
-
-1.  Go to [https://app.ens.domains/](https://app.ens.domains/), then connect your wallet.
-
-    ![Untitled](../img-ens/ens_faqs/Untitled.png)
-
-2.  Go to My Account.
-
-    ![Untitled](../img-ens/ens_faqs/Untitled%208.png)
-
-3.  If you do not have a Primary Resolver set, your screen will display the message `Primary ENS Name (reverse record): not set`.
-
-    ![Untitled](../img-ens/ens_faqs/Untitled%209.png)
-
-4.  To set the Primary ENS Name record, click on the drop-down and select the ENS name you want to be your Primary ENS Name.
-    (The example below shows happywriter.eth, and ENS subdomain has been configure to resolve to 0xc1db...89d7)
-    ![Untitled](../img-ens/ens_faqs/Untitled%2010.png)
-5.  Click "Save".
-
-    ![Untitled](../img-ens/ens_faqs/Untitled%2011.png)
-
-6.  Check the transaction details, then confirm it to set the record.
-
-    ![Untitled](../img-ens/ens_faqs/Untitled%2012.png)
-
-7.  Once the transaction is successful, you will see the ENS name as the “Primary ENS Name (reverse record)”
-
-    ![Untitled](../img-ens/ens_faqs/Untitled%2013.png)
-
-You have now set your Primary ENS Name. This will start to appear in Web3 applications you connect to. You can now register the name with Mailchain to start communicating messages
-
-</details>
+Head to [https://app.ens.domains/](https://app.ens.domains/) and follow the instructions.
 
 ### Does Mailchain support shorthand addressing for ENS?
 

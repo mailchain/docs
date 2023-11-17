@@ -1,3 +1,5 @@
+import NameServiceSubinboxImage from '/docs/user/guides/getting-started/register-a-wallet-partials/_nameservice_subinbox_image.mdx';
+
 1.  Click 'Disconnect' to disconnect your wallet from Mailchain.
 
     <img
@@ -18,12 +20,4 @@
 
     You will see your new sub-inbox in the left sidebar.
 
-    <img
-    	className="guides-image"
-    	alt="sub-inbox image"
-    	src={
-    		props.imagePath
-    			? props.imagePath
-    			: '/img/user/guides/getting-started/img-register-a-wallet/example-sub-inbox.png'
-    	}
-    />
+    <NameServiceSubinboxImage imageShow={props.imageShow} imagePath={props.imagePath} />

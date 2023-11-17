@@ -49,7 +49,7 @@ Mailchain will always resolve the underlying domain from the SPACE ID API so it 
 
 To register a SPACE ID domain, please see <a href="https://docs.space.id/getting-started/tutorials/register" target="_blank">https://docs.space.id/getting-started/tutorials/register</a>.
 
-### How Do I Set a primary SPACE ID domain?
+### How do I set a primary SPACE ID domain?
 
 To set a primary SPACE ID domain, please see <a href="https://docs.space.id/getting-started/tutorials/manage" target="_blank">https://docs.space.id/getting-started/tutorials/manage</a>.
 

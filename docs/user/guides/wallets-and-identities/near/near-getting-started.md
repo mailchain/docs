@@ -19,12 +19,10 @@ Near is building up the Blockchain Operating System Web3 stack to integrate expe
 ### Prerequisites:
 
 -   [ ] You have a .near account ID (see [https://near.org/learn/tools/](https://near.org/learn/tools/))
--   [ ] Your .near account has a balance of at least 0.0006Ⓝ to send the transaction that registers your account ID
 -   [ ] You have a Mailchain account (see [here](/user/guides/getting-started/create-a-mailchain-account))
 
 import NearConnect from '/docs/user/guides/getting-started/register-a-wallet-partials/\_near_connect.mdx'
 import NearVerify from '/docs/user/guides/getting-started/register-a-wallet-partials/\_near_verify.mdx'
-import NameserviceNear from '/docs/user/guides/getting-started/register-a-wallet-partials/\_nameservice_near.mdx'
 import NearDisconnect from '/docs/user/guides/getting-started/register-a-wallet-partials/\_near_disconnect.mdx'
 
 ### Step 1: Connect your wallet
@@ -35,14 +33,11 @@ import NearDisconnect from '/docs/user/guides/getting-started/register-a-wallet-
 
 <NearVerify />
 
-### Step 3: Adding your .near (NEAR account)
-
-<NameserviceNear />
-
-### Step 4: Disconnect your wallet
+### Step 3: Disconnect your wallet
 
 <NearDisconnect imagePath="/img/user/guides/getting-started/img-register-a-wallet/example-sub-inbox-near.png"/>
-## How to send a message using your .near account
+
+## How To Send A Message Using Your Near Account
 
 With Mailchain you can send Mailchain message from your .near account to other Mailchain users, including ENS, Unstoppable Domains, Freename, Lens.xyz, Coinbase IDs, and Ethereum addresses.
 

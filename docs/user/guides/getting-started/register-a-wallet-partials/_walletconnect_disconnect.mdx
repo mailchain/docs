@@ -1,3 +1,5 @@
+import NameServiceSubinboxImage from '/docs/user/guides/getting-started/register-a-wallet-partials/_nameservice_subinbox_image.mdx';
+
 You have successfully registered your wallet address with a set of messaging keys that belong to your Mailchain account. You no longer need to have wallet connected to send and receive messages, so Mailchain disconnects it.
 
 1.  You now have the option to 'Go To Inbox' or to 'Register Another Address'.
@@ -10,12 +12,4 @@ You have successfully registered your wallet address with a set of messaging key
 
     You will see your new sub-inbox in the left sidebar.
 
-    <img
-    	className="guides-image"
-    	alt="sub-inbox image"
-    	src={
-    		props.imagePath
-    			? props.imagePath
-    			: '/img/user/guides/getting-started/img-register-a-wallet/example-sub-inbox.png'
-    	}
-    />
+    <NameServiceSubinboxImage imageShow={props.imageShow} imagePath={props.imagePath} />

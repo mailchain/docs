@@ -39,11 +39,11 @@ Mailchain will always resolve the underlying name from the Tezos contracts so it
 
 If your .tez name does not point to or resolve an address, Mailchain will not be able to discover your name.
 
-### How Do I Register A .tez Name?
+### How do I register a .tez name?
 
 To register a .tez name, visit https://app.tezos.domains/ and follow instructions.
 
-### How Do I Set A Tezos Domains Reverse Record?
+### How do I set a Tezos Domains reverse record?
 
 To set a Tezos Domains reverse record, visit your dashboard at https://app.tezos.domains/. Select the name you wish to be the reverse resolved name, then make changes to the "Reverse Record" section.
 

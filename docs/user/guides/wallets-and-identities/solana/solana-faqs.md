@@ -31,11 +31,11 @@ If you have not yet registered the wallet address with Mailchain, the protocol w
 
 Mailchain will always resolve the underlying name from the Solana contracts so it will reflect the latest changes returned by the resolver.
 
-### How Do I Register A .sol Name?
+### How do I register a .sol name?
 
 To register a .sol name, visit https://sns.id/ and follow instructions.
 
-### Does Mailchain support shorthand addressing for Solana Wallets and Solana Name Service domains?
+### Does Mailchain support shorthand addressing for Solana wallets and Solana Name Service domains?
 
 | TLD     | Fully qualified Mailchain address                     | Shorthand Mailchain address             | Name service address            |
 | ------- | ----------------------------------------------------- | --------------------------------------- | ------------------------------- |

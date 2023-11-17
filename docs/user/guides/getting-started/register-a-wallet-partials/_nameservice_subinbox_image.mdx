@@ -1,0 +1,19 @@
+<!--
+	Accepts the following props:
+	imageShow: 'true' or 'false'
+	imagePath: '/img/user/guides/getting-started/img-register-a-wallet/example-sub-inbox.png' (default)
+-->
+
+<span>
+	{props.imageShow === 'false' ? null : (
+		<img
+			className="guides-image"
+			alt="sub-inbox image"
+			src={
+				props.imagePath
+					? props.imagePath
+					: '/img/user/guides/getting-started/img-register-a-wallet/example-sub-inbox.png'
+			}
+		/>
+	)}
+</span>
