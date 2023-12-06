@@ -27,6 +27,10 @@ Address format is invalid. Check that the format follows the Mailchain address s
 
 Before sending, the SDK prepares each distributions for the recipients. One or more distributions failed to prepare. Check the error's `failures` attribute for the failed distributions and corresponding errors.
 
+#### `group_address_not_supported`
+
+The operation failure is due to the use of a group address, which is incompatible with the desired operation. The error message will specify the problematic address. Ensure the use of a non-group address and reattempt the operation.
+
 #### `identity_expired`
 
 Identity has expired. Check the identity provider settings. Owner of the identity must renew domain to continue using it for messaging.
