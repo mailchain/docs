@@ -83,8 +83,8 @@ const config = {
 						title: 'Community',
 						items: [
 							{
-								label: 'Discord',
-								href: 'https://discord.gg/ZMnJNx4WkQ',
+								label: 'GitHub',
+								href: 'https://github.com/mailchain',
 							},
 							{
 								label: 'Twitter',
@@ -98,10 +98,6 @@ const config = {
 							{
 								label: 'Blog',
 								to: 'https://www.mailchain.com/news',
-							},
-							{
-								label: 'GitHub',
-								href: 'https://github.com/mailchain',
 							},
 						],
 					},

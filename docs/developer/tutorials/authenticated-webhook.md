@@ -348,4 +348,4 @@ Congratulations 🎉 you've extended the send API and added authenticated. You c
 
 ## What's next?
 
-Try finding where you can use your webhook. Let us know of any interesting integrations or if you need any support via our [Discord](https://discord.gg/2gqGpagbhe) channel.
+Try finding where you can use your webhook. Let us know of any interesting integrations or if you need any support via any of our [support](https://docs.mailchain.com/getting-help/) channels.

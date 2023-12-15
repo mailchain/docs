@@ -98,7 +98,7 @@ To verify that email magic link is working, input your traditional (non-Web3) em
 
 Clicking on the magic link should open the application in the browser with a welcome message. This means Stytch is setup correctly and you can proceed with the rest of the tutorial.
 
-If you have any issues, please trace back through the steps or drop us a line on our [Discord](https://discord.gg/2gqGpagbhe) server.
+If you have any issues, please trace back through the steps or drop us a line on our [support](https://docs.mailchain.com/getting-help/) channels.
 
 ## Step 3 - Configure the Mailchain SDK
 

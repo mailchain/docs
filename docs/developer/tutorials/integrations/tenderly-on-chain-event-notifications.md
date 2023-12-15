@@ -370,4 +370,4 @@ Don't forget to disable the webhook in your Tenderly account when you are finish
 
 Tenderly provides an important set of tools for Ethereum developers. The ability to simulate, monitor and query transactions and state gives access to a sophisticated set of triggers and alerts. Combining this with web3 communication helps developers provide notifications and updates to users or application developers.
 
-Let us know of any interesting variations of this tutorial that you have implemented or if you need any support via our [Discord](https://discord.gg/2gqGpagbhe) channel.
+Let us know of any interesting variations of this tutorial that you have implemented or if you need any support via our [support](https://docs.mailchain.com/getting-help/) channels.

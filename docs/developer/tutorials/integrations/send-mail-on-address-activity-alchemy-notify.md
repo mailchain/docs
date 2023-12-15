@@ -265,4 +265,4 @@ Don't forget to de-activate the webhook in your Alchemy account when you are fin
 
 As mentioned before Alchemy has an API and SDK for JS that can be used to create, update and remove Notify webhooks. This is very useful if we want to make a meaningful implementation that is not used just for testing. You can access the [Alchemy SDK Quickstart](https://docs.alchemy.com/reference/alchemy-sdk-quickstart) to get started and learn more.
 
-On top of this, checkout more generic approach of webhooks with [authenticated webhook guide](/developer/tutorials/authenticated-webhook.md). Let us know of any interesting variations of this tutorial that you have made or if you need any support via our [Discord](https://discord.gg/2gqGpagbhe) channel.
+On top of this, checkout more generic approach of webhooks with [authenticated webhook guide](/developer/tutorials/authenticated-webhook.md). Let us know of any interesting variations of this tutorial that you have made or if you need any support via our [support](https://docs.mailchain.com/getting-help/) channels.
