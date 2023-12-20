@@ -57,7 +57,7 @@ const sidebars = {
 				{
 					type: 'category',
 					label: 'Registering Wallets & Identities',
-					collapsed: false,
+					collapsed: true,
 					link: {
 						type: 'generated-index',
 						title: 'Registering Wallets & Identities',
@@ -252,7 +252,7 @@ const sidebars = {
 				{
 					type: 'category',
 					label: 'Best Practices',
-					collapsed: false,
+					collapsed: true,
 					link: {
 						type: 'generated-index',
 						title: 'Mailchain Best Practices',
@@ -275,7 +275,7 @@ const sidebars = {
 				},
 				{
 					type: 'category',
-					label: 'Tips & Tricks',
+					label: 'Productivity, Tips & Tricks',
 					collapsed: false,
 					link: {
 						type: 'generated-index',

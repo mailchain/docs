@@ -1,6 +1,6 @@
 ---
 title: 'You Got Mail! Get Existing Messages'
-sidebar_position: 2
+sidebar_position: 60
 image: 'img/thumbs/social-square-1.png'
 ---
 
